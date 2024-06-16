@@ -11,6 +11,7 @@
 		8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50A9E02C19D15300DCA88C /* ContentView.swift */; };
 		8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E22C19D15500DCA88C /* Assets.xcassets */; };
 		8A50A9E62C19D15500DCA88C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */; };
+		8ADEEB152C1B21B5006B1C04 /* MiauColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADEEB142C1B21B5006B1C04 /* MiauColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		8A50A9E02C19D15300DCA88C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A50A9E22C19D15500DCA88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8ADEEB142C1B21B5006B1C04 /* MiauColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		8A50A9DD2C19D15300DCA88C /* catto */ = {
 			isa = PBXGroup;
 			children = (
+				8ADEEB102C1B16E9006B1C04 /* miau */,
 				8A50A9DE2C19D15300DCA88C /* cattoApp.swift */,
 				8A50A9E02C19D15300DCA88C /* ContentView.swift */,
 				8A50A9E22C19D15500DCA88C /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8ADEEB102C1B16E9006B1C04 /* miau */ = {
+			isa = PBXGroup;
+			children = (
+				8ADEEB142C1B21B5006B1C04 /* MiauColor.swift */,
+			);
+			path = miau;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */,
+				8ADEEB152C1B21B5006B1C04 /* MiauColor.swift in Sources */,
 				8A50A9DF2C19D15300DCA88C /* cattoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
