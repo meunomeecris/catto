@@ -73,17 +73,9 @@
 		8ADEEB102C1B16E9006B1C04 /* miau */ = {
 			isa = PBXGroup;
 			children = (
-				8ADEEB112C1B20B9006B1C04 /* theme */,
-			);
-			path = miau;
-			sourceTree = "<group>";
-		};
-		8ADEEB112C1B20B9006B1C04 /* theme */ = {
-			isa = PBXGroup;
-			children = (
 				8ADEEB142C1B21B5006B1C04 /* MiauColor.swift */,
 			);
-			path = theme;
+			path = miau;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

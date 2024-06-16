@@ -34,7 +34,7 @@ import SwiftUI
             .padding(20)
             .background(.bgCardPrimary)
         Text("Background")
-            .foregroundStyle(.textPrimary)
+            .foregroundStyle(.textSecondary)
             .padding(20)
             .background(.bgCardSecondary)
             .padding(.bottom, 16)
