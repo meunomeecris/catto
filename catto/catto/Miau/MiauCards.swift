@@ -16,8 +16,6 @@ struct MiauCard: View {
 
     var body: some View {
         ZStack {
-//            let cardColor = isMostVoted ? Color(.bgCardPrimary) : Color(.bgCardSecondary)
-
             HStack(alignment: .top) {
                 AvatarCard(urlImage: url)
                 VStack(alignment: .leading, spacing: 4) {
