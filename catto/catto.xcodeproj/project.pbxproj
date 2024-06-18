@@ -11,7 +11,13 @@
 		8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50A9E02C19D15300DCA88C /* ContentView.swift */; };
 		8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E22C19D15500DCA88C /* Assets.xcassets */; };
 		8A50A9E62C19D15500DCA88C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */; };
-		8ADEEB152C1B21B5006B1C04 /* MiauColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADEEB142C1B21B5006B1C04 /* MiauColor.swift */; };
+		8AD96E1B2C20254300EB2F5B /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD96E182C20254300EB2F5B /* Inter-Light.ttf */; };
+		8AD96E1D2C20254300EB2F5B /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD96E1A2C20254300EB2F5B /* Inter-Regular.ttf */; };
+		8AD96E202C20264200EB2F5B /* MiauFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD96E1F2C20264200EB2F5B /* MiauFonts.swift */; };
+		8AD96E232C2026D900EB2F5B /* InknutAntiqua-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD96E212C2026D800EB2F5B /* InknutAntiqua-Bold.ttf */; };
+		8AD96E242C2026D900EB2F5B /* InknutAntiqua-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD96E222C2026D900EB2F5B /* InknutAntiqua-Medium.ttf */; };
+		8AD96E262C20382E00EB2F5B /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD96E252C20382E00EB2F5B /* Inter-Bold.ttf */; };
+		8ADEEB152C1B21B5006B1C04 /* MiauColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADEEB142C1B21B5006B1C04 /* MiauColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +26,14 @@
 		8A50A9E02C19D15300DCA88C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A50A9E22C19D15500DCA88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8ADEEB142C1B21B5006B1C04 /* MiauColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauColor.swift; sourceTree = "<group>"; };
+		8AD96E182C20254300EB2F5B /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		8AD96E1A2C20254300EB2F5B /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		8AD96E1E2C2025E600EB2F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8AD96E1F2C20264200EB2F5B /* MiauFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauFonts.swift; sourceTree = "<group>"; };
+		8AD96E212C2026D800EB2F5B /* InknutAntiqua-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InknutAntiqua-Bold.ttf"; sourceTree = "<group>"; };
+		8AD96E222C2026D900EB2F5B /* InknutAntiqua-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InknutAntiqua-Medium.ttf"; sourceTree = "<group>"; };
+		8AD96E252C20382E00EB2F5B /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		8ADEEB142C1B21B5006B1C04 /* MiauColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +66,8 @@
 		8A50A9DD2C19D15300DCA88C /* catto */ = {
 			isa = PBXGroup;
 			children = (
-				8ADEEB102C1B16E9006B1C04 /* miau */,
+				8AD96E1E2C2025E600EB2F5B /* Info.plist */,
+				8ADEEB102C1B16E9006B1C04 /* Miau */,
 				8A50A9DE2C19D15300DCA88C /* cattoApp.swift */,
 				8A50A9E02C19D15300DCA88C /* ContentView.swift */,
 				8A50A9E22C19D15500DCA88C /* Assets.xcassets */,
@@ -70,12 +84,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8ADEEB102C1B16E9006B1C04 /* miau */ = {
+		8AD96E172C20252F00EB2F5B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				8ADEEB142C1B21B5006B1C04 /* MiauColor.swift */,
+				8AD96E212C2026D800EB2F5B /* InknutAntiqua-Bold.ttf */,
+				8AD96E222C2026D900EB2F5B /* InknutAntiqua-Medium.ttf */,
+				8AD96E182C20254300EB2F5B /* Inter-Light.ttf */,
+				8AD96E252C20382E00EB2F5B /* Inter-Bold.ttf */,
+				8AD96E1A2C20254300EB2F5B /* Inter-Regular.ttf */,
 			);
-			path = miau;
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8ADEEB102C1B16E9006B1C04 /* Miau */ = {
+			isa = PBXGroup;
+			children = (
+				8AD96E172C20252F00EB2F5B /* Fonts */,
+				8ADEEB142C1B21B5006B1C04 /* MiauColors.swift */,
+				8AD96E1F2C20264200EB2F5B /* MiauFonts.swift */,
+			);
+			path = Miau;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +164,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD96E232C2026D900EB2F5B /* InknutAntiqua-Bold.ttf in Resources */,
+				8AD96E242C2026D900EB2F5B /* InknutAntiqua-Medium.ttf in Resources */,
+				8AD96E262C20382E00EB2F5B /* Inter-Bold.ttf in Resources */,
+				8AD96E1D2C20254300EB2F5B /* Inter-Regular.ttf in Resources */,
 				8A50A9E62C19D15500DCA88C /* Preview Assets.xcassets in Resources */,
+				8AD96E1B2C20254300EB2F5B /* Inter-Light.ttf in Resources */,
 				8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,8 +181,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD96E202C20264200EB2F5B /* MiauFonts.swift in Sources */,
 				8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */,
-				8ADEEB152C1B21B5006B1C04 /* MiauColor.swift in Sources */,
+				8ADEEB152C1B21B5006B1C04 /* MiauColors.swift in Sources */,
 				8A50A9DF2C19D15300DCA88C /* cattoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +321,7 @@
 				DEVELOPMENT_TEAM = 7T93UNM5FF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = catto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,6 +351,7 @@
 				DEVELOPMENT_TEAM = 7T93UNM5FF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = catto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
