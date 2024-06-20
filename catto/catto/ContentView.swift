@@ -17,6 +17,13 @@ struct ContentView: View {
             MiauCard(username: "@meunomeecriss", comment: "Super power!", likes: 3, url: "https://preview.redd.it/19winbuo94t91.jpg?width=3024&format=pjpg&auto=webp&s=86f1f844799004ac6974d35e34a6431a8abb53eb", isMostVoted: false)
         }
         .padding(16)
+
+        HStack {
+            MiauTextField(text: "", defaultState: false, sendButtonAction: {})
+            MiauNextButton(action: {})
+        }
+        .padding(16)
+
         VStack {
             MiauPrimaryButton(btnLabel: "Primary", action: {})
                 .padding(.bottom, 16)

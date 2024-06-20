@@ -19,10 +19,10 @@ struct MiauPrimaryButton: View {
                 .bodyButton()
                 .foregroundColor(.textButton)
         }
-        .padding(EdgeInsets(top: 8, leading: 24, bottom: 8, trailing: 24))
+        .padding(EdgeInsets(top: 4, leading: 24, bottom: 4, trailing: 24))
         .background(Color(.bgButton))
         .fixedSize(horizontal: true, vertical: false)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .clipShape(RoundedRectangle(cornerRadius: 16))
 
     }
 }
@@ -37,11 +37,11 @@ struct MiauFavoriteButton: View {
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.auxiliarBlue)
-                .frame(width: 24, height: 24)
-                .padding(16)
+                .frame(maxWidth: 24, maxHeight: 24)
+                .padding(10)
         }
         .background(.bgButton)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 }
 
@@ -55,10 +55,10 @@ struct MiauNextButton: View {
                 .scaledToFit()
                 .foregroundStyle(.textButton)
                 .frame(width: 24, height: 24)
-                .padding(16)
+                .padding(10)
         }
         .background(.bgButton)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 }
 
@@ -72,15 +72,19 @@ struct MiauCloseButton: View {
                 .scaledToFit()
                 .foregroundStyle(.textButton)
                 .frame(width: 24, height: 24)
-                .padding(16)
+                .padding(8)
         }
         .background(.bgButton)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 }
 
 #Preview {
     VStack {
+        HStack {
+            MiauPrimaryButton(btnLabel: "Primary", action: {})
+            MiauFavoriteButton(isPressed: true, action: {})
+        }
         MiauPrimaryButton(btnLabel: "Primary", action: {})
         MiauFavoriteButton(isPressed: true, action: {})
         MiauFavoriteButton(isPressed: false, action: {})
