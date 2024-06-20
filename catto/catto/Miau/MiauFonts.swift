@@ -111,6 +111,19 @@ extension View {
     }
 }
 
+// MARK: Caption
+struct MiauCaptionModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.custom("Inter-Bold", size: 10))
+    }
+}
+extension View {
+    func caption() -> some View {
+        self.modifier(MiauCaptionModifier())
+    }
+}
+
 
 #Preview {
     VStack(spacing: 16){
@@ -139,6 +152,9 @@ extension View {
             .foregroundStyle(.textPrimary)
         Text("Label Bold")
             .labelBold()
+            .foregroundStyle(.textSecondary)
+        Text("Caption")
+            .caption()
             .foregroundStyle(.textSecondary)
     }
 }
