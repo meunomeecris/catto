@@ -9,19 +9,19 @@ import SwiftUI
 
 struct MiauTextField: View {
     @State var text: String
-    var defaultState: Bool
+    var placehold: String
     var sendButtonAction: () -> Void
 
     var body: some View {
         ZStack {
             HStack {
                 TextField(text: $text, axis: .vertical) {
-                    Text("@catto")
+                    Text(placehold)
                         .foregroundStyle(.textSecondary)
                 }
                 .autocorrectionDisabled(true)
                 .lineLimit(2)
-                if defaultState == true {
+                if !text.isEmpty {
                     Button{
                         sendButtonAction()
                     } label: {
@@ -36,16 +36,12 @@ struct MiauTextField: View {
         }
         .foregroundStyle(.textButton)
         .focusable(true)
-        .padding([.top, .bottom], 11)
+        .padding([.top, .bottom], 13)
         .background(.bgButton)
-        .clipShape(RoundedRectangle(cornerRadius:16))
+        .clipShape(RoundedRectangle(cornerRadius:12))
     }
 }
 
 #Preview {
-    VStack {
-        MiauTextField(text: "", defaultState: true, sendButtonAction: {})
-        MiauTextField(text: "", defaultState: false, sendButtonAction: {})
-    }
-    .padding(16)
+    MiauTextField(text: "", placehold: "@catto", sendButtonAction: {})
 }
