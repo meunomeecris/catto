@@ -38,10 +38,11 @@ struct MiauTextField: View {
         .focusable(true)
         .padding([.top, .bottom], 13)
         .background(.bgButton)
-        .clipShape(RoundedRectangle(cornerRadius:12))
+        .clipShape(RoundedRectangle(cornerRadius:20))
     }
 }
 
 #Preview {
     MiauTextField(text: "", placehold: "@catto", sendButtonAction: {})
+        .padding(16)
 }
