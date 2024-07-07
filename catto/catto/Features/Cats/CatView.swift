@@ -1,5 +1,5 @@
 //
-//  CatsView.swift
+//  CatView.swift
 //  catto
 //
 //  Created by Cris Messias on 20/06/24.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CatsView: View {
-    @Binding var viewModel: CatsViewModel
+struct CatView: View {
+    @Binding var viewModel: CatViewModel
 
     var body: some View {
         NavigationStack {
@@ -17,9 +17,9 @@ struct CatsView: View {
                     ScrollView {
                         VStack(spacing: 16) {
                             if let image = viewModel.catImage {
-                                CatsImage(image: image)
+                                CatImage(image: image)
                             } else {
-                                CatsProgressView()
+                                CatProgressView()
                             }
                             CommentsView()
                         }
@@ -54,7 +54,7 @@ struct CatsView: View {
     }
 }
 
-struct CatsImage: View {
+struct CatImage: View {
     var image: UIImage
 
     var body: some View {
@@ -70,7 +70,7 @@ struct CatsImage: View {
     }
 }
 
-struct CatsProgressView: View {
+struct CatProgressView: View {
     var body: some View {
         ProgressView("Psiu, psiu, psiu")
             .foregroundStyle(.textPrimary)
@@ -84,5 +84,5 @@ struct CatsProgressView: View {
 }
 
 #Preview {
-    CatsView(viewModel: .constant(CatsViewModel(catGetUserCase: CatUserCase())))
+    CatView(viewModel: .constant(CatViewModel(catGetUserCase: CatUserCase())))
 }

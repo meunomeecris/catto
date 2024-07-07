@@ -1,5 +1,5 @@
 //
-//  CatsViewModel.swift
+//  CatViewModel.swift
 //  catto
 //
 //  Created by Cris Messias on 21/06/24.
@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 @Observable
-class CatsViewModel {
+class CatViewModel {
     var catGetUserCase: CatUserCase
     var catImage: UIImage? = nil
 

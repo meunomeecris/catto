@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            CatsView(viewModel: .constant(CatsViewModel(catGetUserCase: CatUserCase())))
+            CatView(viewModel: .constant(CatViewModel(catGetUserCase: CatUserCase())))
         }
     }
 }
