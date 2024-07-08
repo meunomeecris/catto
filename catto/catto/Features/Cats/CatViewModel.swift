@@ -14,7 +14,14 @@ class CatViewModel {
     init(catGetUserCase: CatUserCase) {
         self.catGetUserCase = catGetUserCase
     }
-
+    @MainActor
+    func getCatImage() -> String {
+        guard let catUrl = catGetUserCase.cats.first?.url else {
+            return "error"
+        }
+        return catUrl
+    }
+    
     func onCatsViewAppear() {
         Task {
             await catGetUserCase.getCats()

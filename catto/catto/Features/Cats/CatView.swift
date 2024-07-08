@@ -15,35 +15,7 @@ struct CatView: View {
             VStack {
                 ZStack {
                     ScrollView {
-                        VStack(spacing: 16) {
-                            ForEach(viewModel.catGetUserCase.cats) { cat in
-                                AsyncImage(url: URL(string: cat.url)) { phase in
-                                    switch phase {
-                                    case .empty:
-                                        CatProgressView()
-                                    case .success(let image):
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .clipShape(RoundedRectangle(cornerRadius: 16))
-                                            .overlay(content: {
-                                                RoundedRectangle(cornerRadius: 16)
-                                                    .stroke(.auxiliarCardCatBoard, lineWidth: 8)
-                                            })
-                                            .padding(.top, 16)
-                                    case .failure(let error):
-                                        Text("Failed to load image")
-                                            .foregroundColor(.red)
-                                    @unknown default:
-                                        EmptyView()
-                                    }
-                                }
-
-                            }
-                                CommentsView()
-                            .padding([.trailing, .leading], 16)
-                            .padding(.top, 16)
-                        }
+                        CatCard(viewModel: .constant(viewModel))
                     }
                     .toolbar {
                         ToolbarItem(placement: .topBarLeading) {
@@ -86,6 +58,37 @@ struct CatProgressView: View {
     }
 }
 
+struct CatCard: View {
+    @Binding var viewModel: CatViewModel
+
+    var body: some View {
+        VStack(spacing: 16) {
+            AsyncImage(url: URL(string: viewModel.getCatImage())) { phase in
+                switch phase {
+                case .empty:
+                    CatProgressView()
+                case .success(let image):
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                        .overlay(content: {
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(.auxiliarCardCatBoard, lineWidth: 8)
+                        })
+                        .padding(.top, 16)
+                case .failure(let error):
+                    CatProgressView()
+                @unknown default:
+                    EmptyView()
+                }
+            }
+            CommentsView()
+                .padding(.top, 16)
+        }
+        .padding([.trailing, .leading], 16)
+    }
+}
 #Preview {
     CatView(viewModel: .constant(CatViewModel(catGetUserCase: CatUserCase())))
 }
