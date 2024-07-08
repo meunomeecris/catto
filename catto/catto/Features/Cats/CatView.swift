@@ -77,7 +77,7 @@ struct CatCard: View {
                                 .stroke(.auxiliarCardCatBoard, lineWidth: 8)
                         })
                         .padding(.top, 16)
-                case .failure(let error):
+                case .failure(_):
                     CatProgressView()
                 @unknown default:
                     EmptyView()

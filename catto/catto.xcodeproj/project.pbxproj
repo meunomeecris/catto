@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A50A9DF2C19D15300DCA88C /* cattoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50A9DE2C19D15300DCA88C /* cattoApp.swift */; };
 		8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50A9E02C19D15300DCA88C /* ContentView.swift */; };
 		8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E22C19D15500DCA88C /* Assets.xcassets */; };
 		8A50A9E62C19D15500DCA88C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */; };
+		8A5582A02C3C35950012D58C /* cattoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55829F2C3C35950012D58C /* cattoApp.swift */; };
 		8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64FF782C222AC1001BB68D /* MiauTextField.swift */; };
 		8A7FE1F62C245E31005C0B3A /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FE1F52C245E31005C0B3A /* CatView.swift */; };
 		8A7FE1F82C246E07005C0B3A /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FE1F72C246E07005C0B3A /* CommentsView.swift */; };
@@ -30,10 +30,10 @@
 
 /* Begin PBXFileReference section */
 		8A50A9DB2C19D15300DCA88C /* catto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catto.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A50A9DE2C19D15300DCA88C /* cattoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cattoApp.swift; sourceTree = "<group>"; };
 		8A50A9E02C19D15300DCA88C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A50A9E22C19D15500DCA88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8A55829F2C3C35950012D58C /* cattoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cattoApp.swift; sourceTree = "<group>"; };
 		8A64FF782C222AC1001BB68D /* MiauTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauTextField.swift; sourceTree = "<group>"; };
 		8A7FE1F52C245E31005C0B3A /* CatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
 		8A7FE1F72C246E07005C0B3A /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		8A50A9DD2C19D15300DCA88C /* catto */ = {
 			isa = PBXGroup;
 			children = (
-				8A50A9DE2C19D15300DCA88C /* cattoApp.swift */,
+				8A55829F2C3C35950012D58C /* cattoApp.swift */,
 				8A50A9E02C19D15300DCA88C /* ContentView.swift */,
 				8A50A9E22C19D15500DCA88C /* Assets.xcassets */,
 				8AD96E1E2C2025E600EB2F5B /* Info.plist */,
@@ -248,13 +248,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7FE1F62C245E31005C0B3A /* CatView.swift in Sources */,
+				8A5582A02C3C35950012D58C /* cattoApp.swift in Sources */,
 				8AD96E202C20264200EB2F5B /* MiauFonts.swift in Sources */,
 				8A7FE1F82C246E07005C0B3A /* CommentsView.swift in Sources */,
 				8A7FE1FA2C25B175005C0B3A /* CatViewModel.swift in Sources */,
 				8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */,
 				8ADEEB152C1B21B5006B1C04 /* MiauColors.swift in Sources */,
 				8AB014DF2C21C4C6002DBA02 /* MiauCards.swift in Sources */,
-				8A50A9DF2C19D15300DCA88C /* cattoApp.swift in Sources */,
 				8AB1E23A2C381B0F00FE4D61 /* CatModel.swift in Sources */,
 				8AB014E12C21C9B2002DBA02 /* MiauButton.swift in Sources */,
 				8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */,

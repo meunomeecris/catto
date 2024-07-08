@@ -1,4 +1,3 @@
-//
 //  cattoApp.swift
 //  catto
 //
@@ -6,6 +5,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 @main
 struct cattoApp: App {
@@ -15,3 +15,4 @@ struct cattoApp: App {
         }
     }
 }
+
