@@ -16,57 +16,60 @@ struct CatView: View {
                 ZStack {
                     ScrollView {
                         VStack(spacing: 16) {
-                            if let image = viewModel.catImage {
-                                CatImage(image: image)
-                            } else {
-                                CatProgressView()
+                            ForEach(viewModel.catGetUserCase.cats) { cat in
+                                AsyncImage(url: URL(string: cat.url)) { phase in
+                                    switch phase {
+                                    case .empty:
+                                        CatProgressView()
+                                    case .success(let image):
+                                        image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .clipShape(RoundedRectangle(cornerRadius: 16))
+                                            .overlay(content: {
+                                                RoundedRectangle(cornerRadius: 16)
+                                                    .stroke(.auxiliarCardCatBoard, lineWidth: 8)
+                                            })
+                                            .padding(.top, 16)
+                                    case .failure(let error):
+                                        Text("Failed to load image")
+                                            .foregroundColor(.red)
+                                    @unknown default:
+                                        EmptyView()
+                                    }
+                                }
+
                             }
-                            CommentsView()
-                        }
-                        .padding([.trailing, .leading], 16)
-                        .padding(.top, 16)
-                    }
-                }
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Text("Catto")
-                            .heading()
-                            .foregroundStyle(.textPrimary)
-                    }
-                    ToolbarItem {
-                        MiauButtonProfile {
-                            viewModel.profileButtonPressed()
+                                CommentsView()
+                            .padding([.trailing, .leading], 16)
+                            .padding(.top, 16)
                         }
                     }
+                    .toolbar {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Text("Catto")
+                                .heading()
+                                .foregroundStyle(.textPrimary)
+                        }
+                        ToolbarItem {
+                            MiauButtonProfile {
+                                viewModel.profileButtonPressed()
+                            }
+                        }
+                    }
                 }
+                MiauTextField(
+                    text: "",
+                    placehold: "Title me",
+                    sendButtonAction: {
+                        viewModel.sendButtonPressed()
+                    })
+                .padding([.trailing, .leading], 16)
             }
-            MiauTextField(
-                text: "",
-                placehold: "Title me",
-                sendButtonAction: {
-                    viewModel.sendButtonPressed()
-                })
-            .padding([.trailing, .leading], 16)
+            .onAppear {
+                viewModel.onCatsViewAppear()
+            }
         }
-        .onAppear {
-            viewModel.onCatsViewAppear()
-        }
-    }
-}
-
-struct CatImage: View {
-    var image: UIImage
-
-    var body: some View {
-        Image(uiImage: image)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .overlay(content: {
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(.auxiliarCardCatBoard, lineWidth: 8)
-            })
-            .padding(.top, 16)
     }
 }
 
