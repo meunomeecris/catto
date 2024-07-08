@@ -12,8 +12,13 @@
 		8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E22C19D15500DCA88C /* Assets.xcassets */; };
 		8A50A9E62C19D15500DCA88C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */; };
 		8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64FF782C222AC1001BB68D /* MiauTextField.swift */; };
+		8A7FE1F62C245E31005C0B3A /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FE1F52C245E31005C0B3A /* CatView.swift */; };
+		8A7FE1F82C246E07005C0B3A /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FE1F72C246E07005C0B3A /* CommentsView.swift */; };
+		8A7FE1FA2C25B175005C0B3A /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FE1F92C25B175005C0B3A /* CatViewModel.swift */; };
 		8AB014DF2C21C4C6002DBA02 /* MiauCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB014DE2C21C4C6002DBA02 /* MiauCards.swift */; };
 		8AB014E12C21C9B2002DBA02 /* MiauButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB014E02C21C9B2002DBA02 /* MiauButton.swift */; };
+		8AB1E23A2C381B0F00FE4D61 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1E2392C381B0F00FE4D61 /* CatModel.swift */; };
+		8AB1E23E2C38222400FE4D61 /* CatUserCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1E23D2C38222400FE4D61 /* CatUserCase.swift */; };
 		8AD96E1B2C20254300EB2F5B /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD96E182C20254300EB2F5B /* Inter-Light.ttf */; };
 		8AD96E1D2C20254300EB2F5B /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD96E1A2C20254300EB2F5B /* Inter-Regular.ttf */; };
 		8AD96E202C20264200EB2F5B /* MiauFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD96E1F2C20264200EB2F5B /* MiauFonts.swift */; };
@@ -30,8 +35,14 @@
 		8A50A9E22C19D15500DCA88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A64FF782C222AC1001BB68D /* MiauTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauTextField.swift; sourceTree = "<group>"; };
+		8A7FE1F52C245E31005C0B3A /* CatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
+		8A7FE1F72C246E07005C0B3A /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		8A7FE1F92C25B175005C0B3A /* CatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModel.swift; sourceTree = "<group>"; };
 		8AB014DE2C21C4C6002DBA02 /* MiauCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauCards.swift; sourceTree = "<group>"; };
 		8AB014E02C21C9B2002DBA02 /* MiauButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauButton.swift; sourceTree = "<group>"; };
+		8AB1E2392C381B0F00FE4D61 /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
+		8AB1E23B2C381BFF00FE4D61 /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
+		8AB1E23D2C38222400FE4D61 /* CatUserCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatUserCase.swift; sourceTree = "<group>"; };
 		8AD96E182C20254300EB2F5B /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		8AD96E1A2C20254300EB2F5B /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		8AD96E1E2C2025E600EB2F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +64,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A0D8AF22C3ABA8400C069C0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		8A50A9D22C19D15300DCA88C = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +90,12 @@
 		8A50A9DD2C19D15300DCA88C /* catto */ = {
 			isa = PBXGroup;
 			children = (
-				8AD96E1E2C2025E600EB2F5B /* Info.plist */,
-				8ADEEB102C1B16E9006B1C04 /* Miau */,
 				8A50A9DE2C19D15300DCA88C /* cattoApp.swift */,
 				8A50A9E02C19D15300DCA88C /* ContentView.swift */,
 				8A50A9E22C19D15500DCA88C /* Assets.xcassets */,
+				8AD96E1E2C2025E600EB2F5B /* Info.plist */,
+				8A7FE1F32C245E1B005C0B3A /* Features */,
+				8ADEEB102C1B16E9006B1C04 /* Miau */,
 				8A50A9E42C19D15500DCA88C /* Preview Content */,
 			);
 			path = catto;
@@ -88,6 +107,44 @@
 				8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8A7FE1F32C245E1B005C0B3A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8A7FE1F42C245E25005C0B3A /* Cats */,
+				8AB1E2382C381A9200FE4D61 /* Model */,
+				8A0D8AF22C3ABA8400C069C0 /* Tests */,
+				8AB1E23C2C381C0A00FE4D61 /* SecurityAPIKeys */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8A7FE1F42C245E25005C0B3A /* Cats */ = {
+			isa = PBXGroup;
+			children = (
+				8A7FE1F52C245E31005C0B3A /* CatView.swift */,
+				8A7FE1F92C25B175005C0B3A /* CatViewModel.swift */,
+				8A7FE1F72C246E07005C0B3A /* CommentsView.swift */,
+			);
+			path = Cats;
+			sourceTree = "<group>";
+		};
+		8AB1E2382C381A9200FE4D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8AB1E2392C381B0F00FE4D61 /* CatModel.swift */,
+				8AB1E23D2C38222400FE4D61 /* CatUserCase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8AB1E23C2C381C0A00FE4D61 /* SecurityAPIKeys */ = {
+			isa = PBXGroup;
+			children = (
+				8AB1E23B2C381BFF00FE4D61 /* Secret.xcconfig */,
+			);
+			path = SecurityAPIKeys;
 			sourceTree = "<group>";
 		};
 		8AD96E172C20252F00EB2F5B /* Fonts */ = {
@@ -190,13 +247,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A7FE1F62C245E31005C0B3A /* CatView.swift in Sources */,
 				8AD96E202C20264200EB2F5B /* MiauFonts.swift in Sources */,
+				8A7FE1F82C246E07005C0B3A /* CommentsView.swift in Sources */,
+				8A7FE1FA2C25B175005C0B3A /* CatViewModel.swift in Sources */,
 				8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */,
 				8ADEEB152C1B21B5006B1C04 /* MiauColors.swift in Sources */,
 				8AB014DF2C21C4C6002DBA02 /* MiauCards.swift in Sources */,
 				8A50A9DF2C19D15300DCA88C /* cattoApp.swift in Sources */,
+				8AB1E23A2C381B0F00FE4D61 /* CatModel.swift in Sources */,
 				8AB014E12C21C9B2002DBA02 /* MiauButton.swift in Sources */,
 				8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */,
+				8AB1E23E2C38222400FE4D61 /* CatUserCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +386,7 @@
 		};
 		8A50A9EA2C19D15500DCA88C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AB1E23B2C381BFF00FE4D61 /* Secret.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -354,6 +417,7 @@
 		};
 		8A50A9EB2C19D15500DCA88C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AB1E23B2C381BFF00FE4D61 /* Secret.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

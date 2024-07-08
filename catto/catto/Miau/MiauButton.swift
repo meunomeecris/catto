@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MiauPrimaryButton: View {
+struct MiauButtonPrimary: View {
     var btnLabel: String
     var action: () -> Void
 
@@ -27,12 +27,31 @@ struct MiauPrimaryButton: View {
     }
 }
 
-struct MiauFavoriteButton: View {
-    @State var isPressed: Bool
+struct MiauButtonProfile: View {
     var action: () -> Void
 
     var body: some View {
-        Button(action: action) {
+        Button(action: {
+            action()
+        }, label: {
+            Image("avatarUser")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 32, height: 32)
+                .clipShape(Circle())
+        })
+    }
+}
+
+struct MiauButtonFavorite: View {
+    @Binding var isPressed: Bool
+    var action: () -> Void
+
+    var body: some View {
+        Button(action: {
+            isPressed.toggle()
+            action()
+        }) {
             Image(systemName: isPressed ? "heart.fill" : "heart" )
                 .resizable()
                 .scaledToFit()
@@ -45,7 +64,7 @@ struct MiauFavoriteButton: View {
     }
 }
 
-struct MiauNextButton: View {
+struct MiauButtonNext: View {
     var action: () -> Void
 
     var body: some View {
@@ -62,7 +81,7 @@ struct MiauNextButton: View {
     }
 }
 
-struct MiauCloseButton: View {
+struct MiauButtonClose: View {
     var action: () -> Void
 
     var body: some View {
@@ -82,13 +101,14 @@ struct MiauCloseButton: View {
 #Preview {
     VStack {
         HStack {
-            MiauPrimaryButton(btnLabel: "Primary", action: {})
-            MiauFavoriteButton(isPressed: true, action: {})
+            MiauButtonPrimary(btnLabel: "Primary", action: {})
+            MiauButtonFavorite(isPressed: .constant(true), action: {})
         }
-        MiauPrimaryButton(btnLabel: "Primary", action: {})
-        MiauFavoriteButton(isPressed: true, action: {})
-        MiauFavoriteButton(isPressed: false, action: {})
-        MiauNextButton(action: {})
-        MiauCloseButton(action: {})
+        MiauButtonProfile(action: {})
+        MiauButtonPrimary(btnLabel: "Primary", action: {})
+        MiauButtonFavorite(isPressed: .constant(true), action: {})
+        MiauButtonFavorite(isPressed: .constant(false), action: {})
+        MiauButtonNext(action: {})
+        MiauButtonClose(action: {})
     }
 }
