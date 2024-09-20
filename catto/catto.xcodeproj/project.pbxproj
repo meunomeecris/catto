@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,7 +41,6 @@
 		8AB014DE2C21C4C6002DBA02 /* MiauCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauCards.swift; sourceTree = "<group>"; };
 		8AB014E02C21C9B2002DBA02 /* MiauButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauButton.swift; sourceTree = "<group>"; };
 		8AB1E2392C381B0F00FE4D61 /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
-		8AB1E23B2C381BFF00FE4D61 /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
 		8AB1E23D2C38222400FE4D61 /* CatUserCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatUserCase.swift; sourceTree = "<group>"; };
 		8AD96E182C20254300EB2F5B /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		8AD96E1A2C20254300EB2F5B /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
@@ -52,6 +51,10 @@
 		8AD96E252C20382E00EB2F5B /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		8ADEEB142C1B21B5006B1C04 /* MiauColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8AEE39582C9D427500C42BC0 /* Resource */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resource; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8A50A9D82C19D15300DCA88C /* Frameworks */ = {
@@ -114,8 +117,8 @@
 			children = (
 				8A7FE1F42C245E25005C0B3A /* Cats */,
 				8AB1E2382C381A9200FE4D61 /* Model */,
+				8AEE39582C9D427500C42BC0 /* Resource */,
 				8A0D8AF22C3ABA8400C069C0 /* Tests */,
-				8AB1E23C2C381C0A00FE4D61 /* SecurityAPIKeys */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -137,14 +140,6 @@
 				8AB1E23D2C38222400FE4D61 /* CatUserCase.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		8AB1E23C2C381C0A00FE4D61 /* SecurityAPIKeys */ = {
-			isa = PBXGroup;
-			children = (
-				8AB1E23B2C381BFF00FE4D61 /* Secret.xcconfig */,
-			);
-			path = SecurityAPIKeys;
 			sourceTree = "<group>";
 		};
 		8AD96E172C20252F00EB2F5B /* Fonts */ = {
@@ -186,6 +181,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8AEE39582C9D427500C42BC0 /* Resource */,
 			);
 			name = catto;
 			productName = catto;
@@ -386,7 +384,6 @@
 		};
 		8A50A9EA2C19D15500DCA88C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AB1E23B2C381BFF00FE4D61 /* Secret.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -417,7 +414,6 @@
 		};
 		8A50A9EB2C19D15500DCA88C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AB1E23B2C381BFF00FE4D61 /* Secret.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

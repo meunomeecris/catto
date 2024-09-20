@@ -10,21 +10,26 @@ import Foundation
 @Observable
 class CatViewModel {
     var catGetUserCase: CatUserCase
+    var cats: [CatModel] = []
 
     init(catGetUserCase: CatUserCase) {
         self.catGetUserCase = catGetUserCase
     }
-    @MainActor
+
     func getCatImage() -> String {
-        guard let catUrl = catGetUserCase.cats.first?.url else {
-            return "error"
+        guard let catUrl = cats.first?.url else {
+            return "Cat's url not found"
         }
         return catUrl
     }
-    
+
     func onCatsViewAppear() {
         Task {
-            await catGetUserCase.getCats()
+            do {
+             cats = try await catGetUserCase.getCats()
+            } catch APIError.invalidURL {
+                print("Invalid Url")
+            }
         }
     }
 
