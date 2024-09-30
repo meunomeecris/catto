@@ -15,7 +15,12 @@ struct CatView: View {
             VStack {
                 ZStack {
                     ScrollView {
-                        CatCard(viewModel: .constant(viewModel))
+                        VStack(spacing: 16) {
+                            CatCardView(viewModel: .constant(CatCardViewModel(catViewModel: viewModel)))
+                            CaptionView()
+                                .padding(.top, 16)
+                        }
+                        .padding([.trailing, .leading], 16)
                     }
                     .toolbar {
                         ToolbarItem(placement: .topBarLeading) {
@@ -45,50 +50,6 @@ struct CatView: View {
     }
 }
 
-struct CatProgressView: View {
-    var body: some View {
-        ProgressView("Psiu, psiu, psiu")
-            .foregroundStyle(.textPrimary)
-            .frame(minWidth: 350, minHeight: 400)
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .overlay(content: {
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(.auxiliarCardCatBoard, lineWidth: 8)
-            })
-    }
-}
-
-struct CatCard: View {
-    @Binding var viewModel: CatViewModel
-
-    var body: some View {
-        VStack(spacing: 16) {
-            AsyncImage(url: URL(string: viewModel.getCatImage())) { phase in
-                switch phase {
-                case .empty:
-                    CatProgressView()
-                case .success(let image):
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
-                        .overlay(content: {
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(.auxiliarCardCatBoard, lineWidth: 8)
-                        })
-                        .padding(.top, 16)
-                case .failure(_):
-                    CatProgressView()
-                @unknown default:
-                    EmptyView()
-                }
-            }
-            CommentsView()
-                .padding(.top, 16)
-        }
-        .padding([.trailing, .leading], 16)
-    }
-}
 #Preview {
     CatView(viewModel: .constant(CatViewModel(catGetUserCase: CatUserCase())))
 }

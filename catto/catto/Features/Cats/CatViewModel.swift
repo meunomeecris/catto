@@ -16,13 +16,6 @@ class CatViewModel {
         self.catGetUserCase = catGetUserCase
     }
 
-    func getCatImage() -> String {
-        guard let catUrl = cats.first?.url else {
-            return "Cat's url not found"
-        }
-        return catUrl
-    }
-
     func onCatsViewAppear() {
         Task {
             do {
