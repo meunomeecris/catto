@@ -10,17 +10,14 @@ import Foundation
 @Observable
 class CatCardViewModel {
     var catViewModel: CatViewModel
-    var isAlertPresented: Bool
-
-    init(catViewModel: CatViewModel, isAlertPresented: Bool = false) {
+    
+    init(catViewModel: CatViewModel) {
         self.catViewModel = catViewModel
-        self.isAlertPresented = isAlertPresented
     }
 
     func getCatImage() -> String {
         guard let catUrl = catViewModel.cats.first?.url else {
-            isAlertPresented = true
-            return "Cat's url not found"
+            return  "error: \(APIError.invalidURL.localizedDescription)"
         }
         return catUrl
     }

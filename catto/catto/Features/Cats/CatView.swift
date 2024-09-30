@@ -17,8 +17,8 @@ struct CatView: View {
                     ScrollView {
                         VStack(spacing: 16) {
                             CatCardView(viewModel: .constant(CatCardViewModel(catViewModel: viewModel)))
-                            CaptionView()
-                                .padding(.top, 16)
+//                            CaptionView()
+//                                .padding(.top, 16)
                         }
                         .padding([.trailing, .leading], 16)
                     }
@@ -35,18 +35,24 @@ struct CatView: View {
                         }
                     }
                 }
-                MiauTextField(
-                    text: "",
-                    placehold: "Title me",
-                    sendButtonAction: {
-                        viewModel.sendButtonPressed()
-                    })
-                .padding([.trailing, .leading], 16)
+//                MiauTextField(
+//                    text: "",
+//                    placehold: "Title me",
+//                    sendButtonAction: {
+//                        viewModel.sendButtonPressed()
+//                    })
+//                .padding([.trailing, .leading], 16)
             }
             .onAppear {
                 viewModel.onCatsViewAppear()
             }
+            .alert("Uh-oh", isPresented: .constant(viewModel.isAlertPresented)) {
+                Button("ok") {}
+            } message: {
+                Text("We’ve hit a cat-tastrophe! Try again later.")
+            }
         }
+        .padding(.top, 16)
     }
 }
 

@@ -31,11 +31,7 @@ struct CatCardView: View {
                     EmptyView()
                 }
             }
-            .alert("Uh-oh", isPresented: .constant(viewModel.isAlertPresented)) {
-                Button("I get it!", role: .cancel) { }
-            } message: {
-                Text("We’ve hit a cat-tastrophe! Try again later.")
-            }
+            
     }
 
     struct CatProgressView: View {

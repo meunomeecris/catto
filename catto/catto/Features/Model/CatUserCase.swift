@@ -7,7 +7,8 @@
 
 import Foundation
 
-@Observable class CatUserCase {
+
+class CatUserCase {
     let apiError = APIError.self
 
     func getCats() async throws -> [CatModel] {
@@ -35,7 +36,7 @@ import Foundation
         case 502: throw apiError.badGateway
         case 503: throw apiError.serviceUnavailable
         case 504: throw apiError.gatewayTimeout
-        default: throw apiError.unkown
+        default: throw apiError.unknown
         }
 
         //Convert the JSON to Swift Data
@@ -47,46 +48,3 @@ import Foundation
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-    //    func getCats() async {
-    //
-    //        let apiKey = "live_BYaJAKzpgJDw8juW988YkW2jRps8u9HoOHgYLLu1hzBOAPKKNNLiuG4xFC4vLRqI"
-    //
-    //        let urlAPICat = "https://api.thecatapi.com/v1/images/search?limit=11&breed_ids=beng&api_key=\(apiKey)"
-    //
-    //        //Cria um URL apartir da string fornecida ou encerra a função
-    //        guard let urlRequest = URL(string: urlAPICat) else {
-    //            print("Invalid URL")
-    //            return
-    //        }
-    //
-    //        //Bloco que pode lançar erros
-    //        do {
-    //            //Faz uma solicitação HTTP para baixar dados da URL
-    //            let (data, _) = try await URLSession.shared.data(from: urlRequest)
-    //            //Tenta decodificar os dados recevidos em um array de CatModel
-    //            let catData = try JSONDecoder().decode([CatModel].self, from: data)
-    //            //Verifica se existe um objeto CatModel e atualiza a thread para reflita na interface do usuário
-    //                DispatchQueue.main.async {
-    //                    self.cats = catData
-    //                    print(self.cats.count)
-    //                }
-    //            //Capture qualquer erro do bloco
-    //        } catch {
-    //            print("Resquest error: \(error.localizedDescription)")
-    //        }
-    //    }
-
-
-
-
