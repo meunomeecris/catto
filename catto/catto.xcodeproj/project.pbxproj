@@ -11,9 +11,11 @@
 		8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E22C19D15500DCA88C /* Assets.xcassets */; };
 		8A50A9E62C19D15500DCA88C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */; };
 		8A5582A02C3C35950012D58C /* cattoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55829F2C3C35950012D58C /* cattoApp.swift */; };
+		8A5C9AF52CAAA2D50024AC6A /* CatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C9AF42CAAA2D50024AC6A /* CatCardView.swift */; };
+		8A5C9AF92CAAA32C0024AC6A /* CatCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C9AF82CAAA32C0024AC6A /* CatCardViewModel.swift */; };
 		8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64FF782C222AC1001BB68D /* MiauTextField.swift */; };
 		8A7FE1F62C245E31005C0B3A /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FE1F52C245E31005C0B3A /* CatView.swift */; };
-		8A7FE1F82C246E07005C0B3A /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FE1F72C246E07005C0B3A /* CommentsView.swift */; };
+		8A7FE1F82C246E07005C0B3A /* CaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FE1F72C246E07005C0B3A /* CaptionView.swift */; };
 		8A7FE1FA2C25B175005C0B3A /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7FE1F92C25B175005C0B3A /* CatViewModel.swift */; };
 		8AB014DF2C21C4C6002DBA02 /* MiauCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB014DE2C21C4C6002DBA02 /* MiauCards.swift */; };
 		8AB014E12C21C9B2002DBA02 /* MiauButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB014E02C21C9B2002DBA02 /* MiauButton.swift */; };
@@ -34,9 +36,11 @@
 		8A50A9E22C19D15500DCA88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A55829F2C3C35950012D58C /* cattoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cattoApp.swift; sourceTree = "<group>"; };
+		8A5C9AF42CAAA2D50024AC6A /* CatCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCardView.swift; sourceTree = "<group>"; };
+		8A5C9AF82CAAA32C0024AC6A /* CatCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCardViewModel.swift; sourceTree = "<group>"; };
 		8A64FF782C222AC1001BB68D /* MiauTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauTextField.swift; sourceTree = "<group>"; };
 		8A7FE1F52C245E31005C0B3A /* CatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
-		8A7FE1F72C246E07005C0B3A /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		8A7FE1F72C246E07005C0B3A /* CaptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionView.swift; sourceTree = "<group>"; };
 		8A7FE1F92C25B175005C0B3A /* CatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModel.swift; sourceTree = "<group>"; };
 		8AB014DE2C21C4C6002DBA02 /* MiauCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauCards.swift; sourceTree = "<group>"; };
 		8AB014E02C21C9B2002DBA02 /* MiauButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauButton.swift; sourceTree = "<group>"; };
@@ -112,10 +116,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8A5C9AF32CAA981F0024AC6A /* Captions */ = {
+			isa = PBXGroup;
+			children = (
+				8A7FE1F72C246E07005C0B3A /* CaptionView.swift */,
+			);
+			path = Captions;
+			sourceTree = "<group>";
+		};
 		8A7FE1F32C245E1B005C0B3A /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				8A7FE1F42C245E25005C0B3A /* Cats */,
+				8A5C9AF32CAA981F0024AC6A /* Captions */,
 				8AB1E2382C381A9200FE4D61 /* Model */,
 				8AEE39582C9D427500C42BC0 /* Resource */,
 				8A0D8AF22C3ABA8400C069C0 /* Tests */,
@@ -128,7 +141,8 @@
 			children = (
 				8A7FE1F52C245E31005C0B3A /* CatView.swift */,
 				8A7FE1F92C25B175005C0B3A /* CatViewModel.swift */,
-				8A7FE1F72C246E07005C0B3A /* CommentsView.swift */,
+				8A5C9AF42CAAA2D50024AC6A /* CatCardView.swift */,
+				8A5C9AF82CAAA32C0024AC6A /* CatCardViewModel.swift */,
 			);
 			path = Cats;
 			sourceTree = "<group>";
@@ -248,15 +262,17 @@
 				8A7FE1F62C245E31005C0B3A /* CatView.swift in Sources */,
 				8A5582A02C3C35950012D58C /* cattoApp.swift in Sources */,
 				8AD96E202C20264200EB2F5B /* MiauFonts.swift in Sources */,
-				8A7FE1F82C246E07005C0B3A /* CommentsView.swift in Sources */,
+				8A7FE1F82C246E07005C0B3A /* CaptionView.swift in Sources */,
 				8A7FE1FA2C25B175005C0B3A /* CatViewModel.swift in Sources */,
 				8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */,
 				8ADEEB152C1B21B5006B1C04 /* MiauColors.swift in Sources */,
+				8A5C9AF52CAAA2D50024AC6A /* CatCardView.swift in Sources */,
 				8AB014DF2C21C4C6002DBA02 /* MiauCards.swift in Sources */,
 				8AB1E23A2C381B0F00FE4D61 /* CatModel.swift in Sources */,
 				8AB014E12C21C9B2002DBA02 /* MiauButton.swift in Sources */,
 				8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */,
 				8AB1E23E2C38222400FE4D61 /* CatUserCase.swift in Sources */,
+				8A5C9AF92CAAA32C0024AC6A /* CatCardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

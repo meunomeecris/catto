@@ -10,25 +10,22 @@ import Foundation
 @Observable
 class CatViewModel {
     var catGetUserCase: CatUserCase
-    var cats: [CatModel] = []
+    var cats: [CatModel]
+    var isAlertPresented: Bool
 
-    init(catGetUserCase: CatUserCase) {
+    init(catGetUserCase: CatUserCase, cats: [CatModel] = [] , isAlertPresented: Bool = false) {
         self.catGetUserCase = catGetUserCase
-    }
-
-    func getCatImage() -> String {
-        guard let catUrl = cats.first?.url else {
-            return "Cat's url not found"
-        }
-        return catUrl
+        self.cats = cats
+        self.isAlertPresented = isAlertPresented
     }
 
     func onCatsViewAppear() {
         Task {
             do {
              cats = try await catGetUserCase.getCats()
-            } catch APIError.invalidURL {
-                print("Invalid Url")
+            } catch {
+                print("Error occurred on getCats:\(error.localizedDescription)")
+                isAlertPresented.toggle()
             }
         }
     }

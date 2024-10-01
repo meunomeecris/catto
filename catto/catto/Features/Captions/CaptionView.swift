@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CommentsView: View {
+struct CaptionView: View {
     var body: some View {
         VStack(spacing: 12) {
             MiauCard(username: "@catto", comment: " I will eat all ratatouilles", likes: 13, url: "https://s.yimg.com/ny/api/res/1.2/NV.9pY4aUmqpKFaH8EhyNA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xNTAw/https://s.yimg.com/os/en_US/News/BGR_News/funny-cat.jpg", isMostVoted: true)
@@ -18,5 +18,5 @@ struct CommentsView: View {
 }
 
 #Preview {
-    CommentsView()
+    CaptionView()
 }
