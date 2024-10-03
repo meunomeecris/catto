@@ -11,7 +11,21 @@ struct CatCardView: View {
     @Binding var viewModel: CatCardViewModel
 
     var body: some View {
-        AsyncImage(url: URL(string: viewModel.getCatImage)) { phase in
+        VStack(spacing: 24) {
+            ZStack {
+                ForEach(viewModel.getAllCats, id: \.self) { eachCat in
+                    CatImagesView(urlString: eachCat.url)
+                }
+            }
+        }
+    }
+
+    struct CatImagesView: View {
+        var urlString: String
+        @State var offset: CGSize = .zero
+
+        var body: some View {
+            AsyncImage(url: URL(string: urlString )) { phase in
                 switch phase {
                 case .empty:
                     CatProgressView()
@@ -19,6 +33,8 @@ struct CatCardView: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                        .frame(height: 500)
+                        .background(.bgScreen)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                         .overlay(content: {
                             RoundedRectangle(cornerRadius: 16)
@@ -28,10 +44,36 @@ struct CatCardView: View {
                 case .failure(_):
                     CatProgressView()
                 @unknown default:
-                    EmptyView()
+                    CatProgressView()
                 }
             }
-            
+            .offset(x: offset.width, y: offset.height * 0.4)
+            .rotationEffect(.degrees(Double(offset.width / 40)))
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        withAnimation(.spring()) {
+                            offset = value.translation
+                        }
+                    }
+                    .onEnded { value in
+                        withAnimation(.spring()) {
+                            swipeCard(width: offset.width)
+                        }
+                    }
+            )
+        }
+
+        func swipeCard(width: CGFloat) {
+            switch width {
+            case -500...(-200):
+                offset = CGSize(width: -500, height: 0)
+            case 200...500:
+                offset = CGSize(width: 500, height: 0)
+            default:
+                offset = .zero
+            }
+        }
     }
 
     struct CatProgressView: View {
@@ -46,8 +88,4 @@ struct CatCardView: View {
                 })
         }
     }
-}
-
-#Preview {
-    
 }

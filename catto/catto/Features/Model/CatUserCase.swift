@@ -10,12 +10,7 @@ import Foundation
 @Observable
 class CatUserCase {
     let apiError = APIError.self
-    var catModel: CatModel?
-
-    public init(catModel: CatModel? = nil) {
-        self.catModel = catModel
-    }
-
+    var catModel: [CatModel] = []
 
     func getCats() async throws {
         guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=11&breed_ids=beng&api_key=live_BYaJAKzpgJDw8juW988YkW2jRps8u9HoOHgYLLu1hzBOAPKKNNLiuG4xFC4vLRqI") else {
@@ -43,22 +38,12 @@ class CatUserCase {
             }
 
             let catData = try JSONDecoder().decode([CatModel].self, from: data)
-            if let cat = catData.first {
-                DispatchQueue.main.async {
-                    print(catData.count)
-                    self.catModel = cat
-                }
+            DispatchQueue.main.async {
+                self.catModel = catData
             }
         } catch {
             print("Error: \(error.localizedDescription)")
             throw apiError.invalidData
         }
-    }
-
-    func getImage() -> String {
-        guard let catUrl = catModel?.url else {
-            return "error: \(APIError.invalidURL.localizedDescription)"
-        }
-        return catUrl
     }
 }

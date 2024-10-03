@@ -11,19 +11,11 @@ import Foundation
 class CatCardViewModel {
     var catGetUserCase: CatUserCase
 
-
     init(catGetUserCase: CatUserCase) {
         self.catGetUserCase = catGetUserCase
     }
-    
-    var getCatImage: String  {
-        catGetUserCase.getImage()
-    }
 
-//    func getCatImage() -> String {
-//        guard let catUrl = catViewModel.cats.first?.url else {
-//            return  "error: \(APIError.invalidURL.localizedDescription)"
-//        }
-//        return catUrl
-//    }
+    var getAllCats: [CatModel] {
+        catGetUserCase.catModel
+    }
 }
