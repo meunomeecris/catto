@@ -10,20 +10,21 @@ import Foundation
 @Observable
 class CatCardViewModel {
     var catGetUserCase: CatUserCase
-
+    var currentCat: Int = 0
 
     init(catGetUserCase: CatUserCase) {
         self.catGetUserCase = catGetUserCase
     }
-    
-    var getCatImage: String  {
-        catGetUserCase.getImage()
+
+    func getCatImage() -> String {
+        if !catGetUserCase.catModel.isEmpty && currentCat < catGetUserCase.catModel.count {
+            return catGetUserCase.catModel[currentCat].url
+        } else {
+            return "Error: Invalid URL"
+        }
     }
 
-//    func getCatImage() -> String {
-//        guard let catUrl = catViewModel.cats.first?.url else {
-//            return  "error: \(APIError.invalidURL.localizedDescription)"
-//        }
-//        return catUrl
-//    }
+    func getNextImageButtonPressed() {
+        currentCat += 1
+    }
 }

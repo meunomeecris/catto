@@ -11,7 +11,8 @@ struct CatCardView: View {
     @Binding var viewModel: CatCardViewModel
 
     var body: some View {
-        AsyncImage(url: URL(string: viewModel.getCatImage)) { phase in
+        VStack(spacing: 24) {
+            AsyncImage(url: URL(string: viewModel.getCatImage())) { phase in
                 switch phase {
                 case .empty:
                     CatProgressView()
@@ -31,7 +32,10 @@ struct CatCardView: View {
                     EmptyView()
                 }
             }
-            
+            MiauButtonPrimary(btnLabel: "More Cats") {
+                viewModel.getNextImageButtonPressed()
+            }
+        }
     }
 
     struct CatProgressView: View {

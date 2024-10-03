@@ -57,6 +57,6 @@ struct CatView: View {
     }
 }
 
-#Preview {
-    CatView(viewModel: .constant(CatViewModel(catGetUserCase: CatUserCase())))
-}
+//#Preview {
+//    CatView(viewModel: .constant(CatViewModel(catGetUserCase: CatUserCase())))
+//}
