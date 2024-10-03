@@ -17,8 +17,8 @@ struct CatView: View {
                     ScrollView {
                         VStack(spacing: 16) {
                             CatCardView(viewModel: .constant(CatCardViewModel(catGetUserCase: viewModel.catGetUserCase)))
-//                            CaptionView()
-//                                .padding(.top, 16)
+                            CaptionView()
+                                .padding(.top, 16)
 
                         }
                         .padding([.trailing, .leading], 16)
@@ -36,13 +36,13 @@ struct CatView: View {
                         }
                     }
                 }
-//                MiauTextField(
-//                    text: "",
-//                    placehold: "Title me",
-//                    sendButtonAction: {
-//                        viewModel.sendButtonPressed()
-//                    })
-//                .padding([.trailing, .leading], 16)
+                MiauTextField(
+                    text: "",
+                    placehold: "Title me",
+                    sendButtonAction: {
+                        viewModel.sendButtonPressed()
+                    })
+                .padding([.trailing, .leading], 16)
             }
             .onAppear {
                 viewModel.onCatsViewAppear()
@@ -56,7 +56,3 @@ struct CatView: View {
         .padding(.top, 16)
     }
 }
-
-//#Preview {
-//    CatView(viewModel: .constant(CatViewModel(catGetUserCase: CatUserCase())))
-//}
