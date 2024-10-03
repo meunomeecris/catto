@@ -11,7 +11,7 @@ struct CatCardView: View {
     @Binding var viewModel: CatCardViewModel
 
     var body: some View {
-            AsyncImage(url: URL(string: viewModel.getCatImage())) { phase in
+        AsyncImage(url: URL(string: viewModel.getCatImage)) { phase in
                 switch phase {
                 case .empty:
                     CatProgressView()

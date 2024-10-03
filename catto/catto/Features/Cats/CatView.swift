@@ -16,9 +16,10 @@ struct CatView: View {
                 ZStack {
                     ScrollView {
                         VStack(spacing: 16) {
-                            CatCardView(viewModel: .constant(CatCardViewModel(catViewModel: viewModel)))
+                            CatCardView(viewModel: .constant(CatCardViewModel(catGetUserCase: viewModel.catGetUserCase)))
 //                            CaptionView()
 //                                .padding(.top, 16)
+
                         }
                         .padding([.trailing, .leading], 16)
                     }
