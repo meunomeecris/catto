@@ -7,42 +7,23 @@
 
 import SwiftUI
 
-struct MiauTextField: View {
-    @State var text: String
-    var placehold: String
-    var sendButtonAction: () -> Void
 
-    var body: some View {
-        ZStack {
-            HStack {
-                TextField(text: $text, axis: .vertical) {
-                    Text(placehold)
-                        .foregroundStyle(.textSecondary)
-                }
-                .autocorrectionDisabled(true)
-                .lineLimit(2)
-                if !text.isEmpty {
-                    Button{
-                        sendButtonAction()
-                    } label: {
-                        Image(systemName: "paperplane.fill")
-                            .font(.title3)
-                            .foregroundStyle(.auxiliarBrand)
-                    }
-
-                }
-            }
-            .padding([.trailing, .leading], 16)
-        }
-        .foregroundStyle(.textButton)
-        .focusable(true)
-        .padding([.top, .bottom], 13)
-        .background(.bgButton)
-        .clipShape(RoundedRectangle(cornerRadius:20))
+struct MiauTexFieldModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .foregroundStyle(.textButton)
+            .focusable(true)
+            .padding([.top, .bottom], 13)
+            .padding(.horizontal)
+            .background(.bgButton)
+            .clipShape(RoundedRectangle(cornerRadius:16))
+            .autocorrectionDisabled(true)
+            .lineLimit(2)
     }
 }
 
-#Preview {
-    MiauTextField(text: "", placehold: "@catto", sendButtonAction: {})
-        .padding(16)
+extension View {
+    func miauTextField() -> some View {
+        self.modifier(MiauTexFieldModifier())
+    }
 }

@@ -11,10 +11,12 @@ import Foundation
 class CatViewModel {
     var catGetUserCase: CatUserCase
     var isAlertPresented: Bool
+    var captionInput: String
 
-    init(catGetUserCase: CatUserCase, isAlertPresented: Bool = false) {
+    init(catGetUserCase: CatUserCase, isAlertPresented: Bool = false, captionInput: String = "") {
         self.catGetUserCase = catGetUserCase
         self.isAlertPresented = isAlertPresented
+        self.captionInput = captionInput
     }
 
     func onCatsViewAppear() {
@@ -28,10 +30,11 @@ class CatViewModel {
         }
     }
 
-    func profileButtonPressed() {
-        
+    func sendButtonPressed() {
+        captionInput = ""
     }
 
-    func sendButtonPressed() {
+    func profileButtonPressed() {
+
     }
 }

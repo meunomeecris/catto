@@ -33,7 +33,7 @@ struct CatCardView: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(height: 500)
+                        .frame(height: 440)
                         .background(.bgScreen)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                         .overlay(content: {

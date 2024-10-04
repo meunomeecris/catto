@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CatView: View {
+struct CatView: View {  
     @Binding var viewModel: CatViewModel
 
     var body: some View {
@@ -36,13 +36,7 @@ struct CatView: View {
                         }
                     }
                 }
-                MiauTextField(
-                    text: "",
-                    placehold: "Title me",
-                    sendButtonAction: {
-                        viewModel.sendButtonPressed()
-                    })
-                .padding([.trailing, .leading], 16)
+                TextFieldCaption(viewModel: .constant(CatViewModel(catGetUserCase: viewModel.catGetUserCase)))
             }
             .onAppear {
                 viewModel.onCatsViewAppear()
@@ -54,5 +48,36 @@ struct CatView: View {
             }
         }
         .padding(.top, 16)
+    }
+}
+
+struct TextFieldCaption: View {
+    @Binding var viewModel: CatViewModel
+    @FocusState private var miauTextFielIsFocused: Bool
+
+    var body: some View {
+        ZStack {
+            HStack {
+                TextField(text: $viewModel.captionInput, axis: .vertical) {
+                    Text("Give me a title")
+                        .foregroundStyle(.textSecondary)
+                }
+                    .miauTextField()
+                    .focused($miauTextFielIsFocused)
+
+                if !viewModel.captionInput.isEmpty {
+                    Button{
+                        viewModel.sendButtonPressed()
+                        miauTextFielIsFocused = true
+                    } label: {
+                        Image(systemName: "paperplane.fill")
+                            .font(.title2)
+                            .foregroundStyle(.auxiliarBrand)
+                    }
+
+                }
+            }
+            .padding([.trailing, .leading], 16)
+        }
     }
 }
