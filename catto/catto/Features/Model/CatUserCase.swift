@@ -11,9 +11,10 @@ import Foundation
 class CatUserCase {
     let apiError = APIError.self
     var catModel: [CatModel] = []
+    var catCaptions: [CaptionModel] = []
 
     func getCats() async throws {
-        guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=11&breed_ids=beng&api_key=live_BYaJAKzpgJDw8juW988YkW2jRps8u9HoOHgYLLu1hzBOAPKKNNLiuG4xFC4vLRqI") else {
+        guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=22&breed_ids=beng&api_key=live_BYaJAKzpgJDw8juW988YkW2jRps8u9HoOHgYLLu1hzBOAPKKNNLiuG4xFC4vLRqI") else {
             return
         }
 
@@ -40,6 +41,7 @@ class CatUserCase {
             let catData = try JSONDecoder().decode([CatModel].self, from: data)
             DispatchQueue.main.async {
                 self.catModel = catData
+                print(self.catModel.count)
             }
         } catch {
             print("Error: \(error.localizedDescription)")

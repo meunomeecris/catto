@@ -1,21 +1,21 @@
 //
-//  CatCardViewModel.swift
+//  CaptionViewModel.swift
 //  catto
 //
-//  Created by Cris Messias on 30/09/24.
+//  Created by Cris Messias on 04/10/24.
 //
 
 import Foundation
 
 @Observable
-class CatCardViewModel {
+class CaptionViewModel {
     var catUserCase: CatUserCase
 
     init(catUserCase: CatUserCase) {
         self.catUserCase = catUserCase
     }
 
-    var getAllCats: [CatModel] {
-        catUserCase.catModel
+    var getAllCaptions: [CaptionModel] {
+        catUserCase.catCaptions
     }
 }

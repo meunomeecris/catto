@@ -11,3 +11,10 @@ struct CatModel: Codable, Identifiable, Hashable {
     let id: String
     let url: String
 }
+
+struct CaptionModel: Hashable {
+    let user: String
+    let vote: Int
+    let caption: String
+}
+
