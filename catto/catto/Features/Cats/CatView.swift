@@ -16,8 +16,8 @@ struct CatView: View {
                 ZStack {
                     ScrollView {
                         VStack(spacing: 16) {
-                            CatCardView(viewModel: .constant(CatCardViewModel(catGetUserCase: viewModel.catGetUserCase)))
-                            CaptionView()
+                            CatCardView(viewModel: .constant(CatCardViewModel(catUserCase: viewModel.catUserCase)))
+                            CaptionView(viewModel: .constant(CaptionViewModel(catUserCase: viewModel.catUserCase)))
                                 .padding(.top, 16)
 
                         }
@@ -36,7 +36,7 @@ struct CatView: View {
                         }
                     }
                 }
-                TextFieldCaption(viewModel: .constant(CatViewModel(catGetUserCase: viewModel.catGetUserCase)))
+                TextFieldCaption(viewModel: .constant(CatViewModel(catUserCase: viewModel.catUserCase)))
             }
             .onAppear {
                 viewModel.onCatsViewAppear()
