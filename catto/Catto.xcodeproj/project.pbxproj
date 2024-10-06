@@ -11,7 +11,7 @@
 		8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50A9E02C19D15300DCA88C /* ContentView.swift */; };
 		8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E22C19D15500DCA88C /* Assets.xcassets */; };
 		8A50A9E62C19D15500DCA88C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */; };
-		8A5582A02C3C35950012D58C /* cattoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55829F2C3C35950012D58C /* cattoApp.swift */; };
+		8A5582A02C3C35950012D58C /* CattoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55829F2C3C35950012D58C /* CattoApp.swift */; };
 		8A5C9AF52CAAA2D50024AC6A /* CatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C9AF42CAAA2D50024AC6A /* CatCardView.swift */; };
 		8A5C9AF92CAAA32C0024AC6A /* CatCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C9AF82CAAA32C0024AC6A /* CatCardViewModel.swift */; };
 		8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64FF782C222AC1001BB68D /* MiauTextField.swift */; };
@@ -33,11 +33,11 @@
 
 /* Begin PBXFileReference section */
 		8A4563A52CB08C68000E29F6 /* CaptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionViewModel.swift; sourceTree = "<group>"; };
-		8A50A9DB2C19D15300DCA88C /* catto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A50A9DB2C19D15300DCA88C /* Catto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A50A9E02C19D15300DCA88C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A50A9E22C19D15500DCA88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8A55829F2C3C35950012D58C /* cattoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cattoApp.swift; sourceTree = "<group>"; };
+		8A55829F2C3C35950012D58C /* CattoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoApp.swift; sourceTree = "<group>"; };
 		8A5C9AF42CAAA2D50024AC6A /* CatCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCardView.swift; sourceTree = "<group>"; };
 		8A5C9AF82CAAA32C0024AC6A /* CatCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCardViewModel.swift; sourceTree = "<group>"; };
 		8A64FF782C222AC1001BB68D /* MiauTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauTextField.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		8A50A9D22C19D15300DCA88C = {
 			isa = PBXGroup;
 			children = (
-				8A50A9DD2C19D15300DCA88C /* catto */,
+				8A50A9DD2C19D15300DCA88C /* Catto */,
 				8A50A9DC2C19D15300DCA88C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,15 +91,15 @@
 		8A50A9DC2C19D15300DCA88C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A50A9DB2C19D15300DCA88C /* catto.app */,
+				8A50A9DB2C19D15300DCA88C /* Catto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8A50A9DD2C19D15300DCA88C /* catto */ = {
+		8A50A9DD2C19D15300DCA88C /* Catto */ = {
 			isa = PBXGroup;
 			children = (
-				8A55829F2C3C35950012D58C /* cattoApp.swift */,
+				8A55829F2C3C35950012D58C /* CattoApp.swift */,
 				8A50A9E02C19D15300DCA88C /* ContentView.swift */,
 				8A50A9E22C19D15500DCA88C /* Assets.xcassets */,
 				8AD96E1E2C2025E600EB2F5B /* Info.plist */,
@@ -107,7 +107,7 @@
 				8ADEEB102C1B16E9006B1C04 /* Miau */,
 				8A50A9E42C19D15500DCA88C /* Preview Content */,
 			);
-			path = catto;
+			path = Catto;
 			sourceTree = "<group>";
 		};
 		8A50A9E42C19D15500DCA88C /* Preview Content */ = {
@@ -130,7 +130,7 @@
 		8A7FE1F32C245E1B005C0B3A /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				8A7FE1F42C245E25005C0B3A /* Cats */,
+				8A7FE1F42C245E25005C0B3A /* Cat */,
 				8A5C9AF32CAA981F0024AC6A /* Captions */,
 				8AB1E2382C381A9200FE4D61 /* Model */,
 				8AEE39582C9D427500C42BC0 /* Resource */,
@@ -139,7 +139,7 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		8A7FE1F42C245E25005C0B3A /* Cats */ = {
+		8A7FE1F42C245E25005C0B3A /* Cat */ = {
 			isa = PBXGroup;
 			children = (
 				8A7FE1F52C245E31005C0B3A /* CatView.swift */,
@@ -147,7 +147,7 @@
 				8A5C9AF42CAAA2D50024AC6A /* CatCardView.swift */,
 				8A5C9AF82CAAA32C0024AC6A /* CatCardViewModel.swift */,
 			);
-			path = Cats;
+			path = Cat;
 			sourceTree = "<group>";
 		};
 		8AB1E2382C381A9200FE4D61 /* Model */ = {
@@ -187,9 +187,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8A50A9DA2C19D15300DCA88C /* catto */ = {
+		8A50A9DA2C19D15300DCA88C /* Catto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A50A9E92C19D15500DCA88C /* Build configuration list for PBXNativeTarget "catto" */;
+			buildConfigurationList = 8A50A9E92C19D15500DCA88C /* Build configuration list for PBXNativeTarget "Catto" */;
 			buildPhases = (
 				8A50A9D72C19D15300DCA88C /* Sources */,
 				8A50A9D82C19D15300DCA88C /* Frameworks */,
@@ -202,9 +202,9 @@
 			fileSystemSynchronizedGroups = (
 				8AEE39582C9D427500C42BC0 /* Resource */,
 			);
-			name = catto;
+			name = Catto;
 			productName = catto;
-			productReference = 8A50A9DB2C19D15300DCA88C /* catto.app */;
+			productReference = 8A50A9DB2C19D15300DCA88C /* Catto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8A50A9D62C19D15300DCA88C /* Build configuration list for PBXProject "catto" */;
+			buildConfigurationList = 8A50A9D62C19D15300DCA88C /* Build configuration list for PBXProject "Catto" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -235,7 +235,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A50A9DA2C19D15300DCA88C /* catto */,
+				8A50A9DA2C19D15300DCA88C /* Catto */,
 			);
 		};
 /* End PBXProject section */
@@ -263,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7FE1F62C245E31005C0B3A /* CatView.swift in Sources */,
-				8A5582A02C3C35950012D58C /* cattoApp.swift in Sources */,
+				8A5582A02C3C35950012D58C /* CattoApp.swift in Sources */,
 				8AD96E202C20264200EB2F5B /* MiauFonts.swift in Sources */,
 				8A7FE1F82C246E07005C0B3A /* CaptionView.swift in Sources */,
 				8A7FE1FA2C25B175005C0B3A /* CatViewModel.swift in Sources */,
@@ -465,7 +465,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A50A9D62C19D15300DCA88C /* Build configuration list for PBXProject "catto" */ = {
+		8A50A9D62C19D15300DCA88C /* Build configuration list for PBXProject "Catto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A50A9E72C19D15500DCA88C /* Debug */,
@@ -474,7 +474,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A50A9E92C19D15500DCA88C /* Build configuration list for PBXNativeTarget "catto" */ = {
+		8A50A9E92C19D15500DCA88C /* Build configuration list for PBXNativeTarget "Catto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A50A9EA2C19D15500DCA88C /* Debug */,

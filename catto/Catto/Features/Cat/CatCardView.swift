@@ -48,13 +48,11 @@ struct CatCardView: View {
                 }
             }
             .offset(x: offset.width, y: offset.height * 0.4)
-            .rotationEffect(.degrees(Double(offset.width / 40)))
+            .rotationEffect(.degrees(Double(offset.width / 60)))
             .gesture(
                 DragGesture()
                     .onChanged { value in
-                        withAnimation(.spring()) {
-                            offset = value.translation
-                        }
+                        offset = value.translation
                     }
                     .onEnded { value in
                         withAnimation(.spring()) {

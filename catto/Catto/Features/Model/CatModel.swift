@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct CatModel: Codable, Identifiable, Hashable {
-    let id: String
+struct CatModel: Codable, Hashable {
     let url: String
 }
 

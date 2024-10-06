@@ -53,7 +53,7 @@ struct CatView: View {
 
 struct TextFieldCaption: View {
     @Binding var viewModel: CatViewModel
-    @FocusState private var miauTextFielIsFocused: Bool
+    @FocusState private var textFielIsFocused: Bool
 
     var body: some View {
         ZStack {
@@ -63,12 +63,12 @@ struct TextFieldCaption: View {
                         .foregroundStyle(.textSecondary)
                 }
                     .miauTextField()
-                    .focused($miauTextFielIsFocused)
+                    .focused($textFielIsFocused)
 
                 if !viewModel.captionInput.isEmpty {
                     Button{
                         viewModel.sendButtonPressed()
-                        miauTextFielIsFocused = true
+                        textFielIsFocused = true
                     } label: {
                         Image(systemName: "paperplane.fill")
                             .font(.title2)

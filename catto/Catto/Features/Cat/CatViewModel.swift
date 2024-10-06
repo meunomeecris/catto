@@ -34,7 +34,7 @@ class CatViewModel {
     }
 
     func addCaption() {
-        let caption = CaptionModel(user: "@ \(generateRandomName(length: 6))", vote: 0, caption: captionInput)
+        let caption = CaptionModel(user: "@\(generateRandomName(length: 6))", vote: 0, caption: captionInput)
         catUserCase.catCaptions.append(caption)
         print("caption: \(catUserCase.catCaptions.count)")
     }

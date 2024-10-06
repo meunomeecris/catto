@@ -41,8 +41,8 @@ class CatUserCase {
             let catData = try JSONDecoder().decode([CatModel].self, from: data)
             DispatchQueue.main.async {
                 self.catModel = catData
-                print(self.catModel.count)
             }
+            
         } catch {
             print("Error: \(error.localizedDescription)")
             throw apiError.invalidData
