@@ -98,6 +98,22 @@ struct MiauButtonClose: View {
     }
 }
 
+struct MiauButtonSend: View {
+    var action: () -> Void
+
+    var body: some View {
+
+        Button(action: action) {
+            Image(systemName: "paperplane.fill")
+                .font(.title2)
+                .foregroundStyle(.auxiliarBrand)
+        }
+        .frame(width: 48, height: 48)
+        .background(.bgButton)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+    }
+}
+
 #Preview {
     VStack {
         HStack {

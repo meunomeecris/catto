@@ -64,9 +64,9 @@ struct CatCardView: View {
 
         func swipeCard(width: CGFloat) {
             switch width {
-            case -500...(-200):
+            case -500...(-145):
                 offset = CGSize(width: -500, height: 0)
-            case 200...500:
+            case 145...500:
                 offset = CGSize(width: 500, height: 0)
             default:
                 offset = .zero

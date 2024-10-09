@@ -18,8 +18,6 @@ struct CatView: View {
                         VStack(spacing: 16) {
                             CatCardView(viewModel: .constant(CatCardViewModel(catUserCase: viewModel.catUserCase)))
                             CaptionView(viewModel: .constant(CaptionViewModel(catUserCase: viewModel.catUserCase)))
-                                .padding(.top, 16)
-
                         }
                         .padding([.trailing, .leading], 16)
                     }
@@ -47,7 +45,7 @@ struct CatView: View {
                 Text("We’ve hit a cat-tastrophe! Try again later.")
             }
         }
-        .padding(.top, 16)
+        .padding([.bottom, .top], 16)
     }
 }
 
@@ -66,15 +64,10 @@ struct TextFieldCaption: View {
                     .focused($textFielIsFocused)
 
                 if !viewModel.captionInput.isEmpty {
-                    Button{
+                    MiauButtonSend {
                         viewModel.sendButtonPressed()
                         textFielIsFocused = true
-                    } label: {
-                        Image(systemName: "paperplane.fill")
-                            .font(.title2)
-                            .foregroundStyle(.auxiliarBrand)
                     }
-
                 }
             }
             .padding([.trailing, .leading], 16)

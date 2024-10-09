@@ -13,7 +13,7 @@ struct MiauTexFieldModifier: ViewModifier {
         content
             .foregroundStyle(.textButton)
             .focusable(true)
-            .padding([.top, .bottom], 13)
+            .padding([.top, .bottom], 14)
             .padding(.horizontal)
             .background(.bgButton)
             .clipShape(RoundedRectangle(cornerRadius:16))
