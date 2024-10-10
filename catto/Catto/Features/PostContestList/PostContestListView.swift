@@ -16,7 +16,7 @@ struct PostContestListView: View {
                 VStack(spacing: 24) {
                     ZStack {
                         ForEach(viewModel.postList, id: \.self) { eachPost in
-                            PostView(post: eachPost)
+                            PostContestView(post: eachPost)
                         }
                     }
                 }
@@ -34,6 +34,7 @@ struct PostContestListView: View {
                     }
                 }
             }
+            CommentTextFieldView(viewModel: viewModel)
         }
         .onAppear() {
             viewModel.onViewAppearGetCats()
@@ -46,3 +47,30 @@ struct PostContestListView: View {
     }
 }
 
+struct CommentTextFieldView: View {
+    @State var viewModel: PostContestListViewModel
+    @FocusState private var commentFieldIsFocused: Bool
+
+    var body: some View {
+        HStack {
+            TextField(
+                "",
+                text: $viewModel.captionInput,
+                prompt: Text("Title me if you can")
+                    .foregroundStyle(.textSecondary)
+            )
+            .miauTextField()
+            .focused($commentFieldIsFocused)
+            .textInputAutocapitalization(.sentences)
+            .autocorrectionDisabled(true)
+            .keyboardType(.alphabet)
+            if !viewModel.captionInput.isEmpty {
+                MiauButtonSend {
+                    viewModel.addCommentButtonPressed()
+                    commentFieldIsFocused = false
+                }
+            }
+        }
+        .padding([.bottom, .horizontal], 16)
+    }
+}

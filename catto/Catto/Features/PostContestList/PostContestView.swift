@@ -1,5 +1,5 @@
 //
-//  PostView.swift
+//  PostContestView.swift
 //  Catto
 //
 //  Created by Cris Messias on 10/10/24.
@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-struct PostView: View {
+struct PostContestView: View {
     let post: PostContest
     @State var offset: CGSize = .zero
     
     var body: some View {
         VStack {
             CatImagesView(urlString: post.cat.url)
-
             if post.caption.isEmpty {
                 Text("No coments yet!")
                     .heading()

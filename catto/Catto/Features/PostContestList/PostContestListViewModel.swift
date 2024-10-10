@@ -32,7 +32,7 @@ class PostContestListViewModel {
         postUseCase.postContestList
     }
 
-    func sendButtonPressed() {
+    func addCommentButtonPressed() {
         addCaption()
         captionInput = ""
     }

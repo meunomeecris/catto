@@ -16,7 +16,7 @@
 		8AB014DF2C21C4C6002DBA02 /* MiauCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB014DE2C21C4C6002DBA02 /* MiauCards.swift */; };
 		8AB014E12C21C9B2002DBA02 /* MiauButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB014E02C21C9B2002DBA02 /* MiauButton.swift */; };
 		8AB1E23A2C381B0F00FE4D61 /* CattoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1E2392C381B0F00FE4D61 /* CattoModel.swift */; };
-		8AD916512CB7C6DF00BB6673 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD916502CB7C6DF00BB6673 /* PostView.swift */; };
+		8AD916512CB7C6DF00BB6673 /* PostContestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD916502CB7C6DF00BB6673 /* PostContestView.swift */; };
 		8AD96E1B2C20254300EB2F5B /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD96E182C20254300EB2F5B /* Inter-Light.ttf */; };
 		8AD96E1D2C20254300EB2F5B /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD96E1A2C20254300EB2F5B /* Inter-Regular.ttf */; };
 		8AD96E202C20264200EB2F5B /* MiauFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD96E1F2C20264200EB2F5B /* MiauFonts.swift */; };
@@ -39,7 +39,7 @@
 		8AB014DE2C21C4C6002DBA02 /* MiauCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauCards.swift; sourceTree = "<group>"; };
 		8AB014E02C21C9B2002DBA02 /* MiauButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauButton.swift; sourceTree = "<group>"; };
 		8AB1E2392C381B0F00FE4D61 /* CattoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoModel.swift; sourceTree = "<group>"; };
-		8AD916502CB7C6DF00BB6673 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		8AD916502CB7C6DF00BB6673 /* PostContestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContestView.swift; sourceTree = "<group>"; };
 		8AD96E182C20254300EB2F5B /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		8AD96E1A2C20254300EB2F5B /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		8AD96E1E2C2025E600EB2F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			children = (
 				8A3DE9702CB7A062003B68CF /* PostContestListView.swift */,
 				8AEFAFAA2CB72A17009F202A /* PostContestListViewModel.swift */,
-				8AD916502CB7C6DF00BB6673 /* PostView.swift */,
+				8AD916502CB7C6DF00BB6673 /* PostContestView.swift */,
 			);
 			path = PostContestList;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 				8AB014E12C21C9B2002DBA02 /* MiauButton.swift in Sources */,
 				8AEFAFA52CB72638009F202A /* PostContestListUseCase.swift in Sources */,
 				8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */,
-				8AD916512CB7C6DF00BB6673 /* PostView.swift in Sources */,
+				8AD916512CB7C6DF00BB6673 /* PostContestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
