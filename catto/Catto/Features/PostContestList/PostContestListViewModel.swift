@@ -1,31 +1,35 @@
 //
-//  CatViewModel.swift
-//  catto
+//  PostContestListViewModel.swift
+//  Catto
 //
-//  Created by Cris Messias on 21/06/24.
+//  Created by Cris Messias on 09/10/24.
 //
 
 import Foundation
 
 @Observable
-class CatViewModel {
-    var catUserCase: CatUserCase
+class PostContestListViewModel {
+    var postUseCase: PostContestListUseCase
     var isAlertPresented: Bool = false
     var captionInput: String = ""
 
-    init(catUserCase: CatUserCase) {
-        self.catUserCase = catUserCase
+    init(postUseCase: PostContestListUseCase) {
+        self.postUseCase = postUseCase
     }
 
-    func onCatsViewAppear() {
+    func onViewAppearGetCats() {
         Task {
             do {
-                try await catUserCase.getCats()
+                try await postUseCase.fetchCats()
             } catch {
-                print("Error occurred on getCats:\(error.localizedDescription)")
+                print("Error occurred on fetchCats:\(error.localizedDescription)")
                 isAlertPresented.toggle()
             }
         }
+    }
+
+    var postList: [PostContest] {
+        postUseCase.postContestList
     }
 
     func sendButtonPressed() {
@@ -34,9 +38,7 @@ class CatViewModel {
     }
 
     func addCaption() {
-        let caption = CaptionModel(user: "@\(generateRandomName(length: 6))", vote: 0, caption: captionInput)
-        catUserCase.catCaptions.append(caption)
-        print("caption: \(catUserCase.catCaptions.count)")
+       
     }
 
     func profileButtonPressed() {
@@ -62,5 +64,4 @@ class CatViewModel {
         }
         return name.capitalized
     }
-
 }
