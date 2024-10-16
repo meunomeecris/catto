@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-
 struct PostView: View {
     let viewModel: PostViewModel
     @State var offset: CGSize = .zero
     
     var body: some View {
         VStack {
-
             CatImagesView(urlString: viewModel.post.cat.url)
 
             if viewModel.post.caption.isEmpty {

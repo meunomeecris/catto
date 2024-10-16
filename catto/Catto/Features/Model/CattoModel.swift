@@ -8,25 +8,25 @@
 import Foundation
 
 struct PostContestList {
-    let post: [PostContest]
+    let post: [Post]
 }
 
-struct PostContest: Hashable {
-    let cat: Cat
-    let caption: [Comments]
+struct Post: Hashable {
+    let cat: CatImage
+    let caption: [CatComments]
 }
 
-struct Cat: Decodable, Hashable {
+struct CatImage: Decodable, Hashable {
     var url: String
 }
 
-struct Comments: Hashable {
-    let user: User
+struct CatComments: Hashable {
+    let user: CattoUser
     let vote: Int
     let caption: String
 }
 
-struct User: Hashable{
+struct CattoUser: Hashable{
     let name: String
     let imageUrl: String
 }

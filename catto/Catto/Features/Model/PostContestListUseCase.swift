@@ -10,7 +10,8 @@ import Foundation
 @Observable
 final class PostContestListUseCase {
     let apiError = APIError.self
-    var postContestList: [PostContest] = []
+    var postUseCase = PostUseCase()
+
 
     func fetchCats() async throws {
         guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=22&breed_ids=beng&api_key=live_BYaJAKzpgJDw8juW988YkW2jRps8u9HoOHgYLLu1hzBOAPKKNNLiuG4xFC4vLRqI") else {
@@ -37,15 +38,15 @@ final class PostContestListUseCase {
             default: throw apiError.unknown
             }
 
-            let catData = try JSONDecoder().decode([Cat].self, from: data)
+            let catData = try JSONDecoder().decode([CatImage].self, from: data)
 
             //Mapeia os `CatFeature` para `PostContestFeature`
             let postData = catData.map { cat in
-                PostContest(cat: cat, caption: [])
+                Post(cat: cat, caption: [])
             }
             //Atualiza o estado da view com os novos posts
             DispatchQueue.main.async {
-                self.postContestList = postData
+                self.postUseCase.postList = postData
             }
 
         } catch {
