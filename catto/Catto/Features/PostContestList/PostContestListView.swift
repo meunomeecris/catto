@@ -11,12 +11,13 @@ struct PostContestListView: View {
     @State var viewModel: PostContestListViewModel
 
     var body: some View {
+    
         NavigationStack {
             ScrollView {
                 VStack(spacing: 24) {
                     ZStack {
-                        ForEach(viewModel.postList, id: \.self) { eachPost in
-                            PostView(post: eachPost)
+                        ForEach(viewModel.contestList, id: \.self) { eachPost in
+                            PostView(viewModel: PostViewModel(post: eachPost))
                         }
                     }
                 }

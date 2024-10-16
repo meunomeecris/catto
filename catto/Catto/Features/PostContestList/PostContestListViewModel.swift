@@ -9,18 +9,18 @@ import Foundation
 
 @Observable
 class PostContestListViewModel {
-    var postUseCase: PostContestListUseCase
+    var getContestList: PostContestListUseCase
     var isAlertPresented: Bool = false
     var captionInput: String = ""
 
-    init(postUseCase: PostContestListUseCase) {
-        self.postUseCase = postUseCase
+    init(postContestListUseCase: PostContestListUseCase) {
+        self.getContestList = postContestListUseCase
     }
 
     func onViewAppearGetCats() {
         Task {
             do {
-                try await postUseCase.fetchCats()
+                try await getContestList.fetchCats()
             } catch {
                 print("Error occurred on fetchCats:\(error.localizedDescription)")
                 isAlertPresented.toggle()
@@ -28,8 +28,8 @@ class PostContestListViewModel {
         }
     }
 
-    var postList: [PostContest] {
-        postUseCase.postContestList
+    var contestList: [Post] {
+        getContestList.postUseCase.postList
     }
 
     func sendButtonPressed() {
@@ -47,7 +47,7 @@ class PostContestListViewModel {
 
 
 
-    ///-- For fun
+    ///--Mockup names
     func generateRandomName(length: Int) -> String {
         let consonants = "bcdfghjklmnpqrstvwxyz"
         let vowels = "aeiou"

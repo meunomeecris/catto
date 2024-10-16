@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct PostView: View {
-    let post: PostContest
+    let viewModel: PostViewModel
     @State var offset: CGSize = .zero
     
     var body: some View {
         VStack {
-            CatImagesView(urlString: post.cat.url)
+            CatImagesView(urlString: viewModel.post.cat.url)
 
-            if post.caption.isEmpty {
+            if viewModel.post.caption.isEmpty {
                 Text("No coments yet!")
                     .heading()
                     .foregroundStyle(.textSecondary)
             } else {
-                ForEach(post.caption, id: \.self) { eachCaption in
+                ForEach(viewModel.post.caption, id: \.self) { eachCaption in
                     MiauCard(
                         username: eachCaption.user.name,
                         avatarUrl: eachCaption.user.imageUrl,
