@@ -102,14 +102,13 @@ struct MiauButtonSend: View {
     var action: () -> Void
 
     var body: some View {
-
         Button(action: action) {
             Image(systemName: "paperplane.fill")
                 .font(.title2)
-                .foregroundStyle(.auxiliarBrand)
+                .foregroundStyle(.textPrimaryDark)
         }
         .frame(width: 48, height: 48)
-        .background(.bgButton)
+        .background(.auxiliarBrand)
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 }

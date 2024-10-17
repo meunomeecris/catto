@@ -11,10 +11,10 @@ import Foundation
 class PostContestListViewModel {
     var getContestList: PostContestListUseCase
     var isAlertPresented: Bool = false
-    var captionInput: String = ""
 
-    init(postContestListUseCase: PostContestListUseCase) {
-        self.getContestList = postContestListUseCase
+
+    init(getContestList: PostContestListUseCase) {
+        self.getContestList = getContestList
     }
 
     func onViewAppearGetCats() {
@@ -29,39 +29,10 @@ class PostContestListViewModel {
     }
 
     var contestList: [Post] {
-        getContestList.postUseCase.postList
-    }
-
-    func sendButtonPressed() {
-        addCaption()
-        captionInput = ""
-    }
-
-    func addCaption() {
-       
+        getContestList.postUseCase.postList.reversed()
     }
 
     func profileButtonPressed() {
 
-    }
-
-
-
-    ///--Mockup names
-    func generateRandomName(length: Int) -> String {
-        let consonants = "bcdfghjklmnpqrstvwxyz"
-        let vowels = "aeiou"
-        var name = ""
-        var isVowel = Bool.random()
-
-        for _ in 0..<length {
-            if isVowel {
-                name += String(vowels.randomElement()!)
-            } else {
-                name += String(consonants.randomElement()!)
-            }
-            isVowel.toggle()
-        }
-        return name.capitalized
     }
 }

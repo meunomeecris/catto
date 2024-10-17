@@ -13,7 +13,7 @@ struct PostContestList {
 
 struct Post: Hashable {
     let cat: CatImage
-    let caption: [CatComments]
+    var caption: [CatComments]
 }
 
 struct CatImage: Decodable, Hashable {
@@ -21,12 +21,12 @@ struct CatImage: Decodable, Hashable {
 }
 
 struct CatComments: Hashable {
-    let user: CattoUser
-    let vote: Int
+    let user: User
     let caption: String
+    let vote: Int
 }
 
-struct CattoUser: Hashable{
+struct User: Hashable{
     let name: String
     let imageUrl: String
 }

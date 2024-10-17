@@ -11,23 +11,20 @@ struct PostContestListView: View {
     @State var viewModel: PostContestListViewModel
 
     var body: some View {
-    
         NavigationStack {
             ScrollView {
-                VStack(spacing: 24) {
-                    ZStack {
-                        ForEach(viewModel.contestList, id: \.self) { eachPost in
-                            PostView(viewModel: PostViewModel(post: eachPost))
-                        }
+                ZStack {
+                    ForEach(viewModel.contestList, id: \.self) { eachPost in
+                        PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
                     }
                 }
-                .padding([.top, .horizontal], 16)
             }
+            .background(.bgScreen)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Text("Catto")
                         .heading()
-                        .foregroundStyle(.textPrimary)
+                        .foregroundStyle(.textPrimaryLight)
                 }
                 ToolbarItem {
                     MiauButtonProfile {
@@ -40,7 +37,9 @@ struct PostContestListView: View {
             viewModel.onViewAppearGetCats()
         }
         .alert("Meeeeeow", isPresented: .constant(viewModel.isAlertPresented)) {
-            Button("ok") {}
+            Button("ok") {
+                viewModel.onViewAppearGetCats()
+            }
         } message: {
             Text("We’ve hit a cat-tastrophe! Try again later.")
         }

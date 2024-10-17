@@ -7,14 +7,26 @@
 
 import SwiftUI
 
+<<<<<<< Updated upstream
+
 struct PostView: View {
     let viewModel: PostViewModel
-
+=======
+struct PostContestView: View {
+    let post: PostContest
+    
+>>>>>>> Stashed changes
+    @State var offset: CGSize = .zero
+    
     var body: some View {
-        VStack(spacing: 16) {
+        VStack {
+
             CatImagesView(urlString: viewModel.post.cat.url)
+
             if viewModel.post.caption.isEmpty {
-                CommentTextFieldView(viewModel: viewModel, text: "Title me if you can!")
+                Text("No coments yet!")
+                    .heading()
+                    .foregroundStyle(.textSecondary)
             } else {
                 ForEach(viewModel.post.caption, id: \.self) { eachCaption in
                     MiauCard(
@@ -25,31 +37,39 @@ struct PostView: View {
                         isMostVoted: false
                     )
                 }
-                CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can")
             }
         }
-        .padding([.top, .horizontal], 16)
-        .padding(.bottom, 24)
-        .background(.bgScreen)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
-        .offset(x: viewModel.offset.width, y: viewModel.offset.height * 0.4)
-        .rotationEffect(.degrees(Double(viewModel.offset.width / 60)))
+        .offset(x: offset.width, y: offset.height * 0.4)
+        .rotationEffect(.degrees(Double(offset.width / 60)))
         .gesture(
             DragGesture()
                 .onChanged { value in
-                    viewModel.offset = value.translation
+                    offset = value.translation
                 }
                 .onEnded { value in
                     withAnimation(.spring()) {
-                        viewModel.swipeCard(width: viewModel.offset.width)
+                        swipeCard(width: offset.width)
                     }
                 }
         )
     }
+
+    func swipeCard(width: CGFloat) {
+        switch width {
+        case -500...(-145):
+            offset = CGSize(width: -500, height: 0)
+        case 145...500:
+            offset = CGSize(width: 500, height: 0)
+        default:
+            offset = .zero
+        }
+    }
 }
+
 
 struct CatImagesView: View {
     var urlString: String
+    @State var offset: CGSize = .zero
 
     var body: some View {
         AsyncImage(url: URL(string: urlString )) { phase in
@@ -87,40 +107,5 @@ struct CatImageProgressView: View {
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(.auxiliarCardCatBoard, lineWidth: 8)
             })
-    }
-}
-
-struct CommentTextFieldView: View {
-    @State var viewModel: PostViewModel
-    @State var text: String
-    @FocusState private var commentFieldIsFocused: Bool
-
-    var body: some View {
-        HStack {
-            TextField(
-                "",
-                text: $viewModel.captionInput,
-                prompt: Text(text)
-                    .foregroundStyle(.textPrimaryDark)
-            )
-            .miauTextField()
-            .focused($commentFieldIsFocused)
-            .textInputAutocapitalization(.sentences)
-            .keyboardType(.default)
-            .submitLabel(.send)
-            .onSubmit {
-                if !viewModel.captionInput.isEmpty {
-                    viewModel.addCommentButtonPressed()
-                    commentFieldIsFocused = false
-                }
-
-            }
-            MiauButtonSend {
-                if !viewModel.captionInput.isEmpty {
-                    viewModel.addCommentButtonPressed()
-                    commentFieldIsFocused = false
-                }
-            }
-        }
     }
 }

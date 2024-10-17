@@ -13,7 +13,7 @@ struct MiauColors: View {
             Text("Text Color")
                 .foregroundStyle(.textButton)
             Text("Text Color")
-                .foregroundStyle(.textPrimary)
+                .foregroundStyle(.textPrimaryLight)
             Text("Text Color")
                 .foregroundStyle(.textSecondary)
                 .padding(.bottom, 16)
