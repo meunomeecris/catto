@@ -9,12 +9,10 @@ import SwiftUI
 
 struct PostView: View {
     let viewModel: PostViewModel
-    @State var offset: CGSize = .zero
     
     var body: some View {
         VStack {
             CatImagesView(urlString: viewModel.post.cat.url)
-
             if viewModel.post.caption.isEmpty {
                 Text("No coments yet!")
                     .heading()
@@ -31,37 +29,25 @@ struct PostView: View {
                 }
             }
         }
-        .offset(x: offset.width, y: offset.height * 0.4)
-        .rotationEffect(.degrees(Double(offset.width / 60)))
+        .offset(x: viewModel.offset.width, y: viewModel.offset.height * 0.4)
+        .rotationEffect(.degrees(Double(viewModel.offset.width / 60)))
         .gesture(
             DragGesture()
                 .onChanged { value in
-                    offset = value.translation
+                    viewModel.offset = value.translation
                 }
                 .onEnded { value in
                     withAnimation(.spring()) {
-                        swipeCard(width: offset.width)
+                        viewModel.swipeCard(width: viewModel.offset.width)
                     }
                 }
         )
-    }
-
-    func swipeCard(width: CGFloat) {
-        switch width {
-        case -500...(-145):
-            offset = CGSize(width: -500, height: 0)
-        case 145...500:
-            offset = CGSize(width: 500, height: 0)
-        default:
-            offset = .zero
-        }
     }
 }
 
 
 struct CatImagesView: View {
     var urlString: String
-    @State var offset: CGSize = .zero
 
     var body: some View {
         AsyncImage(url: URL(string: urlString )) { phase in

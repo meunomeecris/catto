@@ -7,9 +7,15 @@
 
 import SwiftUI
 
+<<<<<<< Updated upstream
 
 struct PostView: View {
     let viewModel: PostViewModel
+=======
+struct PostContestView: View {
+    let post: PostContest
+    
+>>>>>>> Stashed changes
     @State var offset: CGSize = .zero
     
     var body: some View {

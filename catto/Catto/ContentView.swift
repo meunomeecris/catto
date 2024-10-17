@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            PostContestListView(viewModel: PostContestListViewModel(postContestListUseCase: PostContestListUseCase()))
+            PostContestListView(viewModel: PostContestListViewModel(getContestList: PostContestListUseCase()))
         }
     }
 }

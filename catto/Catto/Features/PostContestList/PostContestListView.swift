@@ -11,14 +11,12 @@ struct PostContestListView: View {
     @State var viewModel: PostContestListViewModel
 
     var body: some View {
-    
         NavigationStack {
             ScrollView {
                 VStack(spacing: 24) {
                     ZStack {
-
                         ForEach(viewModel.contestList, id: \.self) { eachPost in
-                            PostView(viewModel: PostViewModel(post: eachPost))
+                            PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
                         }
                     }
                 }
@@ -42,12 +40,15 @@ struct PostContestListView: View {
             viewModel.onViewAppearGetCats()
         }
         .alert("Meeeeeow", isPresented: .constant(viewModel.isAlertPresented)) {
-            Button("ok") {}
+            Button("ok") {
+                viewModel.onViewAppearGetCats()
+            }
         } message: {
             Text("We’ve hit a cat-tastrophe! Try again later.")
         }
     }
 }
+
 
 struct CommentTextFieldView: View {
     @State var viewModel: PostContestListViewModel

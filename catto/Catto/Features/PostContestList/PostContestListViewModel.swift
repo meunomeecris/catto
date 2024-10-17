@@ -13,8 +13,8 @@ class PostContestListViewModel {
     var isAlertPresented: Bool = false
     var captionInput: String = ""
 
-    init(postContestListUseCase: PostContestListUseCase) {
-        self.getContestList = postContestListUseCase
+    init(getContestList: PostContestListUseCase) {
+        self.getContestList = getContestList
     }
 
     func onViewAppearGetCats() {
@@ -29,16 +29,25 @@ class PostContestListViewModel {
     }
 
     var contestList: [Post] {
-        getContestList.postUseCase.postList
+        getContestList.postUseCase.postList.reversed()
     }
 
     func addCommentButtonPressed() {
-        addCaption()
+        createComment()
         captionInput = ""
     }
 
-    func addCaption() {
-       
+    private func createComment() {
+        getContestList.postUseCase.postList[0].caption.append(
+            CatComments( user:
+                            User(
+                                name: generateRandomName(length: 5),
+                                imageUrl: "https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop"
+                            ),
+                         caption: captionInput,
+                         vote: 4
+                       )
+        )
     }
 
     func profileButtonPressed() {
