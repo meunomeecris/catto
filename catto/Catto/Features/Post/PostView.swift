@@ -9,14 +9,12 @@ import SwiftUI
 
 struct PostView: View {
     let viewModel: PostViewModel
-    
+
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             CatImagesView(urlString: viewModel.post.cat.url)
             if viewModel.post.caption.isEmpty {
-                Text("No coments yet!")
-                    .heading()
-                    .foregroundStyle(.textSecondary)
+                CommentTextFieldView(viewModel: viewModel, text: "Title me if you can!")
             } else {
                 ForEach(viewModel.post.caption, id: \.self) { eachCaption in
                     MiauCard(
@@ -27,8 +25,13 @@ struct PostView: View {
                         isMostVoted: false
                     )
                 }
+                CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can")
             }
         }
+        .padding([.top, .horizontal], 16)
+        .padding(.bottom, 24)
+        .background(.bgScreen)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
         .offset(x: viewModel.offset.width, y: viewModel.offset.height * 0.4)
         .rotationEffect(.degrees(Double(viewModel.offset.width / 60)))
         .gesture(
@@ -44,7 +47,6 @@ struct PostView: View {
         )
     }
 }
-
 
 struct CatImagesView: View {
     var urlString: String
@@ -85,5 +87,40 @@ struct CatImageProgressView: View {
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(.auxiliarCardCatBoard, lineWidth: 8)
             })
+    }
+}
+
+struct CommentTextFieldView: View {
+    @State var viewModel: PostViewModel
+    @State var text: String
+    @FocusState private var commentFieldIsFocused: Bool
+
+    var body: some View {
+        HStack {
+            TextField(
+                "",
+                text: $viewModel.captionInput,
+                prompt: Text(text)
+                    .foregroundStyle(.textPrimaryDark)
+            )
+            .miauTextField()
+            .focused($commentFieldIsFocused)
+            .textInputAutocapitalization(.sentences)
+            .keyboardType(.default)
+            .submitLabel(.send)
+            .onSubmit {
+                if !viewModel.captionInput.isEmpty {
+                    viewModel.addCommentButtonPressed()
+                    commentFieldIsFocused = false
+                }
+
+            }
+            MiauButtonSend {
+                if !viewModel.captionInput.isEmpty {
+                    viewModel.addCommentButtonPressed()
+                    commentFieldIsFocused = false
+                }
+            }
+        }
     }
 }

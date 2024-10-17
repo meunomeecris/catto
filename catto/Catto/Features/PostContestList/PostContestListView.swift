@@ -13,20 +13,18 @@ struct PostContestListView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 24) {
-                    ZStack {
-                        ForEach(viewModel.contestList, id: \.self) { eachPost in
-                            PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
-                        }
+                ZStack {
+                    ForEach(viewModel.contestList, id: \.self) { eachPost in
+                        PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
                     }
                 }
-                .padding([.top, .horizontal], 16)
             }
+            .background(.bgScreen)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Text("Catto")
                         .heading()
-                        .foregroundStyle(.textPrimary)
+                        .foregroundStyle(.textPrimaryLight)
                 }
                 ToolbarItem {
                     MiauButtonProfile {
@@ -34,7 +32,6 @@ struct PostContestListView: View {
                     }
                 }
             }
-            CommentTextFieldView(viewModel: viewModel)
         }
         .onAppear() {
             viewModel.onViewAppearGetCats()
@@ -49,31 +46,3 @@ struct PostContestListView: View {
     }
 }
 
-
-struct CommentTextFieldView: View {
-    @State var viewModel: PostContestListViewModel
-    @FocusState private var commentFieldIsFocused: Bool
-
-    var body: some View {
-        HStack {
-            TextField(
-                "",
-                text: $viewModel.captionInput,
-                prompt: Text("Title me if you can")
-                    .foregroundStyle(.textSecondary)
-            )
-            .miauTextField()
-            .focused($commentFieldIsFocused)
-            .textInputAutocapitalization(.sentences)
-            .autocorrectionDisabled(true)
-            .keyboardType(.alphabet)
-            if !viewModel.captionInput.isEmpty {
-                MiauButtonSend {
-                    viewModel.addCommentButtonPressed()
-                    commentFieldIsFocused = false
-                }
-            }
-        }
-        .padding([.bottom, .horizontal], 16)
-    }
-}
