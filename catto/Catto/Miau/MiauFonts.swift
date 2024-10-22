@@ -25,6 +25,7 @@ struct MiauTitleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.custom("InknutAntiqua-Medium", size: 16))
+            .lineSpacing(2)
     }
 }
 extension View {
