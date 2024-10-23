@@ -13,30 +13,30 @@ class PostViewModel {
     var getContestList: PostContestListUseCase
     let post: Post
     var offset: CGSize = .zero
-    var captionInput: String = ""
+//    var captionInput: String = ""
 
     init(getContestList: PostContestListUseCase, post: Post) {
         self.getContestList = getContestList
         self.post = post
     }
 
-    func addCommentButtonPressed() {
-        createComment()
-        captionInput = ""
-    }
-
-    private func createComment() {
-        getContestList.postUseCase.postList[0].caption.append(
-            CatComments( user:
-                            User(
-                                name: generateRandomName(length: 5),
-                                imageUrl: "https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop"
-                            ),
-                         caption: captionInput,
-                         vote: 4
-                       )
-        )
-    }
+//    func addCommentButtonPressed() {
+//        createComment()
+//        captionInput = ""
+//    }
+//
+//    private func createComment() {
+//        getContestList.postUseCase.postList[0].caption.append(
+//            CatComments( user:
+//                            User(
+//                                name: generateRandomName(length: 5),
+//                                imageUrl: "https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop"
+//                            ),
+//                         caption: captionInput,
+//                         vote: 4
+//                       )
+//        )
+//    }
 
     func swipeCard(width: CGFloat) {
         switch width {
@@ -60,21 +60,5 @@ class PostViewModel {
     }
 
 
-    ///--Mockup names
-    func generateRandomName(length: Int) -> String {
-        let consonants = "bcdfghjklmnpqrstvwxyz"
-        let vowels = "aeiou"
-        var name = ""
-        var isVowel = Bool.random()
-
-        for _ in 0..<length {
-            if isVowel {
-                name += String(vowels.randomElement()!)
-            } else {
-                name += String(consonants.randomElement()!)
-            }
-            isVowel.toggle()
-        }
-        return name.capitalized
-    }
+ 
 }

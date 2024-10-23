@@ -11,28 +11,31 @@ struct PostContestListView: View {
     @State var viewModel: PostContestListViewModel
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
+        ZStack {
+            VStack {
+                HStack {
+                    Text("Catto")
+                        .heading()
+                        .foregroundStyle(.textPrimaryLight)
+                    Spacer()
+                    MiauButtonProfile {
+                        viewModel.profileButtonPressed()
+                    }
+                }
+                .padding([.horizontal, .top], 16)
+                Spacer()
                 ZStack {
                     ForEach(viewModel.contestList, id: \.self) { eachPost in
                         PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
                     }
                 }
-            }
-            .background(.bgScreen)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Text("Catto")
-                        .heading()
-                        .foregroundStyle(.textPrimaryLight)
-                }
-                ToolbarItem {
-                    MiauButtonProfile {
-                        viewModel.profileButtonPressed()
-                    }
-                }
+                Spacer()
+                CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can")
+                    .padding([.horizontal, .top, .bottom], 16)
             }
         }
+        .background(.bgScreen)
+        .ignoresSafeArea()
         .onAppear() {
             viewModel.onViewAppearGetCats()
         }
@@ -45,4 +48,40 @@ struct PostContestListView: View {
         }
     }
 }
+
+struct CommentTextFieldView: View {
+    @State var viewModel: PostContestListViewModel
+    @State var text: String
+    @FocusState private var commentFieldIsFocused: Bool
+
+    var body: some View {
+        HStack {
+            TextField(
+                "",
+                text: $viewModel.captionInput,
+                prompt: Text(text)
+                    .foregroundStyle(.textPrimaryDark)
+            )
+            .miauTextField()
+            .focused($commentFieldIsFocused)
+            .textInputAutocapitalization(.sentences)
+            .keyboardType(.default)
+            .submitLabel(.send)
+            .onSubmit {
+                if !viewModel.captionInput.isEmpty {
+                    viewModel.addCommentButtonPressed()
+                    commentFieldIsFocused = false
+                }
+
+            }
+            MiauButtonSend {
+                if !viewModel.captionInput.isEmpty {
+                    viewModel.addCommentButtonPressed()
+                    commentFieldIsFocused = false
+                }
+            }
+        }
+    }
+}
+
 
