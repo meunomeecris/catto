@@ -53,8 +53,6 @@ class PostContestListViewModel {
         getContestList.postUseCase.postList.reversed()
     }
 
-
-    //
     func addCommentButtonPressed() {
         createComment()
         captionInput = ""
