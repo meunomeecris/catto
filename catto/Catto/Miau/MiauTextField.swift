@@ -11,11 +11,11 @@ import SwiftUI
 struct MiauTexFieldModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .foregroundStyle(.textPrimaryDark)
+            .foregroundStyle(.textButton)
             .focusable(true)
             .padding([.top, .bottom], 14.5)
             .padding(.horizontal)
-            .background(.auxiliarBrand)
+            .background(.bgTextField)
             .clipShape(RoundedRectangle(cornerRadius:16))
             .autocorrectionDisabled(true)
             .lineLimit(2)

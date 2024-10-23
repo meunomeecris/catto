@@ -72,16 +72,18 @@ struct CommentTextFieldView: View {
                     viewModel.addCommentButtonPressed()
                     commentFieldIsFocused = false
                 }
-
             }
-            MiauButtonSend {
-                if !viewModel.captionInput.isEmpty {
-                    viewModel.addCommentButtonPressed()
-                    commentFieldIsFocused = false
+            if !viewModel.captionInput.isEmpty {
+                MiauButtonSend {
+                    if !viewModel.captionInput.isEmpty {
+                        viewModel.addCommentButtonPressed()
+                        commentFieldIsFocused = false
+                    }
                 }
             }
         }
     }
 }
+
 
 
