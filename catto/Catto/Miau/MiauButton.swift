@@ -39,6 +39,10 @@ struct MiauButtonProfile: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 32, height: 32)
                 .clipShape(Circle())
+                .overlay(content: {
+                    Circle()
+                        .stroke(.auxiliarBrand, lineWidth: 2 )
+                })
         })
     }
 }
@@ -105,10 +109,10 @@ struct MiauButtonSend: View {
         Button(action: action) {
             Image(systemName: "paperplane.fill")
                 .font(.title2)
-                .foregroundStyle(.textPrimaryDark)
+                .foregroundStyle(.textButton)
         }
         .frame(width: 48, height: 48)
-        .background(.auxiliarBrand)
+        .background(.bgTextField)
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 }

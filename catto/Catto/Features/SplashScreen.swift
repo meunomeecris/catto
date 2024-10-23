@@ -25,7 +25,6 @@ struct SplashScreen: View {
                         .frame(width: 180, height: 180)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(Color.auxiliarCardCatBoard, lineWidth: 8))
-                        .shadow(radius: 12)
                         .scaleEffect(size)
                         .opacity(opacity)
 
