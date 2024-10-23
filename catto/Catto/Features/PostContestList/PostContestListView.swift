@@ -33,7 +33,8 @@ struct PostContestListView: View {
                 }
                 Spacer()
                 CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can")
-                    .padding([.horizontal, .top, .bottom], 16)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 4)
             }
         }
         .background(.bgScreen)
@@ -67,7 +68,7 @@ struct CommentTextFieldView: View {
             .miauTextField()
             .focused($commentFieldIsFocused)
             .textInputAutocapitalization(.sentences)
-            .keyboardType(.default)
+
             .submitLabel(.send)
             .onSubmit {
                 if !viewModel.captionInput.isEmpty {
@@ -75,6 +76,7 @@ struct CommentTextFieldView: View {
                     commentFieldIsFocused = false
                 }
             }
+
             if !viewModel.captionInput.isEmpty {
                 MiauButtonSend {
                     if !viewModel.captionInput.isEmpty {
@@ -84,6 +86,9 @@ struct CommentTextFieldView: View {
                 }
             }
         }
+        .padding(.bottom, viewModel.currentHeight)
+        .edgesIgnoringSafeArea(.bottom)
+        .animation(.easeInOut, value: 0.16)
     }
 }
 
