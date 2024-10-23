@@ -34,7 +34,7 @@ struct PostContestListView: View {
                 }
                 Spacer()
                 CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can")
-                    .padding(.vertical, 4)
+                    .padding(.vertical, 8)
                     .padding(.horizontal, 16)
             }
         }
