@@ -24,9 +24,11 @@ struct PostContestListView: View {
                 }
                 .padding([.horizontal, .top], 16)
                 Spacer()
-                ZStack {
-                    ForEach(viewModel.contestList, id: \.self) { eachPost in
-                        PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
+                VStack {
+                    ZStack {
+                        ForEach(viewModel.contestList, id: \.self) { eachPost in
+                            PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
+                        }
                     }
                 }
                 Spacer()
@@ -60,7 +62,7 @@ struct CommentTextFieldView: View {
                 "",
                 text: $viewModel.captionInput,
                 prompt: Text(text)
-                    .foregroundStyle(.textPrimaryDark)
+                    .foregroundStyle(.textSecondary)
             )
             .miauTextField()
             .focused($commentFieldIsFocused)

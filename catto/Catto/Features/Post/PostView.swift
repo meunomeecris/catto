@@ -12,12 +12,12 @@ struct PostView: View {
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack(spacing: 16) {
+            VStack(spacing: 8) {
                 CatImagesView(urlString: viewModel.post.cat.url)
                 if viewModel.post.caption.isEmpty {
                     Text("No comments yet!")
                         .heading()
-                        .foregroundStyle(.bgCardSecondary)
+                        .foregroundStyle(.textSecondary)
                 } else {
                     ForEach(viewModel.post.caption, id: \.self) { eachCaption in
                         MiauCard(
