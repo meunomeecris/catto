@@ -39,6 +39,10 @@ struct MiauButtonProfile: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 32, height: 32)
                 .clipShape(Circle())
+                .overlay(content: {
+                    Circle()
+                        .stroke(.auxiliarBrand, lineWidth: 2 )
+                })
         })
     }
 }

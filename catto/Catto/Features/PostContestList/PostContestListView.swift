@@ -22,7 +22,8 @@ struct PostContestListView: View {
                         viewModel.profileButtonPressed()
                     }
                 }
-                .padding([.horizontal, .top], 16)
+                .padding(.top, 16)
+                .padding(.horizontal, 16)
                 Spacer()
                 VStack {
                     ZStack {
@@ -33,8 +34,8 @@ struct PostContestListView: View {
                 }
                 Spacer()
                 CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can")
-                    .padding(.horizontal, 16)
                     .padding(.vertical, 4)
+                    .padding(.horizontal, 16)
             }
         }
         .background(.bgScreen)
