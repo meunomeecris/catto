@@ -15,7 +15,7 @@ struct SplashScreen: View {
 
     var body: some View {
         ZStack {
-            Color.bgScreen
+            Color.auxiliarBrand
                 .ignoresSafeArea()
             if showSplashScreen {
                 VStack {
@@ -38,7 +38,7 @@ struct SplashScreen: View {
                             .multilineTextAlignment(.center)
                             .lineSpacing(5)
                     }
-                    .foregroundStyle(.auxiliarBrand)
+                    .foregroundStyle(.textPrimaryDark)
                     .opacity(showInfos ? 1 : 0)
                     .animation(.easeIn(duration: 0.2), value: showInfos)
                 }
@@ -47,17 +47,17 @@ struct SplashScreen: View {
             }
         }
         .onAppear() {
-            withAnimation(.easeIn(duration: 1)) {
+            withAnimation(.easeIn(duration: 0.8)) {
                 self.size = 1.0
                 self.opacity = 1.0
             }
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 withAnimation {
                     showInfos  = true
                 }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.6) {
                 withAnimation(.smooth) {
                     showSplashScreen = false
                 }

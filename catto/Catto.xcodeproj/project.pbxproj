@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A48751B2CC8ED2A00ED2E64 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4875192CC8ED2A00ED2E64 /* SplashScreen.swift */; };
 		8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50A9E02C19D15300DCA88C /* ContentView.swift */; };
 		8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E22C19D15500DCA88C /* Assets.xcassets */; };
 		8A50A9E62C19D15500DCA88C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A4875192CC8ED2A00ED2E64 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		8A50A9DB2C19D15300DCA88C /* Catto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A50A9E02C19D15300DCA88C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A50A9E22C19D15500DCA88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		8A7FE1F32C245E1B005C0B3A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8A4875192CC8ED2A00ED2E64 /* SplashScreen.swift */,
 				8AC5E0532CBFCB280060013D /* PostContestList */,
 				8AC5E0542CBFCBF70060013D /* Post */,
 				8AB1E2382C381A9200FE4D61 /* Model */,
@@ -272,6 +275,7 @@
 				8AC5E0512CBFCA3E0060013D /* PostContestListViewModel.swift in Sources */,
 				8AB014E12C21C9B2002DBA02 /* MiauButton.swift in Sources */,
 				8AEFAFA52CB72638009F202A /* PostContestListUseCase.swift in Sources */,
+				8A48751B2CC8ED2A00ED2E64 /* SplashScreen.swift in Sources */,
 				8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
