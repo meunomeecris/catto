@@ -26,4 +26,4 @@ Check out the overall flow of the app on Figma: <a href="https://www.figma.com/b
 
 
 <h2>Contact</h2>
- <a href="https://meunomeecris.com> meunomeecris.com </a>
+ <a href="https://meunomeecris.com"> meunomeecris.com </a>
