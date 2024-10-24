@@ -11,7 +11,6 @@ struct PostContestListView: View {
     @State var viewModel: PostContestListViewModel
 
     var body: some View {
-        ZStack {
             VStack {
                 HStack {
                     Text("Catto")
@@ -22,9 +21,11 @@ struct PostContestListView: View {
                         viewModel.profileButtonPressed()
                     }
                 }
-                .padding(.top, 16)
                 .padding(.horizontal, 16)
+                .padding(.top, 24)
+
                 Spacer()
+
                 VStack {
                     ZStack {
                         if viewModel.contestList.isEmpty {
@@ -38,10 +39,10 @@ struct PostContestListView: View {
                 }
                 Spacer()
                 CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can")
-                    .padding(.vertical, 8)
                     .padding(.horizontal, 16)
+                    .offset(y: -60)
+                    .padding(.bottom, -60)
             }
-        }
         .background(.bgScreen)
         .ignoresSafeArea()
         .onAppear() {
