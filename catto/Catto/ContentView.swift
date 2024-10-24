@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
 //        SplashScreen()
-        PostContestListView(viewModel:  PostContestListViewModel(getContestList: PostContestListUseCase()))
+//        PostContestListView(viewModel:  PostContestListViewModel(getContestList: PostContestListUseCase()))
+        CattoFavoriteListView()
+
     }
 }
