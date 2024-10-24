@@ -27,8 +27,12 @@ struct PostContestListView: View {
                 Spacer()
                 VStack {
                     ZStack {
-                        ForEach(viewModel.contestList, id: \.self) { eachPost in
-                            PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
+                        if viewModel.contestList.isEmpty {
+                            CatImageProgressView()
+                        } else {
+                            ForEach(viewModel.contestList, id: \.self) { eachPost in
+                                PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
+                            }
                         }
                     }
                 }

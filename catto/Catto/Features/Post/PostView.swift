@@ -12,8 +12,9 @@ struct PostView: View {
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack(spacing: 8) {
+            VStack(spacing: 12) {
                 CatImagesView(urlString: viewModel.post.cat.url)
+
                 if viewModel.post.caption.isEmpty {
                     Text("No comments yet!")
                         .heading()

@@ -7,7 +7,6 @@
 
 import Foundation
 
-@Observable
 final class PostContestListUseCase {
     let apiError = APIError.self
     var postUseCase = PostUseCase()
