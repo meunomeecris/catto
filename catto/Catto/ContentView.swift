@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        SplashScreen()
+//        SplashScreen()
+        PostContestListView(viewModel:  PostContestListViewModel(getContestList: PostContestListUseCase()))
     }
 }

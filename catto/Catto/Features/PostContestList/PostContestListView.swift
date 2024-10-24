@@ -11,7 +11,6 @@ struct PostContestListView: View {
     @State var viewModel: PostContestListViewModel
 
     var body: some View {
-        ZStack {
             VStack {
                 HStack {
                     Text("Catto")
@@ -22,22 +21,28 @@ struct PostContestListView: View {
                         viewModel.profileButtonPressed()
                     }
                 }
-                .padding(.top, 16)
                 .padding(.horizontal, 16)
+                .padding(.top, 24)
+
                 Spacer()
+
                 VStack {
                     ZStack {
-                        ForEach(viewModel.contestList, id: \.self) { eachPost in
-                            PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
+                        if viewModel.contestList.isEmpty {
+                            CatImageProgressView()
+                        } else {
+                            ForEach(viewModel.contestList, id: \.self) { eachPost in
+                                PostView(viewModel: PostViewModel(getContestList: viewModel.getContestList, post: eachPost))
+                            }
                         }
                     }
                 }
                 Spacer()
                 CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can")
-                    .padding(.vertical, 8)
                     .padding(.horizontal, 16)
+                    .offset(y: -60)
+                    .padding(.bottom, -60)
             }
-        }
         .background(.bgScreen)
         .ignoresSafeArea()
         .onAppear() {

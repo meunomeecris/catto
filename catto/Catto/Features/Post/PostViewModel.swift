@@ -39,7 +39,4 @@ class PostViewModel {
             getContestList.postUseCase.postList.remove(at: 0)
         }
     }
-
-
- 
 }
