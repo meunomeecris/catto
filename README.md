@@ -12,9 +12,9 @@ Explore the Figma prototype to see how Catto works in action: <a href="https://w
 
 <h2>Tech Stack</h2>
 
-Catto is built using Swift and the SwiftUI framework to ensure a smooth and native iOS experience.
-<strong>Architecture:</strong> The app follows the MVVM (Model-View-ViewModel) architecture pattern, ensuring a clear separation between the UI and business logic, making it scalable and easy to maintain.
-<strong>Design System:</strong> I created a custom style guide called Miau, which helps in reusing components like fonts, colors, and UI elements consistently across the app.
+Catto is built using Swift and the SwiftUI framework to ensure a smooth and native iOS experience.<br/>
+<strong>Architecture:</strong> The app follows the MVVM (Model-View-ViewModel) architecture pattern, ensuring a clear separation between the UI and business logic, making it scalable and easy to maintain.<br/>
+<strong>Design System:</strong> I created a custom style guide called Miau, which helps in reusing components like fonts, colors, and UI elements consistently across the app.<br/>
 <strong>API:</strong> The app fetches cat images from <a href="https://thecatapi.com"> The Cat API </a>, delivering fresh content for endless captioning fun.
 
 
