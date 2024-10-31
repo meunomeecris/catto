@@ -12,7 +12,13 @@ struct CattoFavoriteView: View {
 
     var body: some View {
         HStack(spacing: 8) {
-            CattoImageView(cattoPost: cattoPost, widthFrame: 80, heightFrame: 100, cornerRadius: 8, lineWidth: 3)
+            CattoImageView(
+                cattoPost: cattoPost,
+                widthFrame: 80,
+                heightFrame: 100,
+                cornerRadius: 8,
+                lineWidth: 3
+            )
             Text(cattoPost.captionList.first?.caption ?? "")
                 .title()
         }

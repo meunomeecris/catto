@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct CattoFavoriteListView: View {
+    @Environment(ModelData.self) var modelData
+
+    var filteredCats: [CattoPost] {
+        modelData.cattoPost.filter { post in
+            post.isFavorite
+        }
+    }
+
     var body: some View {
         NavigationSplitView {
-            List(cattoPost) { post in
+            List(filteredCats) { post in
                 NavigationLink {
                     CattoPostView(cattoPost: post)
                 } label: {
                     CattoFavoriteView(cattoPost: post)
                 }
             }
-            .navigationTitle("Favorites Catto")
+            .navigationTitle("My Cattos")
+            .navigationBarTitleDisplayMode(.large)
         } detail: {
             Text("Select a Catto")
         }

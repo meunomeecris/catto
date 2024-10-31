@@ -11,6 +11,7 @@ import Foundation
 struct CattoPost: Hashable, Codable, Identifiable {
     var id: Int
     var catImageUrl: String
+    var isFavorite: Bool
     var captionList: [CattoCaption]
 
     struct CattoCaption: Hashable, Codable {

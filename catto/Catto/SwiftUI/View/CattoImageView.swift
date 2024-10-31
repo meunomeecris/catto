@@ -31,9 +31,25 @@ struct CattoImageView: View {
                             .stroke(.auxiliarCardCatBoard, lineWidth: lineWidth)
                     })
             case .failure(_):
-                ProgressView()
+                ProgressView("Psiu\n Psiu\n Psiu")
+                    .heading()
+                    .foregroundStyle(.auxiliarBrand)
+                    .frame(maxWidth: widthFrame ,maxHeight: heightFrame)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .overlay(content: {
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(.auxiliarCardCatBoard, lineWidth: 8)
+                    })
             @unknown default:
-                ProgressView()
+                ProgressView("Psiu\n Psiu\n Psiu")
+                    .heading()
+                    .foregroundStyle(.auxiliarBrand)
+                    .frame(maxWidth: widthFrame ,maxHeight: heightFrame)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .overlay(content: {
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(.auxiliarCardCatBoard, lineWidth: 8)
+                    })
             }
         }
     }

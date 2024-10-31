@@ -2,6 +2,7 @@
     {
         "id": 1001,
         "catImageUrl": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
+        "isFavorite": false,
         "captionList": [
             {
                 "user": {
@@ -24,6 +25,7 @@
     {
         "id": 1002,
         "catImageUrl": "https://cdn2.thecatapi.com/images/aii.jpg",
+        "isFavorite": true,
         "captionList": [
             {
                 "user": {
@@ -38,9 +40,24 @@
                     "username": "psychcat",
                     "userImageUrl": "https://cdn2.thecatapi.com/images/bqh.jpg"
                 },
-                "caption": "I am sexyy and I know it!",
+                "caption": "I am sexy and I know it!",
                 "vote": 0
             }
         ]
-    }
+    },
+    {
+        "id": 1003,
+        "catImageUrl": "https://www.eastsacvet.com/blog/wp-content/uploads/2021/09/iStock-1267021092.jpg",
+        "isFavorite": true,
+        "captionList": [
+            {
+                "user": {
+                    "username": "cat-stroph",
+                    "userImageUrl": "https://cdn2.thecatapi.com/images/eb6.jpg"
+                },
+                "caption": "Que música ruim do caralh@.",
+                "vote": 1
+            },
+        ]
+    },
 ]

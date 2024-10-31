@@ -7,7 +7,11 @@
 
 import Foundation
 
-var cattoPost: [CattoPost] = load("cattoPost.json")
+@Observable
+class ModelData {
+    var cattoPost: [CattoPost] = load("cattoPost.json")
+}
+
 
 
 func load<T: Decodable>(_ filename: String) -> T {

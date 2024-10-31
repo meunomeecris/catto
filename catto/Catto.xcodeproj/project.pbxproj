@@ -21,6 +21,7 @@
 		8A50A9E62C19D15500DCA88C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */; };
 		8A5582A02C3C35950012D58C /* CattoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55829F2C3C35950012D58C /* CattoApp.swift */; };
 		8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64FF782C222AC1001BB68D /* MiauTextField.swift */; };
+		8A99898B2CCB894100BE4578 /* CattoContestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99898A2CCB894100BE4578 /* CattoContestList.swift */; };
 		8AB014DF2C21C4C6002DBA02 /* MiauCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB014DE2C21C4C6002DBA02 /* MiauCards.swift */; };
 		8AB014E12C21C9B2002DBA02 /* MiauButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB014E02C21C9B2002DBA02 /* MiauButton.swift */; };
 		8AB1E23A2C381B0F00FE4D61 /* CattoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1E2392C381B0F00FE4D61 /* CattoModel.swift */; };
@@ -54,6 +55,7 @@
 		8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A55829F2C3C35950012D58C /* CattoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoApp.swift; sourceTree = "<group>"; };
 		8A64FF782C222AC1001BB68D /* MiauTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauTextField.swift; sourceTree = "<group>"; };
+		8A99898A2CCB894100BE4578 /* CattoContestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoContestList.swift; sourceTree = "<group>"; };
 		8AB014DE2C21C4C6002DBA02 /* MiauCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauCards.swift; sourceTree = "<group>"; };
 		8AB014E02C21C9B2002DBA02 /* MiauButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauButton.swift; sourceTree = "<group>"; };
 		8AB1E2392C381B0F00FE4D61 /* CattoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoModel.swift; sourceTree = "<group>"; };
@@ -94,19 +96,20 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		8A2F4C6C2CCA4E7D005860C9 /* Tutorial */ = {
+		8A2F4C6C2CCA4E7D005860C9 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
 				8A2F4C772CCA5A74005860C9 /* View */,
 				8A2F4C782CCA5A86005860C9 /* Model */,
 				8A2F4C792CCA5A91005860C9 /* Ressource */,
 			);
-			path = Tutorial;
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		8A2F4C772CCA5A74005860C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A99898A2CCB894100BE4578 /* CattoContestList.swift */,
 				8A2F4C752CCA5830005860C9 /* CattoFavoriteListView.swift */,
 				8A2F4C7A2CCA5E69005860C9 /* CattoFavoriteView.swift */,
 				8A2F4C6F2CCA4F13005860C9 /* CattoPostView.swift */,
@@ -153,8 +156,8 @@
 			children = (
 				8A55829F2C3C35950012D58C /* CattoApp.swift */,
 				8A50A9E02C19D15300DCA88C /* ContentView.swift */,
-				8A2F4C6C2CCA4E7D005860C9 /* Tutorial */,
-				8A7FE1F32C245E1B005C0B3A /* Features */,
+				8A2F4C6C2CCA4E7D005860C9 /* SwiftUI */,
+				8A7FE1F32C245E1B005C0B3A /* MVVM */,
 				8ADEEB102C1B16E9006B1C04 /* Miau */,
 				8AD96E1E2C2025E600EB2F5B /* Info.plist */,
 				8A50A9E22C19D15500DCA88C /* Assets.xcassets */,
@@ -171,7 +174,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8A7FE1F32C245E1B005C0B3A /* Features */ = {
+		8A7FE1F32C245E1B005C0B3A /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
 				8A4875192CC8ED2A00ED2E64 /* SplashScreen.swift */,
@@ -181,7 +184,7 @@
 				8AEE39582C9D427500C42BC0 /* Resource */,
 				8A0D8AF22C3ABA8400C069C0 /* Tests */,
 			);
-			path = Features;
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 		8AB1E2382C381A9200FE4D61 /* Model */ = {
@@ -324,6 +327,7 @@
 				8A2F4C742CCA5538005860C9 /* CattoImageView.swift in Sources */,
 				8AD96E202C20264200EB2F5B /* MiauFonts.swift in Sources */,
 				8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */,
+				8A99898B2CCB894100BE4578 /* CattoContestList.swift in Sources */,
 				8AC5E0562CBFCC1B0060013D /* PostUseCase.swift in Sources */,
 				8A2F4C692CCA3BA4005860C9 /* PostContestListView .swift in Sources */,
 				8A2F4C7B2CCA5E69005860C9 /* CattoFavoriteView.swift in Sources */,
