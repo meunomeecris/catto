@@ -1,4 +1,4 @@
-<h2>Catto - Purr-crastination Time</h2>
+<h2>Catto - Procrastinate Time </h2>
 
 Welcome to Catto, the playful social app designed for those moments of purr-crastination! Browse through an endless stream of adorable cat photos, add witty captions, and vote for your favorites. It's a fun and simple competition to discover the most creative or funniest caption, all while indulging in your love for cats.
 
