@@ -9,9 +9,8 @@ import Foundation
 
 @Observable
 class ModelData {
-    var cattoPost: [CattoPost] = load("mockCattoPost.json")
+    var cattoPost: [Catto] = load("cattoData.json")
 }
-
 
 
 func load<T: Decodable>(_ filename: String) -> T {

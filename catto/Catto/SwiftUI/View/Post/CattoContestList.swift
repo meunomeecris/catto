@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CattoContestList: View {
     @Environment(ModelData.self) var modelData
-    var caption: Binding<String>
 
 
     var body: some View {
@@ -26,7 +25,7 @@ struct CattoContestList: View {
                     Spacer()
 
                     NavigationLink {
-                        CattoFavoriteListView()
+                        CattoFavoriteList()
                     } label: {
                         AvatarUser(text: "avatarUser")
                     }
@@ -36,21 +35,32 @@ struct CattoContestList: View {
                 Spacer()
 
                 ForEach(modelData.cattoPost) { post in
-                    CattoPostView(cattoPost: post)
-                }
+                    CattoPost(cattoPost: post)
 
-                Spacer()
+                    Spacer()
 
-                HStack {
-                    InputText(caption: caption)
-                    FavoriteButton(isSet: $modelData.cattoPost[0].isFavorite) {
-                    }
+                    CommentInputBar(catto: post)
+                        .padding(.horizontal, 16)
                 }
-                .offset(y: -50)
-                .padding(.bottom, -60)
-                .padding(.horizontal, 16)
             }
         }
     }
 }
 
+struct CommentInputBar: View {
+    @Environment(ModelData.self) var modelData
+    var catto: Catto
+
+    var cattoIndex: Int {
+        modelData.cattoPost.firstIndex(where: { $0.id == catto.id })!
+    }
+
+    var body: some View {
+        @Bindable var modelData = modelData
+
+        HStack {
+            InputText()
+            FavoriteButton(isSet: $modelData.cattoPost[cattoIndex].isFavorite)
+        }
+    }
+}

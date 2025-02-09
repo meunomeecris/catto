@@ -56,7 +56,7 @@
     {
         "id": 1003,
         "catImageUrl": "https://www.eastsacvet.com/blog/wp-content/uploads/2021/09/iStock-1267021092.jpg",
-        "isFavorite": true,
+        "isFavorite": false,
         "captionList": [
             {
                 "id": 1005,

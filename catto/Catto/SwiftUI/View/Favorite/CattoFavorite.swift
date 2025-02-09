@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CattoFavorite: View {
-    var cattoPost: CattoPost
+    var cattoPost: Catto
 
     var body: some View {
         HStack(spacing: 8) {
-            CattoImageView(
+            CattoImage(
                 cattoPost: cattoPost,
                 widthFrame: 80,
                 heightFrame: 100,

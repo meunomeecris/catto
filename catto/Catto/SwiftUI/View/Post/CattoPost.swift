@@ -9,19 +9,18 @@ import SwiftUI
 
 struct CattoPost: View {
     @Environment(ModelData.self) var modelData
-    var cattoPost: CattoPost
+    var cattoPost: Catto
 
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
-                CattoImageView(
+                CattoImage(
                     cattoPost: cattoPost,
                     widthFrame: .infinity,
                     heightFrame: .infinity,
                     cornerRadius: 16,
                     lineWidth: 8
                 )
-
 
                 ForEach(cattoPost.captionList) { caption in
                     MiauCard(username: caption.user.username,

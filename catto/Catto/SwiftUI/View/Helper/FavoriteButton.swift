@@ -10,13 +10,11 @@ import SwiftUI
 struct FavoriteButton: View {
     @Binding var isSet: Bool
 
-    var action: () -> Void
-    
     var body: some View {
-        Button(action: {
+        Button {
             isSet.toggle()
-        }) {
-            Image(systemName: (isSet) ? "heart" : "heart.fill")
+        } label: {
+            Image(systemName: isSet ? "heart.fill" : "heart" )
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.auxiliarFavorite)

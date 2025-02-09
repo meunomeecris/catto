@@ -9,8 +9,9 @@ import SwiftUI
 
 struct CattoFavoriteList: View {
     @Environment(ModelData.self) var modelData
+//    @State private var showFavoritesOnly = false
 
-    var filteredCats: [CattoPost] {
+    var filteredCatto: [Catto] {
         modelData.cattoPost.filter { post in
             post.isFavorite
         }
@@ -18,11 +19,11 @@ struct CattoFavoriteList: View {
 
     var body: some View {
         NavigationSplitView {
-            List(filteredCats) { post in
+            List(filteredCatto) { post in
                 NavigationLink {
-                    CattoPostView(cattoPost: post)
+                    CattoPost(cattoPost: post)
                 } label: {
-                    CattoFavoriteView(cattoPost: post)
+                    CattoFavorite(cattoPost: post)
                 }
             }
             .navigationTitle("My Cattos")

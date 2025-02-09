@@ -9,12 +9,11 @@ import SwiftUI
 
 struct InputText: View {
     @FocusState private var commentFieldIsFocused: Bool
-    var caption: Binding<String>
 
     var body: some View {
         TextField(
             "",
-            text: caption,
+            text: .constant(""),
             prompt: Text("Title meow")
                 .foregroundStyle(.textCardSecondary)
         )
