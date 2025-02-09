@@ -14,10 +14,12 @@ struct CattoPost: Hashable, Codable, Identifiable {
     var isFavorite: Bool
     var captionList: [CattoCaption]
 
-    struct CattoCaption: Hashable, Codable {
+    struct CattoCaption: Hashable, Codable , Identifiable {
+        var id: Int
         let user: CattoUser
         let caption: String
         let vote: Int
+        let isMostVoted: Bool
     }
 }
 

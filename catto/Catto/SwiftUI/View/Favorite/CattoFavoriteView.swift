@@ -19,6 +19,7 @@ struct CattoFavoriteView: View {
                 cornerRadius: 8,
                 lineWidth: 3
             )
+            
             Text(cattoPost.captionList.first?.caption ?? "")
                 .title()
         }

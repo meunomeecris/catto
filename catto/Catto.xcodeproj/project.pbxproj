@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1FFB7B2D57ADF000A05CB7 /* AvatarUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FFB7A2D57ADE500A05CB7 /* AvatarUser.swift */; };
+		8A1FFB7D2D57AF5B00A05CB7 /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FFB7C2D57AF4400A05CB7 /* InputText.swift */; };
+		8A1FFB7F2D57AFF900A05CB7 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FFB7E2D57AFF500A05CB7 /* FavoriteButton.swift */; };
 		8A2F4C692CCA3BA4005860C9 /* PostContestListView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F4C682CCA3BA4005860C9 /* PostContestListView .swift */; };
-		8A2F4C6B2CCA4309005860C9 /* cattoPost.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A2F4C6A2CCA4309005860C9 /* cattoPost.json */; };
+		8A2F4C6B2CCA4309005860C9 /* mockCattoPost.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A2F4C6A2CCA4309005860C9 /* mockCattoPost.json */; };
 		8A2F4C6E2CCA4EB6005860C9 /* CattoPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F4C6D2CCA4EB6005860C9 /* CattoPost.swift */; };
 		8A2F4C702CCA4F13005860C9 /* CattoPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F4C6F2CCA4F13005860C9 /* CattoPostView.swift */; };
 		8A2F4C722CCA4F6C005860C9 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F4C712CCA4F6C005860C9 /* ModelData.swift */; };
@@ -40,8 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A1FFB7A2D57ADE500A05CB7 /* AvatarUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarUser.swift; sourceTree = "<group>"; };
+		8A1FFB7C2D57AF4400A05CB7 /* InputText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputText.swift; sourceTree = "<group>"; };
+		8A1FFB7E2D57AFF500A05CB7 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		8A2F4C682CCA3BA4005860C9 /* PostContestListView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostContestListView .swift"; sourceTree = "<group>"; };
-		8A2F4C6A2CCA4309005860C9 /* cattoPost.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cattoPost.json; sourceTree = "<group>"; };
+		8A2F4C6A2CCA4309005860C9 /* mockCattoPost.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockCattoPost.json; sourceTree = "<group>"; };
 		8A2F4C6D2CCA4EB6005860C9 /* CattoPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoPost.swift; sourceTree = "<group>"; };
 		8A2F4C6F2CCA4F13005860C9 /* CattoPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoPostView.swift; sourceTree = "<group>"; };
 		8A2F4C712CCA4F6C005860C9 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -96,6 +102,35 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		8A1FFB772D57AC3800A05CB7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8A1FFB7C2D57AF4400A05CB7 /* InputText.swift */,
+				8A1FFB7A2D57ADE500A05CB7 /* AvatarUser.swift */,
+				8A2F4C732CCA5538005860C9 /* CattoImageView.swift */,
+				8A1FFB7E2D57AFF500A05CB7 /* FavoriteButton.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		8A1FFB782D57AC7F00A05CB7 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				8A99898A2CCB894100BE4578 /* CattoContestList.swift */,
+				8A2F4C6F2CCA4F13005860C9 /* CattoPostView.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		8A1FFB792D57AD1E00A05CB7 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				8A2F4C752CCA5830005860C9 /* CattoFavoriteListView.swift */,
+				8A2F4C7A2CCA5E69005860C9 /* CattoFavoriteView.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		8A2F4C6C2CCA4E7D005860C9 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,11 +144,9 @@
 		8A2F4C772CCA5A74005860C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8A99898A2CCB894100BE4578 /* CattoContestList.swift */,
-				8A2F4C752CCA5830005860C9 /* CattoFavoriteListView.swift */,
-				8A2F4C7A2CCA5E69005860C9 /* CattoFavoriteView.swift */,
-				8A2F4C6F2CCA4F13005860C9 /* CattoPostView.swift */,
-				8A2F4C732CCA5538005860C9 /* CattoImageView.swift */,
+				8A1FFB782D57AC7F00A05CB7 /* Post */,
+				8A1FFB792D57AD1E00A05CB7 /* Favorite */,
+				8A1FFB772D57AC3800A05CB7 /* Helper */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,7 +163,7 @@
 		8A2F4C792CCA5A91005860C9 /* Ressource */ = {
 			isa = PBXGroup;
 			children = (
-				8A2F4C6A2CCA4309005860C9 /* cattoPost.json */,
+				8A2F4C6A2CCA4309005860C9 /* mockCattoPost.json */,
 			);
 			path = Ressource;
 			sourceTree = "<group>";
@@ -308,7 +341,7 @@
 				8A50A9E62C19D15500DCA88C /* Preview Assets.xcassets in Resources */,
 				8AD96E1B2C20254300EB2F5B /* Inter-Light.ttf in Resources */,
 				8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */,
-				8A2F4C6B2CCA4309005860C9 /* cattoPost.json in Resources */,
+				8A2F4C6B2CCA4309005860C9 /* mockCattoPost.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,11 +358,13 @@
 				8AC5E0582CBFD2610060013D /* PostViewModel.swift in Sources */,
 				8A5582A02C3C35950012D58C /* CattoApp.swift in Sources */,
 				8A2F4C742CCA5538005860C9 /* CattoImageView.swift in Sources */,
+				8A1FFB7B2D57ADF000A05CB7 /* AvatarUser.swift in Sources */,
 				8AD96E202C20264200EB2F5B /* MiauFonts.swift in Sources */,
 				8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */,
 				8A99898B2CCB894100BE4578 /* CattoContestList.swift in Sources */,
 				8AC5E0562CBFCC1B0060013D /* PostUseCase.swift in Sources */,
 				8A2F4C692CCA3BA4005860C9 /* PostContestListView .swift in Sources */,
+				8A1FFB7D2D57AF5B00A05CB7 /* InputText.swift in Sources */,
 				8A2F4C7B2CCA5E69005860C9 /* CattoFavoriteView.swift in Sources */,
 				8ADEEB152C1B21B5006B1C04 /* MiauColors.swift in Sources */,
 				8A2F4C762CCA5830005860C9 /* CattoFavoriteListView.swift in Sources */,
@@ -341,6 +376,7 @@
 				8AEFAFA52CB72638009F202A /* PostContestListUseCase.swift in Sources */,
 				8A48751B2CC8ED2A00ED2E64 /* SplashScreen.swift in Sources */,
 				8A64FF792C222AC1001BB68D /* MiauTextField.swift in Sources */,
+				8A1FFB7F2D57AFF900A05CB7 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

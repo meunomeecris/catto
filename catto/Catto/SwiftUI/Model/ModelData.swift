@@ -9,7 +9,7 @@ import Foundation
 
 @Observable
 class ModelData {
-    var cattoPost: [CattoPost] = load("cattoPost.json")
+    var cattoPost: [CattoPost] = load("mockCattoPost.json")
 }
 
 
