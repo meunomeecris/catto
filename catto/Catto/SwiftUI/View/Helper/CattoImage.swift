@@ -1,5 +1,5 @@
 //
-//  CattoImageView.swift
+//  CattoImage.swift
 //  Catto
 //
 //  Created by Cris Messias on 24/10/24.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CattoImageView: View {
-    var cattoPost: CattoPost
+struct CattoImage: View {
+    var cattoPost: Catto
     var widthFrame: CGFloat
     var heightFrame: CGFloat
     var cornerRadius: CGFloat

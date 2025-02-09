@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CattoPostView: View {
+struct CattoPost: View {
     @Environment(ModelData.self) var modelData
     var cattoPost: CattoPost
 

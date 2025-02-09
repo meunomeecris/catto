@@ -1,10 +1,3 @@
-//
-//  model.swift
-//  Catto
-//
-//  Created by Cris Messias on 24/10/24.
-//
-
 import Foundation
 
 /// SwiftUI Tutorial
@@ -21,9 +14,4 @@ struct CattoPost: Hashable, Codable, Identifiable {
         let vote: Int
         let isMostVoted: Bool
     }
-}
-
-struct CattoUser: Hashable, Codable {
-    var username: String
-    var userImageUrl: String
 }
