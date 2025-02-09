@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1001,
+        "catImageUrl": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
+        "isFavorite": false,
+        "captionList": [
+            {
+                "id": 1001,
+                "user": {
+                    "username": "cat-stroph",
+                    "userImageUrl": "https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=800&ar=2:1&fit=crop"
+                },
+                "caption": "One day at the time...",
+                "vote": 3,
+                "isMostVoted": true,
+            },
+            {
+                "id": 1002,
+                "user": {
+                    "username": "psychcat",
+                    "userImageUrl": "https://i.pinimg.com/enabled/564x/36/88/6a/36886a4e4996887c1ade122c2151c219.jpg"
+                },
+                "caption": "Goooood give me patience.",
+                "vote": 0,
+                "isMostVoted": false,
+            }
+        ]
+    },
+    {
+        "id": 1002,
+        "catImageUrl": "https://cdn2.thecatapi.com/images/aii.jpg",
+        "isFavorite": true,
+        "captionList": [
+            {
+                "id": 1003,
+                "user": {
+                    "username": "cat-stroph",
+                    "userImageUrl": "https://cdn2.thecatapi.com/images/eb6.jpg"
+                },
+                "caption": "Tudo eu nessa casa.",
+                "vote": 3,
+                "isMostVoted": false,
+            },
+            {
+                "id": 1004,
+                "user": {
+                    "username": "psychcat",
+                    "userImageUrl": "https://cdn2.thecatapi.com/images/bqh.jpg"
+                },
+                "caption": "I am sexy and I know it!",
+                "vote": 0,
+                "isMostVoted": false,
+            }
+        ]
+    },
+    {
+        "id": 1003,
+        "catImageUrl": "https://www.eastsacvet.com/blog/wp-content/uploads/2021/09/iStock-1267021092.jpg",
+        "isFavorite": false,
+        "captionList": [
+            {
+                "id": 1005,
+                "user": {
+                    "username": "cat-stroph",
+                    "userImageUrl": "https://cdn2.thecatapi.com/images/eb6.jpg"
+                },
+                "caption": "Que música ruim do caralh@.",
+                "vote": 1,
+                "isMostVoted": false,
+            },
+        ]
+    },
+]

@@ -56,10 +56,10 @@ struct MiauButtonFavorite: View {
             isPressed.toggle()
             action()
         }) {
-            Image(systemName: isPressed ? "heart.fill" : "heart" )
+            Image(systemName: isPressed ? "heart" : "heart.fill" )
                 .resizable()
                 .scaledToFit()
-                .foregroundStyle(.auxiliarBlue)
+                .foregroundStyle(.auxiliarFavorite)
                 .frame(maxWidth: 24, maxHeight: 24)
                 .padding(10)
         }
