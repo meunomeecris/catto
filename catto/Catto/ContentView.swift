@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection: Tab = .post
+
+    enum Tab {
+        case post
+        case favorite
+    }
 
     var body: some View {
-//        SplashScreen()
-        CattoContestList()
+        TabView {
+            CattoPostList()
+                .tabItem {
+                    Label("Catto", systemImage: "cat.circle")
+                }
+                .tag(Tab.post)
+
+            FavoriteList()
+                .tabItem {
+                    Label("Favorite", systemImage: "heart.circle")
+                }
+                .tag(Tab.favorite)
+        }
     }
 }
