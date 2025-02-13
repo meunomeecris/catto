@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CattoFavoriteList: View {
     @Environment(ModelData.self) var modelData
-//    @State private var showFavoritesOnly = false
 
     var filteredCatto: [Catto] {
         modelData.cattoPost.filter { post in
