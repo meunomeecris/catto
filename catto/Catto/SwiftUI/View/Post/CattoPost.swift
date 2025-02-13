@@ -27,7 +27,7 @@ struct CattoPost: View {
                              avatarUrl: caption.user.userImageUrl,
                              caption: caption.caption,
                              likes: caption.vote,
-                             isMostVoted: false)
+                             isMostVoted: caption.isMostVoted)
 
                 }
             }
