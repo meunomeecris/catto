@@ -1,5 +1,5 @@
 //
-//  CattoFavorite.swift
+//  FavoriteItem.swift
 //  Catto
 //
 //  Created by Cris Messias on 24/10/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CattoFavorite: View {
+struct FavoriteItem: View {
     var cattoPost: Catto
 
     var body: some View {

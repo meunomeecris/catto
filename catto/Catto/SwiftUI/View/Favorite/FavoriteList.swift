@@ -1,5 +1,5 @@
 //
-//  CattoFavoriteList.swift
+//  FavoriteList.swift
 //  Catto
 //
 //  Created by Cris Messias on 24/10/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CattoFavoriteList: View {
+struct FavoriteList: View {
     @Environment(ModelData.self) var modelData
 
     var filteredCatto: [Catto] {
@@ -22,7 +22,7 @@ struct CattoFavoriteList: View {
                 NavigationLink {
                     CattoPost(cattoPost: post)
                 } label: {
-                    CattoFavorite(cattoPost: post)
+                    FavoriteItem(cattoPost: post)
                 }
             }
             .navigationTitle("My Cattos")

@@ -1,5 +1,5 @@
 //
-//  CattoContestList.swift
+//  CattoPostList.swift
 //  Catto
 //
 //  Created by Cris Messias on 25/10/24.
@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct CattoContestList: View {
+struct CattoPostList: View {
     @Environment(ModelData.self) var modelData
-
 
     var body: some View {
         @Bindable var modelData = modelData
@@ -21,11 +20,9 @@ struct CattoContestList: View {
                         .heading()
                         .bold()
                         .foregroundStyle(.textPrimaryLight)
-
                     Spacer()
-
                     NavigationLink {
-                        CattoFavoriteList()
+                        FavoriteList()
                     } label: {
                         AvatarUser(text: "avatarUser")
                     }
@@ -33,12 +30,9 @@ struct CattoContestList: View {
                 .padding(.horizontal, 16)
 
                 Spacer()
-
                 ForEach(modelData.cattoPost) { post in
                     CattoPost(cattoPost: post)
-
                     Spacer()
-
                     CommentInputBar(catto: post)
                         .padding(.horizontal, 16)
                 }
