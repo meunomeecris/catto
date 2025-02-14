@@ -42,11 +42,9 @@ struct PostContestListView: View {
                 
                 CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can")
                     .padding(.horizontal, 16)
-                    .offset(y: -60)
-                    .padding(.bottom, -60)
+                    .padding(.bottom, 16)
             }
         .background(.bgScreen)
-        .ignoresSafeArea()
         .onAppear() {
             viewModel.onViewAppearGetCats()
         }
