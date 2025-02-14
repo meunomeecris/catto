@@ -31,26 +31,24 @@ struct CattoImage: View {
                             .stroke(.auxiliarCardCatBoard, lineWidth: lineWidth)
                     })
             case .failure(_):
-                ProgressView("Psiu\n Psiu\n Psiu")
-                    .heading()
-                    .foregroundStyle(.auxiliarBrand)
-                    .frame(maxWidth: widthFrame ,maxHeight: heightFrame)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                    .overlay(content: {
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(.auxiliarCardCatBoard, lineWidth: 8)
-                    })
+                CattoProgressView()
             @unknown default:
-                ProgressView("Psiu\n Psiu\n Psiu")
-                    .heading()
-                    .foregroundStyle(.auxiliarBrand)
-                    .frame(maxWidth: widthFrame ,maxHeight: heightFrame)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                    .overlay(content: {
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(.auxiliarCardCatBoard, lineWidth: 8)
-                    })
+                CattoProgressView()
             }
         }
+    }
+}
+
+struct CattoProgressView: View {
+    var body: some View {
+        ProgressView("Psiu\n Psiu\n Psiu")
+            .heading()
+            .foregroundStyle(.auxiliarBrand)
+            .frame(maxWidth: .infinity ,maxHeight: .infinity)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+            .overlay(content: {
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(.auxiliarCardCatBoard, lineWidth: 8)
+            })
     }
 }

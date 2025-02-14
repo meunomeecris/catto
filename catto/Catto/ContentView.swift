@@ -13,6 +13,7 @@ struct ContentView: View {
     enum Tab {
         case post
         case favorite
+        case mvvm
     }
 
     var body: some View {
@@ -28,6 +29,12 @@ struct ContentView: View {
                     Label("Favorite", systemImage: "heart.circle")
                 }
                 .tag(Tab.favorite)
+
+            SplashScreen()
+                .tabItem {
+                    Label("MVVM", systemImage: "graduationcap.circle")
+                }
+                .tag(Tab.mvvm)
         }
     }
 }
