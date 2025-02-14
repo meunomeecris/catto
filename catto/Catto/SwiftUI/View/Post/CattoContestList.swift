@@ -9,52 +9,23 @@ import SwiftUI
 
 struct CattoPostList: View {
     @Environment(ModelData.self) var modelData
-
+    
     var body: some View {
-        @Bindable var modelData = modelData
-
-        NavigationView {
-            List {
-                HStack {
-                    Text("Catto")
-                        .heading()
-                        .bold()
-                        .foregroundStyle(.textPrimaryLight)
-                    Spacer()
-                    NavigationLink {
-                        FavoriteList()
-                    } label: {
-                        AvatarUser(text: "avatarUser")
+        
+        VStack {
+            Text("Catto")
+                .heading()
+                .bold()
+                .foregroundStyle(.textPrimaryLight)
+            
+            VStack {
+                ZStack {
+                    ForEach(modelData.cattoPost) { post in
+                        CattoPost(cattoPost: post)
                     }
-                }
-                .padding(.horizontal, 16)
-
-                Spacer()
-                ForEach(modelData.cattoPost) { post in
-                    CattoPost(cattoPost: post)
-                    Spacer()
-                    CommentInputBar(catto: post)
-                        .padding(.horizontal, 16)
+                    
                 }
             }
-        }
-    }
-}
-
-struct CommentInputBar: View {
-    @Environment(ModelData.self) var modelData
-    var catto: Catto
-
-    var cattoIndex: Int {
-        modelData.cattoPost.firstIndex(where: { $0.id == catto.id })!
-    }
-
-    var body: some View {
-        @Bindable var modelData = modelData
-
-        HStack {
-            InputText()
-            FavoriteButton(isSet: $modelData.cattoPost[cattoIndex].isFavorite)
         }
     }
 }
