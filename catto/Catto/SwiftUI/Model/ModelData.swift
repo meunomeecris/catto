@@ -10,6 +10,7 @@ import Foundation
 @Observable
 class ModelData {
     var cattoPost: [Catto] = load("cattoData.json")
+    var profile = Profile.default
 }
 
 

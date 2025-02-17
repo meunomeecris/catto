@@ -40,6 +40,10 @@
 		8AD96E262C20382E00EB2F5B /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD96E252C20382E00EB2F5B /* Inter-Bold.ttf */; };
 		8ADEEB152C1B21B5006B1C04 /* MiauColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADEEB142C1B21B5006B1C04 /* MiauColors.swift */; };
 		8AEFAFA52CB72638009F202A /* PostContestListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEFAFA42CB72623009F202A /* PostContestListUseCase.swift */; };
+		8AF07F972D5F3F7B009F8DB1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF07F962D5F3F78009F8DB1 /* Profile.swift */; };
+		8AF07F992D5F43DC009F8DB1 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF07F982D5F43D0009F8DB1 /* ProfileSummary.swift */; };
+		8AF07F9B2D5F4884009F8DB1 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF07F9A2D5F4880009F8DB1 /* ProfileHost.swift */; };
+		8AF07F9D2D5F5096009F8DB1 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF07F9C2D5F5092009F8DB1 /* ProfileEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +82,10 @@
 		8AD96E252C20382E00EB2F5B /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		8ADEEB142C1B21B5006B1C04 /* MiauColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauColors.swift; sourceTree = "<group>"; };
 		8AEFAFA42CB72623009F202A /* PostContestListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContestListUseCase.swift; sourceTree = "<group>"; };
+		8AF07F962D5F3F78009F8DB1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		8AF07F982D5F43D0009F8DB1 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
+		8AF07F9A2D5F4880009F8DB1 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
+		8AF07F9C2D5F5092009F8DB1 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -144,6 +152,7 @@
 		8A2F4C772CCA5A74005860C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8AF07F952D5F3F12009F8DB1 /* Profile */,
 				8A1FFB782D57AC7F00A05CB7 /* Post */,
 				8A1FFB792D57AD1E00A05CB7 /* Favorite */,
 				8A1FFB772D57AC3800A05CB7 /* Helper */,
@@ -154,6 +163,7 @@
 		8A2F4C782CCA5A86005860C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8AF07F962D5F3F78009F8DB1 /* Profile.swift */,
 				8A2F4C6D2CCA4EB6005860C9 /* Catto.swift */,
 				8A2F4C712CCA4F6C005860C9 /* ModelData.swift */,
 			);
@@ -273,6 +283,16 @@
 			path = Miau;
 			sourceTree = "<group>";
 		};
+		8AF07F952D5F3F12009F8DB1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8AF07F9C2D5F5092009F8DB1 /* ProfileEditor.swift */,
+				8AF07F9A2D5F4880009F8DB1 /* ProfileHost.swift */,
+				8AF07F982D5F43D0009F8DB1 /* ProfileSummary.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,7 +374,11 @@
 			files = (
 				8A2F4C702CCA4F13005860C9 /* CattoPost.swift in Sources */,
 				8A2F4C6E2CCA4EB6005860C9 /* Catto.swift in Sources */,
+				8AF07F9D2D5F5096009F8DB1 /* ProfileEditor.swift in Sources */,
+				8AF07F9B2D5F4884009F8DB1 /* ProfileHost.swift in Sources */,
+				8AF07F972D5F3F7B009F8DB1 /* Profile.swift in Sources */,
 				8A2F4C722CCA4F6C005860C9 /* ModelData.swift in Sources */,
+				8AF07F992D5F43DC009F8DB1 /* ProfileSummary.swift in Sources */,
 				8AC5E0582CBFD2610060013D /* PostViewModel.swift in Sources */,
 				8A5582A02C3C35950012D58C /* CattoApp.swift in Sources */,
 				8A2F4C742CCA5538005860C9 /* CattoImage.swift in Sources */,
