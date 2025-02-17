@@ -45,12 +45,11 @@ struct CattoPost: View {
                                  caption: caption.caption,
                                  likes: caption.vote,
                                  isMostVoted: caption.isMostVoted)
+                        .padding(.horizontal, 6)
                     }
                 }
             }
         }
-        .padding([.top, .horizontal], 16)
-        .padding(.bottom, 24)
         .background(.bgScreen)
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .offset(x: offset.width, y: offset.height * 0.4)

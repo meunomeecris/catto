@@ -205,26 +205,6 @@
                 "vote": 99,
                 "isMostVoted": true
             },
-            {
-                "id": 13,
-                "user": {
-                    "username": "mysticCat",
-                    "userImageUrl": "https://i.pinimg.com/736x/8b/70/f3/8b70f31126724c85fb88467fe9734901.jpg"
-                },
-                "caption": "Wise and mysterious...",
-                "vote": 99,
-                "isMostVoted": true
-            },
-            {
-                "id": 14,
-                "user": {
-                    "username": "mysticCat",
-                    "userImageUrl": "https://i.pinimg.com/736x/8b/70/f3/8b70f31126724c85fb88467fe9734901.jpg"
-                },
-                "caption": "Wise and mysterious...",
-                "vote": 99,
-                "isMostVoted": true
-            }
         ]
     }
 ]
