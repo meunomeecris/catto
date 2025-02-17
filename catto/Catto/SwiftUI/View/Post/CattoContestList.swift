@@ -9,9 +9,22 @@ import SwiftUI
 
 struct CattoPostList: View {
     @Environment(ModelData.self) var modelData
+    @State private var showingProfile = false
 
     var body: some View {
-        NavigationStack {
+        VStack {
+            HStack {
+                Text("Catto")
+                    .heading()
+                    .foregroundStyle(.textPrimaryLight)
+                Spacer()
+                MiauButtonProfile {
+                    showingProfile.toggle()
+                }
+            }
+
+            Spacer()
+
             VStack {
                 ZStack {
                     ForEach(modelData.cattoPost) { post in
@@ -19,10 +32,14 @@ struct CattoPostList: View {
                     }
                 }
             }
-            .navigationTitle("Catto")
-            .navigationBarTitleDisplayMode(.inline)
-            .ignoresSafeArea(edges: .bottom)
+            Spacer()
         }
-
+        .padding(.horizontal, 16)
+        .background(.bgScreen)
+        .ignoresSafeArea(edges: .bottom)
+        .sheet(isPresented: $showingProfile) {
+            ProfileHost()
+                .environment(modelData)
+        }
     }
 }

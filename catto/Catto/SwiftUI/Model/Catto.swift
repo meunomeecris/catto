@@ -21,9 +21,10 @@ struct Catto: Hashable, Codable, Identifiable {
         let vote: Int
         let isMostVoted: Bool
     }
+    
+    struct CattoUser: Hashable, Codable {
+        var username: String
+        var userImageUrl: String
+    }
 }
 
-struct CattoUser: Hashable, Codable {
-    var username: String
-    var userImageUrl: String
-}
