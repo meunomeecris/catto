@@ -9,8 +9,6 @@ import SwiftUI
 
 struct AvatarUser: View {
     var imageUrl: String
-    //    var width: CGFloat
-    //    var height: CGFloat
     
     var body: some View {
         AsyncImage(url: URL(string: imageUrl)) { phase in
@@ -20,7 +18,6 @@ struct AvatarUser: View {
             case .success(let image):
                 image.resizable()
                     .scaledToFit()
-                //                    .frame(width: width, height: height)
                     .clipShape(Circle())
                     .overlay {
                         Circle().stroke(.white, lineWidth: 4)
@@ -36,16 +33,6 @@ struct AvatarUser: View {
             @unknown default:
                 EmptyView()
             }
-            
-            //        Image(text)
-            //            .resizable()
-            //            .aspectRatio(contentMode: .fill)
-            //            .frame(width: 32, height: 32)
-            //            .clipShape(Circle())
-            //            .overlay(content: {
-            //                Circle()
-            //                    .stroke(.auxiliarBrand, lineWidth: 2 )
-            //            })
         }
     }
 }
