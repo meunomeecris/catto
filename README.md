@@ -1,5 +1,5 @@
 # Catto - Procrastination Time
-My Progress as an iOS Developer
+My Progress as an iOS Developer Swift | SwiftUI
 
 ## Overview
 Catto is a playful social app designed for moments of purr-crastination! Users can browse through an endless stream of adorable cat photos, add witty captions, and vote for their favorites. It's a fun and simple competition to discover the most creative or funniest caption, all while indulging in a love for cats.
@@ -27,12 +27,17 @@ This project has been a key part of my journey as an iOS Developer. Over time, I
 
 
 ### 2nd Version - Catto (This repo)
-- Created in August 2024 with a more organized structure.
+- Technical refinement to improve the project structure.
 - Architecture: MVVM.
-- Used a REST API.
-- Added comments (without persistence).
-- Saved favorites.
-- Implemented Swipe Gesture for card navigation.
+- Used a REST API for data fetching.
+- Error handling in API requests, with error display in the interface.
+- Integrated Miau Design System for a consistent UI.
+- Features
+  - Splash screen on app launch.
+  - Swipe gesture to navigate between cards.
+  - Added comments (without persistence).
+
+
 
 <p align="center">
      <img src="https://github.com/user-attachments/assets/ba7a656b-12ed-4070-b990-1ac0e220b55a" height="300" margin-right: 10px;">
@@ -46,15 +51,16 @@ This project has been a key part of my journey as an iOS Developer. Over time, I
 
 
 
-### 3rd Version - SwiftUI (This repo)
-- Restructured in the last 3 months using SwiftUI.
+### 3rd Version - Catto SwiftUI (This repo)
+- Restructured with SwiftUI for a more modern UI.
 - Business Logic integrated with Views.
-- Used mocked data for testing.
-- Implemented a call for mock data.
+- Used @ObservableObject and @Environment to access properties efficiently.
+- Data consumption from a JSON with a call to fetch data.
 - Features:
-  - Add and remove favorites.
-  - Swipe Gesture for navigating between cards.
-  - Editable profile.
+  - Add and remove items from favorites.
+  - Swipe gesture to navigate between cards.
+  - Editable user profile.
+  - 
 
 <p align="center">
      <img src="https://github.com/user-attachments/assets/5ae2b2a3-ec63-4b1a-89b8-143d8a632b8e" height="300" margin-right: 10px;">
@@ -69,6 +75,8 @@ This project has been a key part of my journey as an iOS Developer. Over time, I
 ## Progress and Learning
 The evolution of Catto reflects my growth as an iOS Developer, allowing me to:
 - Improve understanding of architectures like MVVM.
+- Delegate responsibilities effectively between view models.
+- Gain a better understanding of @Environment and its usage in SwiftUI.
 - Explore different approaches for data persistence.
 - Implement gestures and enhance app interactivity.
 - Migrate to SwiftUI and understand its declarative approach.
@@ -77,110 +85,21 @@ The evolution of Catto reflects my growth as an iOS Developer, allowing me to:
   
 
 ## What's Next?
-- Improve data persistence (full implementation of SwiftData or CoreData).
+- Separate business logic from views for cleaner architecture.
+- Implement Unit Tests to ensure better code quality and stability.
+- Improve data persistence (full implementation of SwiftData).
 - Refine user interface.
 - Explore animations and transitions for a smoother experience.
-- Unit testing and better test coverage.
 
+  
 ## Links and Resources
 - [Catto Repository](https://github.com/meunomeecris/catto)
 - [Gatilho Repository](https://github.com/meunomeecris/gatilhos)
 
 This repository is where I continue evolving and documenting my journey as an iOS Developer. Feedback and contributions are always welcome!
 
----
 
-# Catto - Meu Progresso como iOS Developer
+## Contact me 
+[Linkedin](https://www.linkedin.com/in/meunomeecris/) | 
+ <a href="(meunomeecriss@gmail.com)"> Email </a>
 
-## Visão Geral
-Catto é um aplicativo social divertido projetado para momentos de "purr-crastinação"! Os usuários podem navegar por um fluxo infinito de fotos adoráveis de gatos, adicionar legendas criativas e votar em suas favoritas. É uma competição simples e divertida para descobrir a legenda mais engraçada ou criativa, enquanto aproveitam o amor por gatos.
-
-Este projeto tem sido uma parte essencial da minha jornada como iOS Developer. Ao longo do tempo, reestruturei o app diversas vezes, experimentando diferentes abordagens, frameworks e arquiteturas. Este repositório documenta minha evolução e aprendizado como iOS Developer.
-
-## Histórico do Projeto
-
-### 1ª Versão - Gatilho ([Repositório](https://github.com/meunomeecris/gatilhos))
-- Desenvolvido no início de 2024.
-- Arquitetura: MVVM.
-- Uso de API REST gratuita.
-- Exibição de imagens na tela.
-- Navegação entre imagens.
-- Adição de comentários e salvamento em favoritos com SwiftData.
-
-### 2ª Versão - Catto ([Repositório](https://github.com/meunomeecris/catto))
-- Criado em agosto de 2024 com uma estrutura mais organizada.
-- Arquitetura: MVVM.
-- Uso de API REST.
-- Adição de comentários (sem persistência).
-- Salvamento de favoritos.
-- Implementação de Swipe Gesture para navegação entre cards.
-
-### 3ª Versão - SwiftUI ([Repositório em progresso])
-- Reestruturação nos últimos 3 meses com SwiftUI.
-- Business Logic integrada às Views.
-- Uso de dados mockados para testes.
-- Implementação de chamada para os dados mock.
-- Funcionalidades:
-  - Adicionar e remover favoritos.
-  - Swipe Gesture para navegar entre os cards.
-  - Perfil editável.
-
-## Progresso e Aprendizado
-A evolução do Catto reflete meu desenvolvimento como iOS Developer, permitindo-me:
-- Aprimorar o entendimento de arquiteturas como MVVM.
-- Explorar diferentes abordagens para persistência de dados.
-- Implementar gestos e melhorar a interatividade do app.
-- Migrar para SwiftUI e entender sua abordagem declarativa.
-- Estruturar melhor a separação de responsabilidades dentro do app.
-
-## O que vem a seguir?
-- Melhorar a persistência de dados (implementação completa de SwiftData ou CoreData).
-- Refinar a interface do usuário.
-- Explorar animações e transições para uma experiência mais fluida.
-- Testes unitários e melhora na cobertura de testes.
-
-## Links e Recursos
-- [Repositório Catto](https://github.com/meunomeecris/catto)
-- [Repositório Gatilho](https://github.com/meunomeecris/gatilhos)
-
-Este repositório é um espaço onde continuo evoluindo e documentando minha jornada como iOS Developer. Feedbacks e contribuições são sempre bem-vindos!
-
-
-
-
-
-
-
-
-
-____
-
-<h2>Catto - Procrastinate Time </h2>
-
-Welcome to Catto, the playful social app designed for those moments of purr-crastination! Browse through an endless stream of adorable cat photos, add witty captions, and vote for your favorites. It's a fun and simple competition to discover the most creative or funniest caption, all while indulging in your love for cats.
-
-
-
-<h2>Prototype</h2>
-
-Explore the Figma prototype to see how Catto works in action: <a href="https://www.figma.com/proto/vrgbscCKY5LCitapECCcPe/Catto?node-id=101-1772&node-type=frame&t=aCkf2EBBqGGAHu59-1&scaling=scale-down&content-scaling=fixed&page-id=67%3A1024&starting-point-node-id=101%3A2098">Figma Prototype</a>
-
-
-
-<h2>Tech Stack</h2>
-
-Catto is built using Swift and the SwiftUI framework to ensure a smooth and native iOS experience.<br/>
-<strong>Architecture:</strong> The app follows the MVVM (Model-View-ViewModel) architecture pattern, ensuring a clear separation between the UI and business logic, making it scalable and easy to maintain.<br/>
-<strong>Design System:</strong> I created a custom style guide called Miau, which helps in reusing components like fonts, colors, and UI elements consistently across the app.<br/>
-<strong>API:</strong> The app fetches cat images from <a href="https://thecatapi.com"> The Cat API </a>, delivering fresh content for endless captioning fun.
-
-
-
-<h2>App Flow</h2>
-
-Check out the overall flow of the app on Figma: <a href="https://www.figma.com/board/VkA9bMNOvyaWBL1G9CDR3d/Catto--Flow?node-id=0-1&t=PXexfOwLqN3cE470-1">App Flow</a>
-
-
-
-<h2>Contact</h2>
- <a href="https://meunomeecris.com"> meunomeecris.com </a>
