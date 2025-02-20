@@ -103,3 +103,5 @@ This repository is where I continue evolving and documenting my journey as an iO
 [Linkedin](https://www.linkedin.com/in/meunomeecris/) | 
  <a href="(meunomeecriss@gmail.com)"> Email </a>
 
+Thanks to my mentor and friend [Vini](https://github.com/viniciusaro)
+
