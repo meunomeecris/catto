@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CattoPostList: View {
     @Environment(ModelData.self) var modelData
+    @Environment(CattoState.self) var cattoState
     @State private var showingProfile = false
 
     var body: some View {
@@ -41,6 +42,11 @@ struct CattoPostList: View {
         .sheet(isPresented: $showingProfile) {
             ProfileHost()
                 .environment(modelData)
+        }
+        .onAppear {
+            if let topPost = modelData.cattoPost.last {
+                cattoState.currentID = topPost.id
+            }
         }
     }
 }
