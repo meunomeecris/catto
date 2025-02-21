@@ -32,11 +32,12 @@ struct CattoPostList: View {
                     }
                 }
             }
+
+            InputText(text: "risus")
             Spacer()
         }
         .padding(.horizontal, 16)
         .background(.bgScreen)
-        .ignoresSafeArea(edges: .bottom)
         .sheet(isPresented: $showingProfile) {
             ProfileHost()
                 .environment(modelData)

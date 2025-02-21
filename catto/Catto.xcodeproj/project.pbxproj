@@ -139,14 +139,14 @@
 			path = Favorite;
 			sourceTree = "<group>";
 		};
-		8A2F4C6C2CCA4E7D005860C9 /* SwiftUI */ = {
+		8A2F4C6C2CCA4E7D005860C9 /* CattoApp */ = {
 			isa = PBXGroup;
 			children = (
 				8A2F4C772CCA5A74005860C9 /* View */,
 				8A2F4C782CCA5A86005860C9 /* Model */,
 				8A2F4C792CCA5A91005860C9 /* Ressource */,
 			);
-			path = SwiftUI;
+			path = CattoApp;
 			sourceTree = "<group>";
 		};
 		8A2F4C772CCA5A74005860C9 /* View */ = {
@@ -199,7 +199,7 @@
 			children = (
 				8A55829F2C3C35950012D58C /* CattoApp.swift */,
 				8A50A9E02C19D15300DCA88C /* ContentView.swift */,
-				8A2F4C6C2CCA4E7D005860C9 /* SwiftUI */,
+				8A2F4C6C2CCA4E7D005860C9 /* CattoApp */,
 				8A7FE1F32C245E1B005C0B3A /* MVVM */,
 				8ADEEB102C1B16E9006B1C04 /* Miau */,
 				8AD96E1E2C2025E600EB2F5B /* Info.plist */,
