@@ -6,13 +6,23 @@
 //
 
 import Foundation
+import SwiftUI
 
 @Observable
 class CattoState {
     var modelData: ModelData
-    var currentID: Int = 0
+    var showingProfile = false
+
+    var filteredCatto: [Catto] {
+        modelData.cattoPost.filter { post in
+            post.isFavorite
+        }
+    }
 
     init(modelData: ModelData) {
         self.modelData = modelData
     }
+
+
+
 }
