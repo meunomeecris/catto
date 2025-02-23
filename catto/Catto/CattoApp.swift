@@ -10,11 +10,17 @@ import Foundation
 @main
 struct CattoApp: App {
     @State private var modelData = ModelData()
+    @State private var cattoState: CattoState
 
+    init() {
+        let md = ModelData()
+        self.cattoState = CattoState(modelData: md)
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(modelData)
+                .environment(cattoState)
         }
     }
 }

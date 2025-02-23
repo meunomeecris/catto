@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CattoPost: View {
     @Environment(ModelData.self) var modelData
+    @Environment(CattoState.self) var cattoState
     @State private var offset: CGSize = .zero
     var cattoPost: Catto
 
@@ -18,6 +19,7 @@ struct CattoPost: View {
 
     var body: some View {
         @Bindable var modelData = modelData
+        @Bindable var cattoState = cattoState
 
         ScrollView(showsIndicators: false) {
             VStack(spacing: 16) {
