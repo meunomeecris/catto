@@ -9,10 +9,9 @@ import SwiftUI
 
 struct CattoPostList: View {
     @Environment(ModelData.self) var modelData
-    @Environment(CattoState.self) var cattoState
 
     var body: some View {
-        @Bindable var cattoState = cattoState
+        @Bindable var modelData = modelData
 
         VStack {
             HStack {
@@ -21,7 +20,7 @@ struct CattoPostList: View {
                     .foregroundStyle(.textPrimaryLight)
                 Spacer()
                 MiauButtonProfile {
-                    cattoState.showingProfile.toggle()
+                    modelData.showingProfile.toggle()
                 }
             }
 
@@ -35,12 +34,12 @@ struct CattoPostList: View {
                 }
             }
 
-            InputText(text: "risus")
+            InputText(text: "Make me laugh ")
             Spacer()
         }
         .padding(.horizontal, 16)
         .background(.bgScreen)
-        .sheet(isPresented: $cattoState.showingProfile) {
+        .sheet(isPresented: $modelData.showingProfile) {
             ProfileHost()
                 .environment(modelData)
         }

@@ -9,11 +9,10 @@ import SwiftUI
 
 struct FavoriteList: View {
     @Environment(ModelData.self) var modelData
-    @Environment(CattoState.self) var cattoState
 
     var body: some View {
         NavigationSplitView {
-            List(cattoState.filteredCatto) { post in
+            List(modelData.filteredCatto) { post in
                 NavigationLink {
                     CattoPost(cattoPost: post)
                 } label: {

@@ -6,11 +6,25 @@
 //
 
 import Foundation
+import SwiftUI
 
 @Observable
 class ModelData {
     var cattoPost: [Catto] = load("cattoData.json")
     var profile = Profile.default
+    var showingProfile = false
+
+
+    var filteredCatto: [Catto] {
+        cattoPost.filter { post in
+            post.isFavorite
+        }
+    }
+
+    func getCattoIndex(for catto: Catto) -> Int? {
+        return cattoPost.firstIndex(where: { $0.id == catto.id })
+    }
+
 }
 
 

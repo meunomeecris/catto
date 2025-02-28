@@ -18,7 +18,6 @@
 		8A2F4C742CCA5538005860C9 /* CattoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F4C732CCA5538005860C9 /* CattoImage.swift */; };
 		8A2F4C762CCA5830005860C9 /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F4C752CCA5830005860C9 /* FavoriteList.swift */; };
 		8A2F4C7B2CCA5E69005860C9 /* FavoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F4C7A2CCA5E69005860C9 /* FavoriteItem.swift */; };
-		8A442EF02D69347200AC7D9A /* CattoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A442EEF2D69346F00AC7D9A /* CattoState.swift */; };
 		8A48751B2CC8ED2A00ED2E64 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4875192CC8ED2A00ED2E64 /* SplashScreen.swift */; };
 		8A50A9E12C19D15300DCA88C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50A9E02C19D15300DCA88C /* ContentView.swift */; };
 		8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A50A9E22C19D15500DCA88C /* Assets.xcassets */; };
@@ -47,6 +46,16 @@
 		8AF07F9D2D5F5096009F8DB1 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF07F9C2D5F5092009F8DB1 /* ProfileEditor.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8A5BFEDB2D71A72800B691C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A50A9D32C19D15300DCA88C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A50A9DA2C19D15300DCA88C;
+			remoteInfo = Catto;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8A1FFB7A2D57ADE500A05CB7 /* AvatarUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarUser.swift; sourceTree = "<group>"; };
 		8A1FFB7C2D57AF4400A05CB7 /* InputText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputText.swift; sourceTree = "<group>"; };
@@ -59,13 +68,13 @@
 		8A2F4C732CCA5538005860C9 /* CattoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoImage.swift; sourceTree = "<group>"; };
 		8A2F4C752CCA5830005860C9 /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
 		8A2F4C7A2CCA5E69005860C9 /* FavoriteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItem.swift; sourceTree = "<group>"; };
-		8A442EEF2D69346F00AC7D9A /* CattoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoState.swift; sourceTree = "<group>"; };
 		8A4875192CC8ED2A00ED2E64 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		8A50A9DB2C19D15300DCA88C /* Catto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A50A9E02C19D15300DCA88C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A50A9E22C19D15500DCA88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A50A9E52C19D15500DCA88C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A55829F2C3C35950012D58C /* CattoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoApp.swift; sourceTree = "<group>"; };
+		8A5BFED72D71A72800B691C7 /* CattoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CattoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A64FF782C222AC1001BB68D /* MiauTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauTextField.swift; sourceTree = "<group>"; };
 		8A99898A2CCB894100BE4578 /* CattoContestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CattoContestList.swift; sourceTree = "<group>"; };
 		8AB014DE2C21C4C6002DBA02 /* MiauCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiauCards.swift; sourceTree = "<group>"; };
@@ -91,11 +100,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8A5BFED82D71A72800B691C7 /* CattoTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CattoTests; sourceTree = "<group>"; };
 		8AEE39582C9D427500C42BC0 /* Resource */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resource; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8A50A9D82C19D15300DCA88C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A5BFED42D71A72800B691C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -165,7 +182,6 @@
 		8A2F4C782CCA5A86005860C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8A442EEF2D69346F00AC7D9A /* CattoState.swift */,
 				8AF07F962D5F3F78009F8DB1 /* Profile.swift */,
 				8A2F4C6D2CCA4EB6005860C9 /* Catto.swift */,
 				8A2F4C712CCA4F6C005860C9 /* ModelData.swift */,
@@ -185,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				8A50A9DD2C19D15300DCA88C /* Catto */,
+				8A5BFED82D71A72800B691C7 /* CattoTests */,
 				8A50A9DC2C19D15300DCA88C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -193,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				8A50A9DB2C19D15300DCA88C /* Catto.app */,
+				8A5BFED72D71A72800B691C7 /* CattoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -319,6 +337,29 @@
 			productReference = 8A50A9DB2C19D15300DCA88C /* Catto.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8A5BFED62D71A72800B691C7 /* CattoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A5BFEDD2D71A72800B691C7 /* Build configuration list for PBXNativeTarget "CattoTests" */;
+			buildPhases = (
+				8A5BFED32D71A72800B691C7 /* Sources */,
+				8A5BFED42D71A72800B691C7 /* Frameworks */,
+				8A5BFED52D71A72800B691C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A5BFEDC2D71A72800B691C7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8A5BFED82D71A72800B691C7 /* CattoTests */,
+			);
+			name = CattoTests;
+			packageProductDependencies = (
+			);
+			productName = CattoTests;
+			productReference = 8A5BFED72D71A72800B691C7 /* CattoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -326,11 +367,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					8A50A9DA2C19D15300DCA88C = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					8A5BFED62D71A72800B691C7 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 8A50A9DA2C19D15300DCA88C;
 					};
 				};
 			};
@@ -348,6 +393,7 @@
 			projectRoot = "";
 			targets = (
 				8A50A9DA2C19D15300DCA88C /* Catto */,
+				8A5BFED62D71A72800B691C7 /* CattoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -365,6 +411,13 @@
 				8AD96E1B2C20254300EB2F5B /* Inter-Light.ttf in Resources */,
 				8A50A9E32C19D15500DCA88C /* Assets.xcassets in Resources */,
 				8A2F4C6B2CCA4309005860C9 /* cattoData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A5BFED52D71A72800B691C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +444,6 @@
 				8A99898B2CCB894100BE4578 /* CattoContestList.swift in Sources */,
 				8AC5E0562CBFCC1B0060013D /* PostUseCase.swift in Sources */,
 				8A2F4C692CCA3BA4005860C9 /* PostContestListView .swift in Sources */,
-				8A442EF02D69347200AC7D9A /* CattoState.swift in Sources */,
 				8A1FFB7D2D57AF5B00A05CB7 /* InputText.swift in Sources */,
 				8A2F4C7B2CCA5E69005860C9 /* FavoriteItem.swift in Sources */,
 				8ADEEB152C1B21B5006B1C04 /* MiauColors.swift in Sources */,
@@ -408,7 +460,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A5BFED32D71A72800B691C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A5BFEDC2D71A72800B691C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A50A9DA2C19D15300DCA88C /* Catto */;
+			targetProxy = 8A5BFEDB2D71A72800B691C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8A50A9E72C19D15500DCA88C /* Debug */ = {
@@ -590,6 +657,44 @@
 			};
 			name = Release;
 		};
+		8A5BFEDE2D71A72800B691C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T93UNM5FF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = meunomeecris.CattoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catto.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Catto";
+			};
+			name = Debug;
+		};
+		8A5BFEDF2D71A72800B691C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T93UNM5FF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = meunomeecris.CattoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catto.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Catto";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,6 +712,15 @@
 			buildConfigurations = (
 				8A50A9EA2C19D15500DCA88C /* Debug */,
 				8A50A9EB2C19D15500DCA88C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A5BFEDD2D71A72800B691C7 /* Build configuration list for PBXNativeTarget "CattoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A5BFEDE2D71A72800B691C7 /* Debug */,
+				8A5BFEDF2D71A72800B691C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
