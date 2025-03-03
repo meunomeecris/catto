@@ -4,7 +4,7 @@ My Progress as an iOS Developer Swift | SwiftUI
 ## Overview
 Catto is a playful social app designed for moments of purr-crastination! Users can browse through an endless stream of adorable cat photos, add witty captions, and vote for their favorites. It's a fun and simple competition to discover the most creative or funniest caption, all while indulging in a love for cats.
 
-This project has been a key part of my journey as an iOS Developer. Over time, I have restructured the app multiple times, experimenting with different approaches, frameworks, and architectures. This repository documents my evolution and learning as an iOS Developer.
+This project has been a key part of my journey as an iOS Developer. Over time, I have restructured the app multiple times, experimenting with different approaches, and architectures. This repository documents my evolution and learning as an iOS Developer.
 
 
 
