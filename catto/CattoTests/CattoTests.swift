@@ -36,7 +36,7 @@ struct CattoTests {
         
         modelData.cattoPost = catto
 
-        let filtered = modelData.filteredCatto
+        let filtered = modelData.filteredCattos
 
         let countFiltered = filtered.count
 

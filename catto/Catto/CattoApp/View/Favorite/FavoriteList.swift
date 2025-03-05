@@ -12,8 +12,8 @@ struct FavoriteList: View {
 
     var body: some View {
         NavigationSplitView {
-            List(modelData.filteredCattoIndices, id: \.self) { index in
-                let post = modelData.getCattoBinding(at: index)
+            List(modelData.filteredCattos) { catto in
+                let post = modelData.getCattoBinding(for: catto)
                 NavigationLink {
                     CattoPost(cattoPost: post)
                 } label: {
