@@ -14,11 +14,21 @@ class ModelData {
     var profile = Profile.default
     var showingProfile = false
 
+    var cattoIndices: [Int] {
+        Array(cattoPost.indices)
+    }
 
-    var filteredCatto: [Catto] {
-        cattoPost.filter { post in
-            post.isFavorite
+    var filteredCattoIndices: [Int] {
+        cattoPost.indices.filter { index in
+            cattoPost[index].isFavorite
         }
+    }
+    
+    func getCattoBinding(at index: Int) -> Binding<Catto> {
+        .init(
+            get: { self.cattoPost[index] },
+            set: { self.cattoPost[index] = $0 }
+        )
     }
 
     func getCattoIndex(for catto: Catto) -> Int? {

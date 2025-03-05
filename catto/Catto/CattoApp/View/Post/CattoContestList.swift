@@ -28,8 +28,8 @@ struct CattoPostList: View {
 
             VStack {
                 ZStack {
-                    ForEach(modelData.cattoPost) { post in
-                        CattoPost(cattoPost: post)
+                    ForEach(modelData.cattoIndices, id: \.self) { index in
+                        CattoPost(cattoPost: modelData.getCattoBinding(at: index))
                     }
                 }
             }

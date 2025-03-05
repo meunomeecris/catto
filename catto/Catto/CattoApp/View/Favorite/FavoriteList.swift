@@ -12,11 +12,12 @@ struct FavoriteList: View {
 
     var body: some View {
         NavigationSplitView {
-            List(modelData.filteredCatto) { post in
+            List(modelData.filteredCattoIndices, id: \.self) { index in
+                let post = modelData.getCattoBinding(at: index)
                 NavigationLink {
                     CattoPost(cattoPost: post)
                 } label: {
-                    FavoriteItem(cattoPost: post)
+                    FavoriteItem(cattoPost: post.wrappedValue)
                 }
             }
             .navigationTitle("My Cattos")
