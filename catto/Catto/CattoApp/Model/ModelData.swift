@@ -8,9 +8,11 @@
 import Foundation
 import SwiftUI
 
-@Observable
+@Observable @MainActor
 class ModelData {
-    var cattoPost: [Catto] = load("cattoData.json")
+    let apiError = APIError.self
+    var cattoPost: [Catto] = []
+    var urlList: [catURL] = []
     var profile = Profile.default
     var showingProfile = false
     
@@ -35,30 +37,55 @@ class ModelData {
         return cattoPost.firstIndex(where: { $0.id == catto.id })
     }
 
-}
+    func getURLCats() async throws {
+        guard let urlRequest = URL(string: "https://api.thecatapi.com/v1/images/search?limit=22&breed_ids=beng&api_key=live_BYaJAKzpgJDw8juW988YkW2jRps8u9HoOHgYLLu1hzBOAPKKNNLiuG4xFC4vLRqI") else {
+            return
+        }
 
+        do {
+            let (data, response) = try await URLSession.shared.data(from: urlRequest)
 
-func load<T: Decodable>(_ filename: String) -> T {
-    let data: Data
+            guard let response = response as? HTTPURLResponse else {
+                throw apiError.invalidResponse
+            }
+            switch response.statusCode {
+            case 200: break
+            case 400: throw apiError.badRequest
+            case 401: throw apiError.unauthorized
+            case 403: throw apiError.forbidden
+            case 404: throw apiError.notFound
+            case 429: throw apiError.tooManyRequests
+            case 500: throw apiError.internalServerError
+            case 502: throw apiError.badGateway
+            case 503: throw apiError.serviceUnavailable
+            case 504: throw apiError.gatewayTimeout
+            default: throw apiError.unknown
+            }
 
+            let urlCatsData = try JSONDecoder().decode([catURL].self, from: data)
 
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-    else {
-        fatalError("Couldn't find \(filename) in main bundle.")
+            let catto = urlCatsData.map { url in
+                Catto(catImageUrl: url)
+            }
+
+            DispatchQueue.main.async {
+                self.cattoPost = catto.reversed()
+            }
+        }
+        catch {
+            print("Error: \(error.localizedDescription)")
+            throw  error
+        }
     }
 
-
-    do {
-        data = try Data(contentsOf: file)
-    } catch {
-        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
+    func fetchCatto() {
+        Task {
+            do {
+                try await getURLCats()
+            } catch {
+                print("Error occurred on fetchCats:\(error.localizedDescription)")
+            }
+        }
     }
 
-
-    do {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
-    }
 }

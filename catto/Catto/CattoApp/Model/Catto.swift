@@ -9,10 +9,10 @@ import Foundation
 
 /// SwiftUI Tutorial
 struct Catto: Hashable, Codable, Identifiable {
-    var id: Int
-    var catImageUrl: String
-    var isFavorite: Bool
-    var captionList: [CattoCaption]
+    var id = UUID()
+    var catImageUrl: catURL
+    var isFavorite: Bool = false
+    var captionList: [CattoCaption] = []
 
     struct CattoCaption: Hashable, Codable , Identifiable {
         var id: Int
@@ -28,3 +28,6 @@ struct Catto: Hashable, Codable, Identifiable {
     }
 }
 
+struct catURL: Codable, Hashable {
+    let url: String
+}

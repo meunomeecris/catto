@@ -43,5 +43,8 @@ struct CattoPostList: View {
             ProfileHost()
                 .environment(modelData)
         }
+        .onAppear {
+            modelData.fetchCatto()
+        }
     }
 }

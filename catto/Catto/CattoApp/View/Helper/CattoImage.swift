@@ -15,7 +15,7 @@ struct CattoImage: View {
     var lineWidth: CGFloat
 
     var body: some View {
-        AsyncImage(url: URL(string: cattoPost.catImageUrl))  { phase in
+        AsyncImage(url: URL(string: cattoPost.catImageUrl.url))  { phase in
             switch phase {
             case .empty:
                 ProgressView()
