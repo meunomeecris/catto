@@ -13,12 +13,22 @@ class ModelData {
     var cattoPost: [Catto] = load("cattoData.json")
     var profile = Profile.default
     var showingProfile = false
-
-
-    var filteredCatto: [Catto] {
-        cattoPost.filter { post in
-            post.isFavorite
-        }
+    
+    var filteredCattos: [Catto] {
+        cattoPost.filter(\.isFavorite)
+    }
+    
+    func getCattoBinding(for catto: Catto) -> Binding<Catto> {
+        .init(
+            get: {
+                guard let index = self.getCattoIndex(for: catto) else { return catto }
+                return self.cattoPost[index]
+            },
+            set: {
+                guard let index = self.getCattoIndex(for: catto) else { return }
+                self.cattoPost[index] = $0
+            }
+        )
     }
 
     func getCattoIndex(for catto: Catto) -> Int? {

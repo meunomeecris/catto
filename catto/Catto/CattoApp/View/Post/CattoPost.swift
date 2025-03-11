@@ -10,11 +10,9 @@ import SwiftUI
 struct CattoPost: View {
     @Environment(ModelData.self) var modelData
     @State private var offset: CGSize = .zero
-    var cattoPost: Catto
+    @Binding var cattoPost: Catto
 
     var body: some View {
-        @Bindable var modelData = modelData
-
         ScrollView(showsIndicators: false) {
             VStack(spacing: 16) {
                 ZStack(alignment: .topTrailing) {
@@ -25,12 +23,8 @@ struct CattoPost: View {
                         cornerRadius: 16,
                         lineWidth: 8
                     )
-                    if let index = modelData.getCattoIndex(for: cattoPost) {
-                        FavoriteButton(isSet: $modelData.cattoPost[index].isFavorite)
-                            .padding([.top, .trailing], 16)
-                    } else {
-                        Text("Erro: Catto não encontrado")
-                    }
+                    FavoriteButton(isSet: $cattoPost.isFavorite)
+                        .padding([.top, .trailing], 16)
                 }
                 .padding(8)
 
