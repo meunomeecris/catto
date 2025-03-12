@@ -50,44 +50,24 @@ class ModelData {
     }
 
     // MARK: - InputText
+    private func createAndAddCaption() {
+        let countCaption: Int = cattoPost[0].captionList.count
 
-//    private func createAndAddedCaption() {
-//        let countCaption: Int = cattoPost[0].captionList.count
-//
-//        cattoPost[0].captionList.append(Catto.CattoCaption(
-//            id: countCaption + 1,
-//                user: Catto.CattoUser(
-//                    username: generateRandomNameUser(length: 5),
-//                    userImageUrl: "https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop"
-//                ),
-//                caption: captionInput,
-//                vote: 0,
-//                isMostVoted: false)
-//            )
-//            print("Caption created!")
-//    }
-     func createAndAddedCaption() {
-        var updatedCatto = cattoPost[0]
-        let countCaption = updatedCatto.captionList.count
-
-        updatedCatto.captionList.append(
-            Catto.CattoCaption(
-                id: countCaption + 1,
+        cattoPost[0].captionList.append(Catto.CattoCaption(
+            id: countCaption + 1,
                 user: Catto.CattoUser(
                     username: generateRandomNameUser(length: 5),
                     userImageUrl: "https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop"
                 ),
                 caption: captionInput,
                 vote: 0,
-                isMostVoted: false
+                isMostVoted: false)
             )
-        )
-        cattoPost[0] = updatedCatto // ⚠️ Aqui forçamos a notificação de mudança!
-        print("Caption created!")
+            print("Caption created!")
     }
 
     func addCaptionButtonPressed() {
-        createAndAddedCaption()
+        createAndAddCaption()
         captionInput = ""
     }
 
