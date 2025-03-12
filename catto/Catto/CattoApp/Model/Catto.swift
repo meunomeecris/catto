@@ -10,7 +10,7 @@ import Foundation
 /// SwiftUI Tutorial
 struct Catto: Hashable, Codable, Identifiable {
     var id = UUID()
-    var catImageUrl: catURL
+    let catImageUrl: catURL
     var isFavorite: Bool = false
     var captionList: [CattoCaption] = []
 

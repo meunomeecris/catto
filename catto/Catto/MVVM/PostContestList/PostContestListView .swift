@@ -40,7 +40,7 @@ struct PostContestListView: View {
 
                 Spacer()
                 
-                CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can")
+                CommentTextFieldView(viewModel: viewModel, text: "Title me the best you can!")
                     .padding(.horizontal, 16)
                     .padding(.bottom, 16)
             }

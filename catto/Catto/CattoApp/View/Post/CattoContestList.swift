@@ -35,6 +35,8 @@ struct CattoPostList: View {
             }
 
             InputText(text: "Make me laugh ")
+                .padding(.bottom, 16)
+
             Spacer()
         }
         .padding(.horizontal, 16)
@@ -44,7 +46,14 @@ struct CattoPostList: View {
                 .environment(modelData)
         }
         .onAppear {
-            modelData.fetchCatto()
+            modelData.fetchCattoList()
+        }
+        .alert("Meeeeeow", isPresented: .constant(modelData.isAlertPresented)) {
+            Button("ok") {
+                modelData.fetchCattoList()
+            }
+        } message: {
+            Text("We’ve hit a cat-tastrophe! Try again later.")
         }
     }
 }

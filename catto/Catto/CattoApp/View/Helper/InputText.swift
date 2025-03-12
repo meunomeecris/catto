@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct InputText: View {
+    @Environment(ModelData.self) var modelData
     @State private var currentHeight: CGFloat = 0
-    @State var captionInput: String = ""
     @State var text: String
     @FocusState private var commentFieldIsFocused: Bool
 
     var body: some View {
+        @Bindable var modelData = modelData
+
         HStack {
             TextField(
                 "",
-                text: $captionInput,
+                text: $modelData.captionInput,
                 prompt: Text(text)
                     .foregroundStyle(.textSecondary)
             )
@@ -26,14 +28,16 @@ struct InputText: View {
             .textInputAutocapitalization(.sentences)
             .submitLabel(.send)
             .onSubmit {
-                if !captionInput.isEmpty {
+                if !modelData.captionInput.isEmpty {
+                    modelData.addCaptionButtonPressed()
                     commentFieldIsFocused = false
                 }
             }
 
-            if !captionInput.isEmpty {
+            if !modelData.captionInput.isEmpty {
                 MiauButtonSend {
-                    if !captionInput.isEmpty {
+                    if !modelData.captionInput.isEmpty {
+                        modelData.addCaptionButtonPressed()
                         commentFieldIsFocused = false
                     }
                 }

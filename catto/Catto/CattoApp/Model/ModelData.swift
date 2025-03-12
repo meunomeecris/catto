@@ -13,13 +13,17 @@ class ModelData {
     let apiError = APIError.self
     var cattoPost: [Catto] = []
     var urlList: [catURL] = []
+    var captionInput: String = ""
     var profile = Profile.default
     var showingProfile = false
-    
+    var isAlertPresented: Bool = false
+
     var filteredCattos: [Catto] {
         cattoPost.filter(\.isFavorite)
     }
-    
+
+
+
     func getCattoBinding(for catto: Catto) -> Binding<Catto> {
         .init(
             get: {
@@ -37,8 +41,11 @@ class ModelData {
         return cattoPost.firstIndex(where: { $0.id == catto.id })
     }
 
+
+    //MARK: - FETCH AND CREAT CATTOS
     func getURLCats() async throws {
         guard let urlRequest = URL(string: "https://api.thecatapi.com/v1/images/search?limit=22&breed_ids=beng&api_key=live_BYaJAKzpgJDw8juW988YkW2jRps8u9HoOHgYLLu1hzBOAPKKNNLiuG4xFC4vLRqI") else {
+            isAlertPresented.toggle()
             return
         }
 
@@ -73,17 +80,17 @@ class ModelData {
             }
         }
         catch {
-            print("Error: \(error.localizedDescription)")
-            throw  error
+            throw error
         }
     }
 
-    func fetchCatto() {
+    func fetchCattoList() {
         Task {
             do {
                 try await getURLCats()
             } catch {
                 print("Error occurred on fetchCats:\(error.localizedDescription)")
+                isAlertPresented.toggle()
             }
         }
     }

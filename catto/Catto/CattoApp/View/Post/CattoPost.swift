@@ -65,8 +65,10 @@ struct CattoPost: View {
         switch width {
         case -500...(-145):
             offset = CGSize(width: -500, height: 0)
+            modelData.cattoPost.removeFirst()
         case 145...500:
             offset = CGSize(width: 500, height: 0)
+            modelData.cattoPost.removeFirst()
         default:
             offset = .zero
         }
