@@ -10,18 +10,20 @@ import SwiftUI
 
 @Observable @MainActor
 class ModelData {
-    let apiError = APIError.self
     var cattoPost: [Catto] = []
-    var urlList: [catURL] = []
-    var captionInput: String = ""
-    var profile = Profile.default
+
+    private var urlImageList: [catURL] = []
+    private let apiError = APIError.self
+
     var showingProfile = false
+    var profile = Profile.default
+
+    var captionInput: String = ""
     var isAlertPresented: Bool = false
 
     var filteredCattos: [Catto] {
         cattoPost.filter(\.isFavorite)
     }
-
 
 
     func getCattoBinding(for catto: Catto) -> Binding<Catto> {
@@ -41,6 +43,71 @@ class ModelData {
         return cattoPost.firstIndex(where: { $0.id == catto.id })
     }
 
+    func removeCattoFromList() {
+        if !cattoPost.isEmpty {
+            cattoPost.remove(at: 0)
+        }
+    }
+
+    // MARK: - InputText
+
+//    private func createAndAddedCaption() {
+//        let countCaption: Int = cattoPost[0].captionList.count
+//
+//        cattoPost[0].captionList.append(Catto.CattoCaption(
+//            id: countCaption + 1,
+//                user: Catto.CattoUser(
+//                    username: generateRandomNameUser(length: 5),
+//                    userImageUrl: "https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop"
+//                ),
+//                caption: captionInput,
+//                vote: 0,
+//                isMostVoted: false)
+//            )
+//            print("Caption created!")
+//    }
+     func createAndAddedCaption() {
+        var updatedCatto = cattoPost[0]
+        let countCaption = updatedCatto.captionList.count
+
+        updatedCatto.captionList.append(
+            Catto.CattoCaption(
+                id: countCaption + 1,
+                user: Catto.CattoUser(
+                    username: generateRandomNameUser(length: 5),
+                    userImageUrl: "https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop"
+                ),
+                caption: captionInput,
+                vote: 0,
+                isMostVoted: false
+            )
+        )
+        cattoPost[0] = updatedCatto // ⚠️ Aqui forçamos a notificação de mudança!
+        print("Caption created!")
+    }
+
+    func addCaptionButtonPressed() {
+        createAndAddedCaption()
+        captionInput = ""
+    }
+
+    ///--Mockup names
+    func generateRandomNameUser(length: Int) -> String {
+        let consonants = "bcdfghjklmnpqrstvwxyz"
+        let vowels = "aeiou"
+        var name = ""
+        var isVowel = Bool.random()
+
+        for _ in 0..<length {
+            if isVowel {
+                name += String(vowels.randomElement()!)
+            } else {
+                name += String(consonants.randomElement()!)
+            }
+            isVowel.toggle()
+        }
+        return name.capitalized
+    }
 
     //MARK: - FETCH AND CREAT CATTOS
     func getURLCats() async throws {
@@ -96,3 +163,6 @@ class ModelData {
     }
 
 }
+
+
+

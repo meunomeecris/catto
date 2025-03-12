@@ -10,7 +10,6 @@ import SwiftUI
 struct InputText: View {
     @Environment(ModelData.self) var modelData
     @State private var currentHeight: CGFloat = 0
-    @State var text: String
     @FocusState private var commentFieldIsFocused: Bool
 
     var body: some View {
@@ -18,9 +17,9 @@ struct InputText: View {
 
         HStack {
             TextField(
-                "",
+                "Make me laugh!",
                 text: $modelData.captionInput,
-                prompt: Text(text)
+                prompt: Text("Make me laugh!")
                     .foregroundStyle(.textSecondary)
             )
             .miauTextField()

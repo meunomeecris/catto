@@ -33,7 +33,7 @@ struct CattoPost: View {
                         .heading()
                         .foregroundStyle(.textSecondary)
                 } else {
-                    ForEach(cattoPost.captionList) { caption in
+                    ForEach(cattoPost.captionList, id: \.self) { caption in
                         MiauCard(username: caption.user.username,
                                  avatarUrl: caption.user.userImageUrl,
                                  caption: caption.caption,
@@ -65,10 +65,10 @@ struct CattoPost: View {
         switch width {
         case -500...(-145):
             offset = CGSize(width: -500, height: 0)
-            modelData.cattoPost.removeFirst()
+            modelData.removeCattoFromList()
         case 145...500:
             offset = CGSize(width: 500, height: 0)
-            modelData.cattoPost.removeFirst()
+            modelData.removeCattoFromList()
         default:
             offset = .zero
         }

@@ -1,9 +1,3 @@
-//
-//  CattoPostList.swift
-//  Catto
-//
-//  Created by Cris Messias on 25/10/24.
-//
 
 import SwiftUI
 
@@ -28,13 +22,22 @@ struct CattoPostList: View {
 
             VStack {
                 ZStack {
-                    ForEach(modelData.cattoPost) { catto in
-                        CattoPost(cattoPost: modelData.getCattoBinding(for: catto))
+                    if modelData.cattoPost.isEmpty {
+                        ImageProgress()
+                    } else {
+                        ForEach(modelData.cattoPost) { catto in
+                            CattoPost(cattoPost: modelData.getCattoBinding(for: catto))
+                            Spacer()
+                        }
                     }
+
                 }
             }
+            InputText()
+                .padding(.bottom, 16)
 
-            InputText(text: "Make me laugh ")
+            Text("Debug / Caption Count: \(modelData.cattoPost.first?.captionList.count ?? 0 )")
+            Text("Debug / ID: \(String(describing: modelData.cattoPost.first?.id))")
                 .padding(.bottom, 16)
 
             Spacer()
