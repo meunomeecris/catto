@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(ModelData.self) var modelData
     @State private var selection: Tab = .post
 
     enum Tab {
@@ -19,6 +20,9 @@ struct ContentView: View {
     var body: some View {
         TabView {
             CattoPostList()
+                .task {
+                    modelData.fetchCattoList()
+                }
                 .tabItem {
                     Label("Catto", systemImage: "cat.circle")
                 }

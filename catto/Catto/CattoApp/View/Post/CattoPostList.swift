@@ -48,9 +48,6 @@ struct CattoPostList: View {
             ProfileHost()
                 .environment(modelData)
         }
-        .onAppear {
-            modelData.fetchCattoList()
-        }
         .alert("Meeeeeow", isPresented: .constant(modelData.isAlertPresented)) {
             Button("ok") {
                 modelData.fetchCattoList()
