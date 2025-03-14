@@ -53,14 +53,15 @@ This project has been a key part of my journey as an iOS Developer. Over time, I
 
 ### 3rd Version - Catto SwiftUI (This repo)
 - Restructured with SwiftUI for a more modern UI.
-- Business Logic integrated with Views.
-- Used @ObservableObject and @Environment to access properties efficiently.
-- Data consumption from a JSON with a call to fetch data.
+- Business Logic separated from the Views.
+- Used @Observable and @Environment to access properties efficiently.
+- Used a REST API for data fetching.
+- Error handling in API requests, with error display in the interface.
 - Features:
-  - Add and remove items from favorites.
   - Swipe gesture to navigate between cards.
+  - Add comments on each card.
+  - Add and remove items from favorites.
   - Editable user profile.
-  - 
 
 <p align="center">
      <img src="https://github.com/user-attachments/assets/5ae2b2a3-ec63-4b1a-89b8-143d8a632b8e" height="300" margin-right: 10px;">
@@ -75,6 +76,7 @@ This project has been a key part of my journey as an iOS Developer. Over time, I
 ## Progress and Learning
 The evolution of Catto reflects my growth as an iOS Developer, allowing me to:
 - Improve understanding of architectures like MVVM.
+- Better understanding of Class and Structure usages. 
 - Delegate responsibilities effectively between view models.
 - Gain a better understanding of @Environment and its usage in SwiftUI.
 - Explore different approaches for data persistence.
@@ -85,10 +87,11 @@ The evolution of Catto reflects my growth as an iOS Developer, allowing me to:
   
 
 ## What's Next?
-- Separate business logic from views for cleaner architecture.
 - Implement Unit Tests to ensure better code quality and stability.
 - Improve data persistence (full implementation of SwiftData).
 - Refine user interface.
+- Authentication with Apple.
+- Logic for vote comments and show the most voted on the top of the list. 
 - Explore animations and transitions for a smoother experience.
 
   
