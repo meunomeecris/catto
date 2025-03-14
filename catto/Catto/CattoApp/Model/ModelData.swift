@@ -11,6 +11,9 @@ import SwiftUI
 @Observable @MainActor
 class ModelData {
     var cattoPost: [Catto] = []
+    var cattoPostReversed: [Catto] {
+        cattoPost.reversed()
+    }
 
     private var urlImageList: [catURL] = []
     private let apiError = APIError.self
@@ -45,15 +48,17 @@ class ModelData {
 
     func removeCattoFromList() {
         if !cattoPost.isEmpty {
-            cattoPost.remove(at: 0)
+            cattoPost.removeLast()
         }
     }
 
     // MARK: - InputText
     private func createAndAddCaption() {
-        let countCaption: Int = cattoPost[0].captionList.count
+        let countCaption: Int = cattoPost.last!.captionList.count
 
-        cattoPost[0].captionList.append(Catto.CattoCaption(
+        let postCaution = cattoPost.count
+
+        cattoPost[postCaution - 1].captionList.append(Catto.CattoCaption(
             id: countCaption + 1,
                 user: Catto.CattoUser(
                     username: generateRandomNameUser(length: 5),
@@ -123,7 +128,7 @@ class ModelData {
             }
 
             DispatchQueue.main.async {
-                self.cattoPost = catto.reversed()
+                self.cattoPost = catto
             }
         }
         catch {
