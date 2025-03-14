@@ -35,11 +35,7 @@ struct CattoPostList: View {
             }
             InputText()
                 .padding(.bottom, 16)
-
-            Text("Debug / Caption Count: \(modelData.cattoPost.first?.captionList.count ?? 0 )")
-            Text("Debug / ID: \(String(describing: modelData.cattoPost.first?.id))")
-                .padding(.bottom, 16)
-
+            
             Spacer()
         }
         .padding(.horizontal, 16)
