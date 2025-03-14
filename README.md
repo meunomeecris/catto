@@ -64,10 +64,10 @@ This project has been a key part of my journey as an iOS Developer. Over time, I
   - Editable user profile.
 
 <p align="center">
-     <img src="https://github.com/user-attachments/assets/5ae2b2a3-ec63-4b1a-89b8-143d8a632b8e" height="300" margin-right: 10px;">
-     <img src="https://github.com/user-attachments/assets/18c6b6de-904c-4a59-acca-7894d296d5e9" height="300" margin-right: 10px;">
-     <img src="https://github.com/user-attachments/assets/65a48623-0ad5-4409-be7b-9a9306ccd68d" height="300" margin-right: 10px;">
-     <img src="https://github.com/user-attachments/assets/ed84c004-6866-4b78-bac2-5bab36c4e30b" height="300" margin-right: 10px;">
+     <img src="https://github.com/user-attachments/assets/d33d3ffb-9ceb-4374-b67b-95b346188176" height="300" margin-right: 10px;">
+     <img src="https://github.com/user-attachments/assets/c1276007-d26b-4b52-990d-a027274b7695" height="300" margin-right: 10px;">
+     <img src="https://github.com/user-attachments/assets/7d752701-c115-4762-9c84-46b799afc79d" height="300" margin-right: 10px;">
+     <img src="https://github.com/user-attachments/assets/0d8250a6-d982-4348-b7cb-f2bdde4cf0f2" height="300" margin-right: 10px;">
      <img src="https://github.com/user-attachments/assets/dfde781f-88b6-41de-a208-c48b51d8e89c" height="300" margin-right: 10px;">
 </p>
 
